@@ -1,0 +1,53 @@
+# Visual Studio cache files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+*.obj
+*.pdb
+*.ilk
+*.lib
+*.exp
+*.exe
+*.dll
+*.app
+*.iobj
+*.ipdb
+*.tlog/
+*.log
+*.pch
+*.bsc
+*.sbr
+
+# AutoCAD ARX outputs
+*.arx
+*.res
+*.recipe
+
+# Intermediate directories
+x64/
+Debug/
+Release/
+
+# SQLite DBs (used by IntelliSense)
+*.VC.db
+
+# IPCH and browse info
+*.ipch
+*.aps
+
+# Backup files
+*~ 
+*.bak
+
+# Other generated files
+*.lastbuildstate
+*.cache
+*.tmp
+*.vsidx
+*.bin
+*.json
+
