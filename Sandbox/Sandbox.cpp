@@ -3,6 +3,7 @@
 #include <string>
 #include <bitset>
 #include <cstdint>
+#include <algorithm>
 #include "constants.h"
 #include "Sandbox.h"
 
@@ -85,6 +86,22 @@ int getIntFromUser(std::string message) {
 		return x;
   }
 
+}
+
+namespace Monster {
+	enum MonsterType {
+		orc,
+		goblin,
+		troll,
+		ogre,
+		skeleton
+	};
+}
+	
+
+int mainFunc() {
+	[[maybe_unused]]Monster::MonsterType monster{ Monster::MonsterType::troll };
+	return 0;
 }
 
 char getCharFromUser(std::string message) {
@@ -333,6 +350,82 @@ int runAliases()
 
 	return 0;
 }
+
+int askWhichPgm() {
+	return getIntFromUser("Which program?");
+}
+
+void sort2(int& x, int& y) {
+	if (x > y) {
+		std::swap(x, y);
+	}
+}
+
+int runSwap()
+{
+	int x{ 7 };
+	int y{ 5 };
+
+	std::cout << x << ' ' << y << '\n'; // should print 7 5
+
+	sort2(x, y); // make sure sort works when values need to be swapped
+	std::cout << x << ' ' << y << '\n'; // should print 5 7
+
+	sort2(x, y); // make sure sort works when values don't need to be swapped
+	std::cout << x << ' ' << y << '\n'; // should print 5 7
+
+	return 0;
+}
+
+constexpr std::string_view getAnimalName(Animal animal) {
+	using enum Animal;
+
+	switch (animal) {
+	case pig: return "pig";
+	case chicken: return "chicken";
+	case goat: return "goat";
+	case cat: return "cat";
+	case dog: return "dog";
+	case duck: return "duck";
+
+	default: return "wyd";
+	}
+
+}
+
+void printNumberOfLegs(Animal animal) {
+	using enum Animal;
+
+	std::cout << "A " << getAnimalName(animal) << " has ";
+
+	switch (animal) {
+	case pig:
+	case goat:
+	case cat:
+	case dog:
+		std::cout << 4;
+		break;
+	
+	case chicken:
+	case duck: 
+		std::cout << 2;
+		break;
+
+	default: std::cout << "idk man\n";
+	}
+
+	std::cout << " legs.\n";
+}
+
+void runAnimalLegNums() {
+
+	using enum Animal;
+
+	Animal kitty{ cat };
+	printNumberOfLegs(kitty);
+	printNumberOfLegs(chicken);
+}
+
 
 //int main()
 //{

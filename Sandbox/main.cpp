@@ -6,7 +6,7 @@
 #include "main.h"
 
 int main() {
-	int whichPgm { 3 };
+	int whichPgm { askWhichPgm() };
 hello:
 	switch (whichPgm) {
 	case 0: {
@@ -29,8 +29,11 @@ hello:
 		runSub();
 		break;
 	}
+	case 4:
+		runAnimalLegNums();
+		break;
 	default: {
-		std::cout << "This switch works.";
+		runSwap();
 		break;
 	}
 	}

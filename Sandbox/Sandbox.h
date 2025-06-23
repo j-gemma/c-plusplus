@@ -38,6 +38,10 @@ int runMult();
 
 int runSub();
 
+int runSwap();
+
+int askWhichPgm();
+
 template< typename T >
 T add(T x, T y) {
 	return x + y;
@@ -59,6 +63,7 @@ namespace constants
 	constexpr double pi{ 3.14159 };
 }
 
+
 using Degrees = double;
 using Radians = double;
 Radians convertToRadians(Degrees degrees);
@@ -71,6 +76,22 @@ constexpr int factorial() {
 	if constexpr (N < 2) return 1;
 	else return N * factorial<N - 1>();
 }
+
+enum class Animal {
+	pig,
+	chicken,
+	goat,
+	cat,
+	dog,
+	duck,
+};
+
+
+constexpr std::string_view getAnimalName(Animal animal);
+
+void printNumberOfLegs(Animal animal);
+
+void runAnimalLegNums();
 
 //int countApples()
 //{
