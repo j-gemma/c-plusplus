@@ -58,6 +58,31 @@ double getDoubleFromUser(void) {
 
 }
 
+double getDoubleFromUser(std::string message) {
+	while (true) {
+		double x{};
+		std::cout << message;
+		std::cin >> x;
+
+		if (!std::cin) {
+			//Handle failure
+			message = "Whoops! Try again.";
+			std::cin.clear();
+			ignoreLine();
+			continue;
+		}
+
+		//If extraneous input, treat as failure case
+		if (hasUnextractedInput()) {
+			ignoreLine();
+			continue;
+		}
+
+		return x;
+	}
+
+}
+
 int getIntFromUser(std::string message) {
 	while (true) {
 		int x{};
@@ -77,8 +102,33 @@ int getIntFromUser(std::string message) {
 			ignoreLine();
 			continue;
 		}
+
+		return x;
+	}
+
+}
+
+int getIntFromUserWithBounds(std::string message, int lbound=1, int ubound=100) {
+	while (true) {
+		int x{};
+		std::cout << message;
+		std::cin >> x;
+
+		if (!std::cin) {
+			//Handle failure
+			message = "Whoops! Try again.";
+			std::cin.clear();
+			ignoreLine();
+			continue;
+		}
+
+		//If extraneous input, treat as failure case
+		if (hasUnextractedInput()) {
+			ignoreLine();
+			continue;
+		}
 		
-		if (x < 1 || x > 100) {
+		if (x < lbound || x > ubound) {
 			message = "Whoops! Try again.";
 			continue;
 		}
@@ -424,6 +474,56 @@ void runAnimalLegNums() {
 	Animal kitty{ cat };
 	printNumberOfLegs(kitty);
 	printNumberOfLegs(chicken);
+}
+
+void printAdRevenueInfo(RevenueInfo rInfo) {
+
+	std::cout << "Ads watched: " << rInfo.adsWatched << '\n';
+	std::cout << "Percentage of users who clicked an ad:  " << rInfo.pctUsrClicks << '\n';
+	std::cout << "Average earnings per clicked ad: " << rInfo.avgEarnPerClick << '\n';
+	std::cout << "\nTotal ad revenue today: $" << rInfo.adsWatched * (rInfo.pctUsrClicks/100) * rInfo.avgEarnPerClick << '\n';
+
+
+}
+
+void runCalculateAdRevenue() {
+
+	printAdRevenueInfo({ getIntFromUser("How many ads were watched?") ,
+						 getDoubleFromUser("What percentage of users clicked an ad?") ,
+						 getDoubleFromUser("Average earnings per clicked ad?") });
+
+}
+
+Fraction getFractionFromUser() {
+	int num = getIntFromUser("Enter a value for the numerator: ");
+	int temp{};
+
+	while (temp == 0) temp = getIntFromUser("Enter a non-zero value for the denominator: ");
+
+	int den = temp;
+
+	return { num, den };
+}
+
+Fraction multiplyFractions(Fraction f1, Fraction f2) {
+
+	return { f1.numerator * f2.numerator, f1.denominator * f2.denominator };
+
+}
+
+void printFraction(Fraction frac) {
+	std::cout << frac.numerator << "/" << frac.denominator;
+}
+
+void runMultiplyFractions() {
+
+	Fraction f1{ getFractionFromUser() };
+	Fraction f2{ getFractionFromUser() };
+
+	std::cout << "Your fractions multiplied together: ";
+	printFraction(multiplyFractions(f1, f2));
+
+
 }
 
 

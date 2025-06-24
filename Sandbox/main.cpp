@@ -29,12 +29,23 @@ hello:
 		runSub();
 		break;
 	}
-	case 4:
+	case 4:{
 		runAnimalLegNums();
 		break;
+	}
+	case 5:{
+		runCalculateAdRevenue();
+		break;
+	}
+	case 6: {
+		runMultiplyFractions();
+	}
+
 	default: {
 		runSwap();
 		break;
 	}
 	}
+
+	return 0;
 }

@@ -93,6 +93,30 @@ void printNumberOfLegs(Animal animal);
 
 void runAnimalLegNums();
 
+struct RevenueInfo {
+	int adsWatched{};
+	double pctUsrClicks{};
+	double avgEarnPerClick{};
+};
+
+void printAdRevenueInfo(RevenueInfo rInfo);
+
+void runCalculateAdRevenue();
+
+
+struct Fraction {
+	int numerator{};
+	int denominator{};
+};
+
+void runMultiplyFractions();
+
+void printFraction(Fraction frac);
+
+Fraction multiplyFractions(Fraction f1, Fraction f2);
+
+Fraction getFractionFromUser();
+
 //int countApples()
 //{
 //	constexpr int maryApples{ 3 };
