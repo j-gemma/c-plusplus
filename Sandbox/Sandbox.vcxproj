@@ -137,19 +137,45 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="accumulate.cpp" />
+    <ClCompile Include="aliasesEX.cpp" />
+    <ClCompile Include="calculateAdRevenue.cpp" />
+    <ClCompile Include="countApples.cpp" />
+    <ClCompile Include="hiLo.cpp" />
     <ClCompile Include="isPrime.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="miscUnused.cpp" />
+    <ClCompile Include="multiplyFractions.cpp" />
+    <ClCompile Include="rotateBits.cpp" />
     <ClCompile Include="Sandbox.cpp" />
     <ClCompile Include="printBallHeight.cpp" />
-    <ClCompile Include="hiLo_JMG.cpp" />
+    <ClCompile Include="input.cpp" />
+    <ClCompile Include="animalLegNums.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="Point3d.cpp" />
+    <ClCompile Include="swap.cpp" />
+    <ClCompile Include="Triad.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="accumulate.h" />
+    <ClInclude Include="aliasesEX.h" />
+    <ClInclude Include="animalLegNums.h" />
+    <ClInclude Include="arithmetic.h" />
+    <ClInclude Include="calculateAdRevenue.h" />
     <ClInclude Include="constants.h" />
-    <ClInclude Include="hiLo_JMG.h" />
+    <ClInclude Include="countApples.h" />
+    <ClInclude Include="Point3d.h" />
+    <ClInclude Include="Triad.h" />
+    <ClInclude Include="hiLo.h" />
+    <ClInclude Include="input.h" />
     <ClInclude Include="isPrime.h" />
-    <ClInclude Include="main.h" />
+    <ClInclude Include="miscUnused.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="multiplyFractions.h" />
+    <ClInclude Include="rotateBits.h" />
     <ClInclude Include="Sandbox.h" />
     <ClInclude Include="Random.h" />
+    <ClInclude Include="swap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
