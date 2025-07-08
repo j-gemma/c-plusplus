@@ -9,6 +9,7 @@
 #include "Monster.h"
 #include "Triad.h"
 #include "Point3d.h"
+#include "Ball.h"
 
 int askWhichPgm() {
 	return getIntFromUser("Which program?");
@@ -50,6 +51,10 @@ int main() {
 	}
 	case 10: {
 		runClassExample();
+		break;
+	}
+	case 11: {
+		runBallClass();
 		break;
 	}
 	default: {

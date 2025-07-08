@@ -139,6 +139,7 @@
   <ItemGroup>
     <ClCompile Include="accumulate.cpp" />
     <ClCompile Include="aliasesEX.cpp" />
+    <ClCompile Include="Ball.cpp" />
     <ClCompile Include="calculateAdRevenue.cpp" />
     <ClCompile Include="countApples.cpp" />
     <ClCompile Include="hiLo.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="aliasesEX.h" />
     <ClInclude Include="animalLegNums.h" />
     <ClInclude Include="arithmetic.h" />
+    <ClInclude Include="Ball.h" />
     <ClInclude Include="calculateAdRevenue.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="countApples.h" />
