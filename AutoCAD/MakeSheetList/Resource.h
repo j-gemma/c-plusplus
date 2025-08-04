@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by ArxProject2.rc
+// Used by MakeSheetList.rc
 //
 #define IDS_PROJNAME 100
 

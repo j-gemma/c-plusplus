@@ -25,7 +25,7 @@
 //-      but are changed infrequently
 //-----------------------------------------------------------------------------
 #pragma once
-#define ARXPROJECT1_MODULE
+#define MAKESHEETLIST_MODULE
 
 /*
 #ifndef _ALLOW_RTCc_IN_STL

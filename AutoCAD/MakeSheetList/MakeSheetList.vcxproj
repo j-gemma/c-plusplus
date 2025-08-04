@@ -12,8 +12,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="acrxEntryPoint.cpp" />
-    <ClCompile Include="ArxProject1.cpp" />
     <ClCompile Include="DocData.cpp" />
+    <ClCompile Include="MakeSheetList.cpp" />
     <ClCompile Include="StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -25,7 +25,7 @@
     <ClInclude Include="StdAfx.h" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="ArxProject1.rc" />
+    <ResourceCompile Include="MakeSheetList.rc" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
