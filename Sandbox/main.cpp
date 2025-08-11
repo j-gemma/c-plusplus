@@ -5,11 +5,13 @@
 #include "swap.h"
 #include "animalLegNums.h"
 #include "calculateAdRevenue.h"
-#include "multiplyFractions.h"
+#include "FractionStruct.h"
 #include "Monster.h"
 #include "Triad.h"
 #include "Point3d.h"
+#include "Point2d.h"
 #include "Ball.h"
+#include "FractionClass.h"
 
 int askWhichPgm() {
 	return getIntFromUser("Which program?");
@@ -38,7 +40,7 @@ int main() {
 		break;
 	}
 	case 7: {
-		runMultiplyFractions();
+		runFractionStruct();
 		break;
 	}
 	case 8: {
@@ -55,6 +57,14 @@ int main() {
 	}
 	case 11: {
 		runBallClass();
+		break;
+	}
+	case 12: {
+		runPoint2d();
+		break;
+	}
+	case 13: {
+		runFractionClass();
 		break;
 	}
 	default: {

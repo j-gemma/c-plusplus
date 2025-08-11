@@ -142,11 +142,12 @@
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="calculateAdRevenue.cpp" />
     <ClCompile Include="countApples.cpp" />
+    <ClCompile Include="FractionClass.cpp" />
     <ClCompile Include="hiLo.cpp" />
     <ClCompile Include="isPrime.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="miscUnused.cpp" />
-    <ClCompile Include="multiplyFractions.cpp" />
+    <ClCompile Include="FractionStruct.cpp" />
     <ClCompile Include="rotateBits.cpp" />
     <ClCompile Include="Sandbox.cpp" />
     <ClCompile Include="printBallHeight.cpp" />
@@ -154,6 +155,7 @@
     <ClCompile Include="animalLegNums.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Point3d.cpp" />
+    <ClCompile Include="Point2d.cpp" />
     <ClCompile Include="swap.cpp" />
     <ClCompile Include="Triad.cpp" />
   </ItemGroup>
@@ -166,6 +168,8 @@
     <ClInclude Include="calculateAdRevenue.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="countApples.h" />
+    <ClInclude Include="FractionClass.h" />
+    <ClInclude Include="Point2d.h" />
     <ClInclude Include="Point3d.h" />
     <ClInclude Include="Triad.h" />
     <ClInclude Include="hiLo.h" />
@@ -173,7 +177,7 @@
     <ClInclude Include="isPrime.h" />
     <ClInclude Include="miscUnused.h" />
     <ClInclude Include="Monster.h" />
-    <ClInclude Include="multiplyFractions.h" />
+    <ClInclude Include="FractionStruct.h" />
     <ClInclude Include="rotateBits.h" />
     <ClInclude Include="Sandbox.h" />
     <ClInclude Include="Random.h" />

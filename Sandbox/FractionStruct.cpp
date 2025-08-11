@@ -1,8 +1,8 @@
 #include <iostream>
-#include "multiplyFractions.h"
+#include "FractionStruct.h"
 #include "input.h"
 
-Fraction getFractionFromUser() {
+FractionStruct getFractionFromUser() {
 	int num = getIntFromUser("Enter a value for the numerator: ");
 	int temp{};
 
@@ -13,23 +13,23 @@ Fraction getFractionFromUser() {
 	return { num, den };
 }
 
-void runMultiplyFractions() {
+void runFractionStruct() {
 
-	Fraction f1{ getFractionFromUser() };
-	Fraction f2{ getFractionFromUser() };
+	FractionStruct f1{ getFractionFromUser() };
+	FractionStruct f2{ getFractionFromUser() };
 
-	std::cout << "Your fractions multiplied together: ";
+	std::cout << "Your Fractions multiplied together: ";
 	printFraction(multiplyFractions(f1, f2));
 
 
 }
 
-Fraction multiplyFractions(Fraction f1, Fraction f2) {
+FractionStruct multiplyFractions(FractionStruct f1, FractionStruct f2) {
 
 	return { f1.numerator * f2.numerator, f1.denominator * f2.denominator };
 
 }
 
-void printFraction(Fraction frac) {
+void printFraction(FractionStruct frac) {
 	std::cout << frac.numerator << "/" << frac.denominator;
 }
