@@ -157,7 +157,7 @@
     <ClCompile Include="Point3d.cpp" />
     <ClCompile Include="Point2d.cpp" />
     <ClCompile Include="swap.cpp" />
-    <ClCompile Include="Triad.cpp" />
+    <ClCompile Include="TriadStruct.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="accumulate.h" />
@@ -171,7 +171,7 @@
     <ClInclude Include="FractionClass.h" />
     <ClInclude Include="Point2d.h" />
     <ClInclude Include="Point3d.h" />
-    <ClInclude Include="Triad.h" />
+    <ClInclude Include="TriadStruct.h" />
     <ClInclude Include="hiLo.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="isPrime.h" />

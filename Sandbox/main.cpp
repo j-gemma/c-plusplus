@@ -7,7 +7,7 @@
 #include "calculateAdRevenue.h"
 #include "FractionStruct.h"
 #include "Monster.h"
-#include "Triad.h"
+#include "TriadStruct.h"
 #include "Point3d.h"
 #include "Point2d.h"
 #include "Ball.h"
@@ -48,7 +48,7 @@ int main() {
 		break;
 	}
 	case 9: {
-		runTriad();
+		runTriadStruct();
 		break;
 	}
 	case 10: {
@@ -65,6 +65,10 @@ int main() {
 	}
 	case 13: {
 		runFractionClass();
+		break;
+	}
+	case 14: {
+		runTriad();
 		break;
 	}
 	default: {

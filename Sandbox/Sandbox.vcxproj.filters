@@ -63,7 +63,7 @@
     <ClCompile Include="Monster.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Triad.cpp">
+    <ClCompile Include="TriadStruct.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Point3d.cpp">
@@ -131,7 +131,7 @@
     <ClInclude Include="Monster.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Triad.h">
+    <ClInclude Include="TriadStruct.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Point3d.h">
