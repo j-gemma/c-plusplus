@@ -12,6 +12,7 @@
 #include "Point2d.h"
 #include "Ball.h"
 #include "FractionClass.h"
+#include "Triad.h"
 
 int askWhichPgm() {
 	return getIntFromUser("Which program?");

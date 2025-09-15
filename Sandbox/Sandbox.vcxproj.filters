@@ -78,12 +78,15 @@
     <ClCompile Include="FractionClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Triad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Random.h">
+    <ClInclude Include="NamespaceRandom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Sandbox.h">
@@ -144,6 +147,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FractionClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Triad.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

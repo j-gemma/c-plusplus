@@ -157,6 +157,7 @@
     <ClCompile Include="Point3d.cpp" />
     <ClCompile Include="Point2d.cpp" />
     <ClCompile Include="swap.cpp" />
+    <ClCompile Include="Triad.cpp" />
     <ClCompile Include="TriadStruct.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +172,7 @@
     <ClInclude Include="FractionClass.h" />
     <ClInclude Include="Point2d.h" />
     <ClInclude Include="Point3d.h" />
+    <ClInclude Include="Triad.h" />
     <ClInclude Include="TriadStruct.h" />
     <ClInclude Include="hiLo.h" />
     <ClInclude Include="input.h" />
@@ -180,7 +182,7 @@
     <ClInclude Include="FractionStruct.h" />
     <ClInclude Include="rotateBits.h" />
     <ClInclude Include="Sandbox.h" />
-    <ClInclude Include="Random.h" />
+    <ClInclude Include="NamespaceRandom.h" />
     <ClInclude Include="swap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

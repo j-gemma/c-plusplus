@@ -1,19 +1,63 @@
+#include <chrono>
+#include <random>
 #include <iostream>
-#include <string>
-#include "Sandbox.h"
 
-void runTriad()
+class Random
 {
-	Triad<int, int, int> t1{ 1, 2, 3 };
-	t1.print();
-	std::cout << '\n';
-	std::cout << t1.getFirst() << '\n';
+private:
+	static std::mt19937 generate()
+	{
+		std::random_device rd{};
 
-	using namespace std::literals::string_literals;
-	const Triad t2{ 1, 2.3, "Hello"s };
-	t2.print();
+		std::seed_seq ss{
+			static_cast<std::seed_seq::result_type>(std::chrono::steady_clock::now().time_since_epoch().count()),
+			rd(), rd(), rd(), rd(), rd(), rd(), rd(), };
+
+		return std::mt19937{ ss };
+
+	}
+
+	static inline std::mt19937 mt{ generate() };
+
+public:
+
+	static int get(int min, int max) { return std::uniform_int_distribution{ min, max }(mt); }
+
+};
+
+
+
+	//inline std::mt19937 generate()
+	//{
+	//	std::random_device rd{};
+
+	//	// Create seed_seq with clock and 7 random numbers from std::random_device
+	//	std::seed_seq ss{
+	//		static_cast<std::seed_seq::result_type>(std::chrono::steady_clock::now().time_since_epoch().count()),
+	//			rd(), rd(), rd(), rd(), rd(), rd(), rd() };
+
+	//	return std::mt19937{ ss };
+	//}
+
+	// Here's our global std::mt19937 object.
+	// The inline keyword means we only have one global instance for our whole program.
+	//static inline std::mt19937 mt{ generate() }; // generates a seeded std::mt19937 and copies it into our global object
+
+	// Generate a random int between [min, max] (inclusive)
+		// * also handles cases where the two arguments have different types but can be converted to int
+	//inline int get(int min, int max)
+	//{
+	//	return std::uniform_int_distribution{ min, max }(mt);
+	//}
+
+
+void runRandomClass()
+{
+	// Print a bunch of random numbers
+	for (int count{ 1 }; count <= 10; ++count)
+		std::cout << Random::get(1, 6) << '\t';
+
 	std::cout << '\n';
 
 	return;
 }
-

@@ -1,5 +1,5 @@
 #include "input.h"
-#include "Random.h"
+#include "NamespaceRandom.h"
 #include <iostream>
 
 char askPlayAgain() {
