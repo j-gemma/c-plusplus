@@ -13,9 +13,23 @@
 #include "Ball.h"
 #include "FractionClass.h"
 #include "Triad.h"
+#include "ClassRandom.h"
+#include "Vector3d.h"
 
 int askWhichPgm() {
 	return getIntFromUser("Which program?");
+}
+
+void runFriendExample()
+{
+	Point3d p{ 1.0, 2.0, 3.0 };
+	Vector3d v{ 2.0, 2.0, -3.0 };
+
+	p.print();
+	p.moveByVector(v);
+	p.print();
+
+	return;
 }
 
 int main() {
@@ -72,6 +86,13 @@ int main() {
 		runTriad();
 		break;
 	}
+	case 15: {
+		runRandomClass();
+		break;
+	}
+	case 16:
+		runFriendExample();
+		break;
 	default: {
 		std::cout << "Default case";
 		break;

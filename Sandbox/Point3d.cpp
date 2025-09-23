@@ -1,30 +1,33 @@
 #include <iostream>
 #include "input.h"
-#include "Sandbox.h"
+#include "Point3d.h"
+#include "Vector3d.h"
 
-class Point3d {
-private:
-	int m_x{};
-	int m_y{};
-	int m_z{};
+Point3d::Point3d(double x, double y, double z)
+	: m_x{ x }, m_y{ y }, m_z{ z }
+{
+}
 
-public:
-	void setValues(int xval, int yval, int zval) {
-		m_x = xval;
-		m_y = yval;
-		m_z = zval;
-	}
+void Point3d::print() const
+{
+	std::cout << "Point(" << m_x << ", " << m_y << ", " << m_z << ")\n";
+}
 
-	void print() const {
-		std::cout << "<" << m_x << ", " << m_y << ", " << m_z << ">";
-	}
+void Point3d::setValues(int xval, int yval, int zval) {
+	m_x = xval;
+	m_y = yval;
+	m_z = zval;
+}
 
-	bool isEqual(Point3d p) const {
-		return (m_x == p.m_x) && (m_y == p.m_y) && (m_z == p.m_z);
+bool Point3d::isEqual(Point3d p) const {
+	return (m_x == p.m_x && m_y == p.m_y && m_z == p.m_z);
+}
 
-	}
-
-};
+void Point3d::moveByVector(const Vector3d& v) {
+	m_x += v.m_x;
+	m_y += v.m_y;
+	m_z += v.m_z;
+}
 
 void runClassExample() {
 
@@ -44,5 +47,6 @@ void runClassExample() {
 	return;
 
 }
+
 
 

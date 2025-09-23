@@ -141,6 +141,7 @@
     <ClCompile Include="aliasesEX.cpp" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="calculateAdRevenue.cpp" />
+    <ClCompile Include="ClassRandom.cpp" />
     <ClCompile Include="countApples.cpp" />
     <ClCompile Include="FractionClass.cpp" />
     <ClCompile Include="hiLo.cpp" />
@@ -159,6 +160,7 @@
     <ClCompile Include="swap.cpp" />
     <ClCompile Include="Triad.cpp" />
     <ClCompile Include="TriadStruct.cpp" />
+    <ClCompile Include="Vector3d.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="accumulate.h" />
@@ -167,6 +169,7 @@
     <ClInclude Include="arithmetic.h" />
     <ClInclude Include="Ball.h" />
     <ClInclude Include="calculateAdRevenue.h" />
+    <ClInclude Include="ClassRandom.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="countApples.h" />
     <ClInclude Include="FractionClass.h" />
@@ -184,6 +187,7 @@
     <ClInclude Include="Sandbox.h" />
     <ClInclude Include="NamespaceRandom.h" />
     <ClInclude Include="swap.h" />
+    <ClInclude Include="Vector3d.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
