@@ -9,6 +9,8 @@ private:
 	double m_z{};
 
 public:
+	
+	Point3d() = default;
 
 	Point3d(double x, double y, double z);
 
