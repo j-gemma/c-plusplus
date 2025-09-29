@@ -1,26 +1,43 @@
 #pragma once
 
-struct Monster {
+class Monster {
 
-	enum class MonsterType {
+enum class Type;
+
+private:
+
+	Monster::Type m_type{};
+	
+	std::string m_roar{ "meh" };
+
+	//use std::string here so that monster is the *owner* of its name 
+	// (as opposed to std::string_view) which is a viewer
+	std::string m_name { "???" };
+
+	int m_health{ 10 };
+
+public:
+	enum class Type {
 		ogre,
 		dragon,
 		orc,
 		spider,
 		slime,
+		goblin,
+		skeleton,
+		troll,
+		vampire,
+		zombie,
+		maxMonsterTypes
 	};
 
-	MonsterType type{ MonsterType::orc };
-
-	//use std::string here so that monster is the *owner* of its name 
-	// (as opposed to std::string_view) which is a viewer
-	std::string name{ "Joeschmoe" };
-
-	int health{ 10 };
-
+	constexpr std::string_view const Type();
+	constexpr std::string& const Name() { return m_name; };
+	constexpr std::string& const Roar() { return m_roar; };
+	constexpr int Health() const { return m_health; };
 };
 
-constexpr std::string_view getMonsterType(Monster::MonsterType mt);
+
 
 void printMonster(Monster& m);
 
