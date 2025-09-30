@@ -175,6 +175,7 @@
     <ClInclude Include="FractionClass.h" />
     <ClInclude Include="Point2d.h" />
     <ClInclude Include="Point3d.h" />
+    <ClInclude Include="Random.h" />
     <ClInclude Include="Triad.h" />
     <ClInclude Include="TriadStruct.h" />
     <ClInclude Include="hiLo.h" />

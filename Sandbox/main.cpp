@@ -34,7 +34,6 @@ void runFriendExample()
 
 int main() {
 
-
 	int whichPgm { askWhichPgm() };
 	switch (whichPgm) {
 	case 0: {
@@ -43,7 +42,6 @@ int main() {
 	}
 	case 4: {
 		runSwap();
-
 		break;
 	}
 	case 5:{
@@ -90,9 +88,26 @@ int main() {
 		runRandomClass();
 		break;
 	}
-	case 16:
+	case 16:{
 		runFriendExample();
 		break;
+	}
+	case 17:{
+		runInitMonster();
+		break;
+	}	
+	case 18:{
+		runMonsterStats();
+		break;
+	}	
+	case 19: {
+		runMonsterGenerator();
+		break;
+	}
+	case 20: {
+		runGenerate100Monsters();
+		break;
+	}
 	default: {
 		std::cout << "Default case";
 		break;
