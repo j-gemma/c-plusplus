@@ -15,21 +15,10 @@
 #include "Triad.h"
 #include "ClassRandom.h"
 #include "Vector3d.h"
+#include "stdVectorExample.h"
 
 int askWhichPgm() {
 	return getIntFromUser("Which program?");
-}
-
-void runFriendExample()
-{
-	Point3d p{ 1.0, 2.0, 3.0 };
-	Vector3d v{ 2.0, 2.0, -3.0 };
-
-	p.print();
-	p.moveByVector(v);
-	p.print();
-
-	return;
 }
 
 int main() {
@@ -106,6 +95,10 @@ int main() {
 	}
 	case 20: {
 		runGenerate100Monsters();
+		break;
+	}
+	case 21: {
+		runGet3Numbers();
 		break;
 	}
 	default: {

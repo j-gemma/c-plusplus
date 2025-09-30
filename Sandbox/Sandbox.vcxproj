@@ -157,6 +157,7 @@
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Point3d.cpp" />
     <ClCompile Include="Point2d.cpp" />
+    <ClCompile Include="stdVectorExample.cpp" />
     <ClCompile Include="swap.cpp" />
     <ClCompile Include="Triad.cpp" />
     <ClCompile Include="TriadStruct.cpp" />
@@ -176,6 +177,7 @@
     <ClInclude Include="Point2d.h" />
     <ClInclude Include="Point3d.h" />
     <ClInclude Include="Random.h" />
+    <ClInclude Include="stdVectorExample.h" />
     <ClInclude Include="Triad.h" />
     <ClInclude Include="TriadStruct.h" />
     <ClInclude Include="hiLo.h" />
