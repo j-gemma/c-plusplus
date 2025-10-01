@@ -101,6 +101,14 @@ int main() {
 		runGet3Numbers();
 		break;
 	}
+	case 22: {
+		runLengthAndIndex();
+		break;
+	}
+	case 23: {
+		runPrintElement();
+		break;
+	}
 	default: {
 		std::cout << "Default case";
 		break;

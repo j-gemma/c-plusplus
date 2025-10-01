@@ -9,7 +9,10 @@ private:
 	double m_z{};
 
 public:
-	Vector3d(double x, double y, double z);
+	Vector3d(double x, double y, double z)
+		: m_x{ x }, m_y{ y }, m_z{ z }
+	{
+	}
 
 	void print() const;
 
@@ -17,3 +20,5 @@ public:
 
 
 };
+
+void runFriendExample();

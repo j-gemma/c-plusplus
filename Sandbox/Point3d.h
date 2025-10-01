@@ -12,7 +12,10 @@ public:
 	
 	Point3d() = default;
 
-	Point3d(double x, double y, double z);
+	Point3d(double x, double y, double z)
+		: m_x{ x }, m_y{ y }, m_z{ z }
+	{
+	}
 
 	void print() const;
 	
