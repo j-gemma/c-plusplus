@@ -16,6 +16,7 @@
 #include "ClassRandom.h"
 #include "Vector3d.h"
 #include "stdVectorExample.h"
+#include "arrayLoop.h"
 
 int askWhichPgm() {
 	return getIntFromUser("Which program?");
@@ -107,6 +108,14 @@ int main() {
 	}
 	case 23: {
 		runPrintElement();
+		break;
+	}
+	case 24: {
+		runArrayLoopEx();
+		break;
+	}
+	case 25: {
+		runArraySearch();
 		break;
 	}
 	default: {

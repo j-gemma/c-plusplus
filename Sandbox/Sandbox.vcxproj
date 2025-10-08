@@ -139,6 +139,7 @@
   <ItemGroup>
     <ClCompile Include="accumulate.cpp" />
     <ClCompile Include="aliasesEX.cpp" />
+    <ClCompile Include="arrayLoop.cpp" />
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="calculateAdRevenue.cpp" />
     <ClCompile Include="ClassRandom.cpp" />
@@ -168,6 +169,7 @@
     <ClInclude Include="aliasesEX.h" />
     <ClInclude Include="animalLegNums.h" />
     <ClInclude Include="arithmetic.h" />
+    <ClInclude Include="arrayLoop.h" />
     <ClInclude Include="Ball.h" />
     <ClInclude Include="calculateAdRevenue.h" />
     <ClInclude Include="ClassRandom.h" />
