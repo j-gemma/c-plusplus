@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 
 double getDoubleFromUser(void);
 
@@ -20,3 +21,30 @@ int getNameLength(void);
 void ignoreLine();
 
 bool hasUnextractedInput();
+
+template <typename T>
+T getTFromUser(std::string message) {
+	while (true) {
+		T x{};
+		std::cout << message;
+		std::cin >> x;
+
+		if (!std::cin) {
+			//Handle failure
+			message = "Whoops! Try again.";
+			std::cin.clear();
+			ignoreLine();
+			continue;
+		}
+
+		//If extraneous input, treat as failure case
+		if (hasUnextractedInput()) {
+			ignoreLine();
+			continue;
+		}
+
+		ignoreLine();
+		return x;
+	}
+
+}

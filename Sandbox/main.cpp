@@ -118,6 +118,15 @@ int main() {
 		runArraySearch();
 		break;
 	}
+	case 26: {
+		runFindMax();
+		break;
+	}
+	case 27: {
+		runFizzBuzz();
+		break;
+	}
+
 	default: {
 		std::cout << "Default case";
 		break;
