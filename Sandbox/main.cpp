@@ -17,9 +17,10 @@
 #include "Vector3d.h"
 #include "stdVectorExample.h"
 #include "arrayLoop.h"
+#include "rangeBased.h"
 
 int askWhichPgm() {
-	return getIntFromUser("Which program?");
+	return getIntFromUser("Which program?\n");
 }
 
 int main() {
@@ -126,7 +127,10 @@ int main() {
 		runFizzBuzz();
 		break;
 	}
-
+	case 28: {
+		runFindName();
+		break;
+	}
 	default: {
 		std::cout << "Default case";
 		break;

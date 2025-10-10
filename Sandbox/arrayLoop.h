@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include "input.h"
+#include <cassert>
 
 int runArrayLoopEx();
 

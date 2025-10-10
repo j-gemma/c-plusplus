@@ -2,8 +2,6 @@
 //#include <format>
 
 #include "arrayLoop.h"
-#include "input.h"
-#include <cassert>
 
 template <typename T>
 int printArray(std::vector<T>& arr) {
