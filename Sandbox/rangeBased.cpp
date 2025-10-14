@@ -12,7 +12,7 @@ int runFindName() {
 	std::vector<std::string_view> names{ "Alex", "Betty", "Caroline", "Dave", "Emily", "Fred", "Greg", "Holly" };
 	std::string input{ getTFromUser<std::string>("Enter a name: ") };
 
-	isNameInArray(names, input) ? std::cout << std::format("{} was found.\n", input) :
+	isValueInArray<std::string_view>(names, input) ? std::cout << std::format("{} was found.\n", input) :
 		std::cout << std::format("{} was not found.\n", input);
 	return 0;
 }

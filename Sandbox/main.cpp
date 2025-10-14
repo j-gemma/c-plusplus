@@ -18,6 +18,7 @@
 #include "stdVectorExample.h"
 #include "arrayLoop.h"
 #include "rangeBased.h"
+#include "enumIndex.h"
 
 int askWhichPgm() {
 	return getIntFromUser("Which program?\n");
@@ -129,6 +130,10 @@ int main() {
 	}
 	case 28: {
 		runFindName();
+		break;
+	}
+	case 29: {
+		runEnumIndex();
 		break;
 	}
 	default: {

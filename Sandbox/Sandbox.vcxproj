@@ -144,6 +144,7 @@
     <ClCompile Include="calculateAdRevenue.cpp" />
     <ClCompile Include="ClassRandom.cpp" />
     <ClCompile Include="countApples.cpp" />
+    <ClCompile Include="enumIndex.cpp" />
     <ClCompile Include="FractionClass.cpp" />
     <ClCompile Include="hiLo.cpp" />
     <ClCompile Include="isPrime.cpp" />
@@ -176,6 +177,7 @@
     <ClInclude Include="ClassRandom.h" />
     <ClInclude Include="constants.h" />
     <ClInclude Include="countApples.h" />
+    <ClInclude Include="enumIndex.h" />
     <ClInclude Include="FractionClass.h" />
     <ClInclude Include="Point2d.h" />
     <ClInclude Include="Point3d.h" />
