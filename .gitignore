@@ -51,4 +51,4 @@ Release/
 *.bin
 *.json
 
-.\AutoCAD
+AutoCAD/
