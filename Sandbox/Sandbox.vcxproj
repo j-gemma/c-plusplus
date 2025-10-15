@@ -165,6 +165,7 @@
     <ClCompile Include="Triad.cpp" />
     <ClCompile Include="TriadStruct.cpp" />
     <ClCompile Include="Vector3d.cpp" />
+    <ClCompile Include="vectorStack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="accumulate.h" />
@@ -197,6 +198,7 @@
     <ClInclude Include="NamespaceRandom.h" />
     <ClInclude Include="swap.h" />
     <ClInclude Include="Vector3d.h" />
+    <ClInclude Include="vectorStack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

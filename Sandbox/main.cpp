@@ -19,6 +19,7 @@
 #include "arrayLoop.h"
 #include "rangeBased.h"
 #include "enumIndex.h"
+#include "vectorStack.h"
 
 int askWhichPgm() {
 	return getIntFromUser("Which program?\n");
@@ -134,6 +135,10 @@ int main() {
 	}
 	case 29: {
 		runEnumIndex();
+		break;
+	}
+	case 30: {
+		runVectorStack();
 		break;
 	}
 	default: {
