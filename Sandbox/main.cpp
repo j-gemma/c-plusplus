@@ -1,25 +1,5 @@
 #include <iostream>
-#include "Sandbox.h"
-#include "input.h"
-#include "hiLo.h"
-#include "swap.h"
-#include "animalLegNums.h"
-#include "calculateAdRevenue.h"
-#include "FractionStruct.h"
-#include "Monster.h"
-#include "TriadStruct.h"
-#include "Point3d.h"
-#include "Point2d.h"
-#include "Ball.h"
-#include "FractionClass.h"
-#include "Triad.h"
-#include "ClassRandom.h"
-#include "Vector3d.h"
-#include "stdVectorExample.h"
-#include "arrayLoop.h"
-#include "rangeBased.h"
-#include "enumIndex.h"
-#include "vectorStack.h"
+#include "projectHeaders.h"
 
 int askWhichPgm() {
 	return getIntFromUser("Which program?\n");
