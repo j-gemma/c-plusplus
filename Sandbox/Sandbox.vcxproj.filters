@@ -102,6 +102,9 @@
     <ClCompile Include="vectorStack.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="quiz16.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h">
@@ -195,6 +198,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="vectorStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="quiz16.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectHeaders.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

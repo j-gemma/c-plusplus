@@ -2,7 +2,7 @@
 #include "projectHeaders.h"
 
 int askWhichPgm() {
-	return getIntFromUser("Which program?\n");
+	return getTFromUser<int>("Which program?\n");
 }
 
 int main() {
@@ -121,6 +121,12 @@ int main() {
 		runVectorStack();
 		break;
 	}
+	case 31: {
+		runQuiz16();
+		break;
+	}
+
+
 	default: {
 		std::cout << "Default case";
 		break;
