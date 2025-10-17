@@ -21,5 +21,15 @@ int printBag(std::vector<int> quantities);
 
 const std::string_view itemName(Items::Items item, int qty);
 
+template<typename T>
+std::pair<int, int>& minAndMaxIndices(const std::vector<T>& things);
+
+template <typename T>
+std::string_view& vectorContents(const std::vector<T>& things);
+
+template <typename T>
+int runMinAndMaxIndices();
+
 int runQuiz16();
+
 
