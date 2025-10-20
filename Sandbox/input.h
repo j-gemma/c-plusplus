@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 #include <iostream>
 
 double getDoubleFromUser(void);
@@ -48,3 +49,4 @@ T getTFromUser(std::string message) {
 	}
 
 }
+

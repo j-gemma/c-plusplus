@@ -168,3 +168,34 @@ bool hasUnextractedInput() {
 	return (!std::cin.eof() && std::cin.peek() != '\n');
 }
 
+std::vector<int> getPositiveIntsFromUser() {
+
+	std::cout << "Enter numbers to add (use -1 to stop): ";
+	std::vector<int> ints{};
+
+	while (true) {
+
+		int x{};
+		std::cin >> x;
+
+		if (x == -1) break;
+
+		if (!std::cin) {
+			//Handle failure
+			std::cout << "Whoops! Try again.";
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			continue;
+		}
+
+		////If extraneous input, treat as failure case
+		//if (hasUnextractedInput()) {
+		//	ignoreLine();
+		//	continue;
+		//}
+
+		//ignoreLine();
+		ints.push_back(x);
+	}
+	return ints;
+}

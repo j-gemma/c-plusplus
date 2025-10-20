@@ -105,6 +105,9 @@
     <ClCompile Include="quiz16.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cppMan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h">
@@ -204,6 +207,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="projectHeaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppMan.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
