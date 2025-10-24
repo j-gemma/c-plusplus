@@ -125,6 +125,10 @@ int main() {
 		runQuiz16();
 		break;
 	}
+	case 32: {
+		playCPPMan();
+		break;
+	}
 
 
 	default: {

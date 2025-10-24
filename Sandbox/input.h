@@ -23,8 +23,10 @@ void ignoreLine();
 
 bool hasUnextractedInput();
 
+char askPlayAgain();
+
 template <typename T>
-T getTFromUser(std::string message) {
+T getTFromUser(std::string message="") {
 	while (true) {
 		T x{};
 		std::cout << message;

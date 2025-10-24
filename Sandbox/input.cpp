@@ -68,8 +68,6 @@ int getIntFromUser(std::string message) {
 
 }
 
-
-
 int getIntFromUserWithBounds(std::string message, int lbound, int ubound) {
 	while (true) {
 		int x{};
@@ -198,4 +196,12 @@ std::vector<int> getPositiveIntsFromUser() {
 		ints.push_back(x);
 	}
 	return ints;
+}
+
+char askPlayAgain() {
+
+	char again{ getCharFromUser("Would you like to play again (y/n)?") };
+
+	if (again == 'y' or again == 'n') return again;
+	else return askPlayAgain();
 }

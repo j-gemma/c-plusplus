@@ -2,13 +2,7 @@
 #include "NamespaceRandom.h"
 #include <iostream>
 
-char askPlayAgain() {
 
-	char again{ getCharFromUser("Would you like to play again (y/n)?") };
-
-	if (again == 'y' or again == 'n') return again;
-	else return askPlayAgain();
-}
 
 void runHiLo() {
 	while (true) {
@@ -35,7 +29,7 @@ void runHiLo() {
 		if (winner) std::cout << "Correct! You win!";
 		else std::cout << "Sorry, you lose. The correct number was " << correct << ".\n";
 
-		char again = askPlayAgain();
+		char again { askPlayAgain() };
 
 		if (again == 'y') {}
 		else if (again == 'n') break;

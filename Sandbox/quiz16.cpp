@@ -139,8 +139,6 @@ int runQuiz16() {
 	printBag(initBag());
 	runMinAndMaxIndices();
 	searchIntsFromUser();
-	playCPPMan();
 
 	return 0;
 }
-
