@@ -108,6 +108,9 @@
     <ClCompile Include="cppMan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ch17ArraysPt1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h">
@@ -210,6 +213,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="cppMan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ch17ArraysPt1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

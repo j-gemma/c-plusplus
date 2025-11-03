@@ -129,7 +129,18 @@ int main() {
 		playCPPMan();
 		break;
 	}
-
+	case 33: {
+		runArrayIntro();
+		break;
+	}
+	case 34: {
+		runPrintArray();
+		break;
+	}
+	case 35: {
+		runPrintItems();
+		break;
+	}
 
 	default: {
 		std::cout << "Default case";

@@ -22,7 +22,7 @@ int playCPPMan() {
 			break;
 		}
 		default: {
-			"Wtf dude!?!?!? How did you get here?";
+			std::cout << "Wtf dude!?!?!? How did you get here?\n";
 			break;
 		}
 
