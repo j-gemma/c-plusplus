@@ -2,6 +2,15 @@
 
 std::array<double, 366> dailyHighTemps{};
 
+const std::array<Animal::Data, Animal::max_animals>& makeAnimalData() {
+
+    std::array<Animal::Data, Animal::max_animals> animalData{};
+
+
+    const std::array<Animal::Data, Animal::max_animals> temp{ animalData };
+    return temp;
+}
+
 int runArrayIntro() {
 	constexpr std::array hello { 'h', 'e', 'l', 'l', 'o' };
 
@@ -36,3 +45,5 @@ int runPrintItems() {
 
     return 0;
 }
+
+
