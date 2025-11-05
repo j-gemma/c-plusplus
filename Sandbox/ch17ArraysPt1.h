@@ -1,8 +1,9 @@
 #pragma once
+#include "input.h"
+
 #include <array>
 #include <iostream>
 #include <cassert>
-
 
 struct Item {
 
@@ -26,16 +27,23 @@ namespace Animal {
 	struct Data {
 		
 		int legs{};
-		std::string name{};
-		std::string sound{};
+		std::string_view name{};
+		std::string_view sound{};
 		
 	};
 
 	using namespace std::string_view_literals;
 	constexpr std::array animalNames{ "chicken"sv, "dog"sv,"cat"sv,
 									 "elephant"sv, "duck"sv, "snake"sv };
-
 	static_assert(animalNames.size() == max_animals);
+
+	constexpr std::array animalSounds{ "cluck"sv, "woof"sv,"meow"sv,
+									 "shazu"sv, "wenk"sv, "plplplplpl"sv };
+	static_assert(animalSounds.size() == max_animals);
+
+
+	constexpr std::array legNums{ 2, 4, 4, 4, 2, 0 };
+	static_assert(legNums.size() == max_animals);
 
 	
 }
@@ -44,7 +52,7 @@ constexpr std::string_view getAnimalName(Animal::Type name) {
 	return Animal::animalNames[name];
 }
 
-std::ostream& operator<<(std::ostream out, Animal::Type animal) {
+inline std::ostream& operator<<(std::ostream& out, Animal::Type animal) {
 	return out << getAnimalName(animal);
 }
 
@@ -69,3 +77,5 @@ int printArray(const std::array<T, N>& arr) {
 	std::cout << std::format(") has length {}\n", arr.size());
 	return 0;
 }
+
+int runArrayOfAnimals();

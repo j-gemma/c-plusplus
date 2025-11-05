@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 
-enum class Animal {
+enum class AnimalClass {
 	pig,
 	chicken,
 	goat,
@@ -10,9 +10,9 @@ enum class Animal {
 	duck,
 };
 
-constexpr std::string_view getAnimalName(Animal animal);
+constexpr std::string_view getAnimalName(AnimalClass animal);
 
-void printNumberOfLegs(Animal animal);
+void printNumberOfLegs(AnimalClass animal);
 
 void runAnimalLegNums();
 

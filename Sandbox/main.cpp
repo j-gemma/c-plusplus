@@ -141,6 +141,10 @@ int main() {
 		runPrintItems();
 		break;
 	}
+	case 36: {
+		runArrayOfAnimals();
+		break;
+	}
 
 	default: {
 		std::cout << "Default case";
