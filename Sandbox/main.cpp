@@ -145,6 +145,10 @@ int main() {
 		runArrayOfAnimals();
 		break;
 	}
+	case 37: {
+		runPerfectSquares();
+		break;
+	}
 
 	default: {
 		std::cout << "Default case";
