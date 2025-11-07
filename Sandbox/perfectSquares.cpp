@@ -33,7 +33,6 @@ int runPerfectSquares() {
 		}
 		if (matchSquare(a)) std::cout << std::format("{} is a perfect square\n", a);
 		else std::cout << std::format("{} is not a perfect square\n", a);
-
 	}
 	
 	return 0;

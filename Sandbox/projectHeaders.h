@@ -22,3 +22,4 @@
 #include "vectorStack.h"
 #include "quiz16.h"
 #include "ch17ArraysPt1.h"
+#include "perfectSquares.h"

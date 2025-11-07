@@ -2,7 +2,6 @@
 
 int printAnimalInfo(int matchIndex) {
 
-    
     if (matchIndex == -1) {
         std::cout << "That animal couldn't be found.\n";
         return matchIndex;
