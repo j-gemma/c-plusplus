@@ -1,41 +1,49 @@
 #include "ch17ArraysPt1.h"
 
-std::array<double, 366> dailyHighTemps{};
+int printAnimalInfo(int matchIndex) {
 
-const std::array<Animal::Data, Animal::max_animals> makeAnimalData() {
-
-    std::array<Animal::Data, Animal::max_animals> animalData{};
-
-    for (std::size_t i{}; i < Animal::max_animals; i++) {
-        animalData[i] = { Animal::legNums[i], Animal::animalNames[i], Animal::animalSounds[i] };
-        //std::cout << animalData[i].name << '\n';
-    }
     
-    return animalData;
+    if (matchIndex == -1) {
+        std::cout << "That animal couldn't be found.\n";
+        return matchIndex;
+    }
+
+    size_t cast{ static_cast<size_t>(matchIndex) };
+  
+    std::cout << std::format("A {} has {} legs and says {}.\n",
+                            Animal::data[cast].name,
+                            Animal::data[cast].legs,
+                            Animal::data[cast].sound);
+                            
+    return matchIndex;
 }
 
+int printRestOfAnimals(int matchIndex) {
 
-int runArrayOfAnimals() {
-
-    std::array<Animal::Data, Animal::max_animals> animalData{ makeAnimalData() };
-    std::string_view uAnimal{ getTFromUser<std::string>("Enter an animal: ") };
-
-    int matchIndex { matchAnimal(uAnimal) };
-
-    if (matchIndex != -1) {
-        printAnimalInfo(matchIndex);
-        printRestOfAnimals(matchIndex);
+    std::cout << "\nHere is the info for the rest of the animals: \n";
+    for (int i{}; i < Animal::max_animals; i++) {
+        if (i != matchIndex) printAnimalInfo(i);
     }
 
     return 0;
 }
 
-int matchAnimal(std::string_view& animal) {
+int matchAnimal(std::string& animal) {
+
+    
     for (size_t i{}; i < Animal::max_animals; i++) {
-        if (animal == Animal::animalNames[i])
+        if (animal == Animal::data[i].name)
             return static_cast<int>(i);
     }
     return -1;
+}
+
+int runArrayOfAnimals() {
+
+    std::string uAnimal{ getTFromUser<std::string>("Enter an animal: ") };
+    printRestOfAnimals(printAnimalInfo(matchAnimal(uAnimal)));
+  
+    return 0;
 }
 
 int runArrayIntro() {
@@ -72,5 +80,3 @@ int runPrintItems() {
 
     return 0;
 }
-
-
