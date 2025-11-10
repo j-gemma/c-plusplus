@@ -149,6 +149,10 @@ int main() {
 		runPerfectSquares();
 		break;
 	}
+	case 38: {
+		runPrintArrayUsingPointers();
+		break;
+	}
 
 	default: {
 		std::cout << "Default case";

@@ -37,6 +37,40 @@ int matchAnimal(std::string& animal) {
     return -1;
 }
 
+int printArrayBackwardsUsingPointers (const char ptr[]) {
+
+    const char* temp { ptr };
+    while (*temp != '\0') {
+        ++temp;
+    }
+
+    while (temp-- != ptr) {
+        std::cout << *temp;
+    }
+    std::cout << '\n';
+    return 0;
+ }
+
+int printArrayUsingPointers(const char ptr[]) {
+
+    while (*ptr != '\0') {
+        std::cout << *ptr;
+        ++ptr;
+    }
+    std::cout << '\n';
+
+    return 0;
+}
+
+int runPrintArrayUsingPointers() {
+
+    char hello[]{"Hello world!"};
+    printArrayUsingPointers("Hello world!");
+    printArrayBackwardsUsingPointers(hello);
+    return 0;
+
+}
+
 int runArrayOfAnimals() {
 
     std::string uAnimal{ getTFromUser<std::string>("Enter an animal: ") };

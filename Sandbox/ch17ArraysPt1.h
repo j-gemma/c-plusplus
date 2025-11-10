@@ -71,6 +71,12 @@ int printRestOfAnimals(int matchIndex);
 
 int matchAnimal(std::string& animal);
 
+int printArrayBackwardsUsingPointers(const char ptr[]);
+
+int printArrayUsingPointers(const char ptr[]);
+
+int runPrintArrayUsingPointers();
+
 int runArrayOfAnimals();
 
 int runArrayIntro();
