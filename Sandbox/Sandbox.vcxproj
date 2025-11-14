@@ -153,8 +153,10 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="miscUnused.cpp" />
     <ClCompile Include="FractionStruct.cpp" />
+    <ClCompile Include="perfectSquares.cpp" />
     <ClCompile Include="quiz16.cpp" />
     <ClCompile Include="rangeBased.cpp" />
+    <ClCompile Include="roscoes.cpp" />
     <ClCompile Include="rotateBits.cpp" />
     <ClCompile Include="Sandbox.cpp" />
     <ClCompile Include="printBallHeight.cpp" />
@@ -185,12 +187,14 @@
     <ClInclude Include="cppMan.h" />
     <ClInclude Include="enumIndex.h" />
     <ClInclude Include="FractionClass.h" />
+    <ClInclude Include="perfectSquares.h" />
     <ClInclude Include="Point2d.h" />
     <ClInclude Include="Point3d.h" />
     <ClInclude Include="projectHeaders.h" />
     <ClInclude Include="quiz16.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="rangeBased.h" />
+    <ClInclude Include="roscoes.h" />
     <ClInclude Include="stdVectorExample.h" />
     <ClInclude Include="Triad.h" />
     <ClInclude Include="TriadStruct.h" />

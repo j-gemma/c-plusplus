@@ -111,6 +111,12 @@
     <ClCompile Include="ch17ArraysPt1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="perfectSquares.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="roscoes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h">
@@ -216,6 +222,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ch17ArraysPt1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="perfectSquares.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="roscoes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
