@@ -153,6 +153,11 @@ int main() {
 		runPrintArrayUsingPointers();
 		break;
 	}
+	case 39: {
+		runRoscoes();
+		break;
+
+	}
 
 	default: {
 		std::cout << "Default case";
