@@ -38,30 +38,30 @@ bool isValidInput(char input) {
 	return false;
 }
 
-int updatePlayer(Player gamer, char purchase) {
+int updatePlayer(Player& gamer, char purchase) {
 
 	//std::cout << std::format("Choice: {}", purchase);
 	size_t choice{ static_cast<size_t>(purchase - '0')};
 
 	int purchasePrice{ Potion::cost[choice] };
-	std::cout << std::format("Purchase price: {}", purchasePrice);
+	//std::cout << std::format("Purchase price: {}", purchasePrice);
 
 	if (gamer.getWealth() < purchasePrice) 
-		std::cout << "You cannot afford that.";
+		std::cout << "\nYou cannot afford that.\n\n";
 	else {
 		gamer.addToInventory(choice);
 		gamer.setWealth(gamer.getWealth() - purchasePrice);
-		std::cout << std::format("You purchased a potion of {}. You have {} gold left.\n", Potion::name[choice], gamer.getWealth());
+		std::cout << std::format("\nYou purchased a potion of {}. You have {} gold left.\n\n", Potion::name[choice], gamer.getWealth());
 	}
 
 	return 0;
 }
 
-int printExitStats(Player gamer) {
-	std::cout << "Your inventory contains: \n";
+int printExitStats(Player& gamer) {
+	std::cout << "\nYour inventory contains: \n";
 	
 	for (auto& a : Potion::types) {
-		std::cout << std::format("{}x potion of {}", gamer.getInventory()[a], Potion::name[a]);
+		std::cout << std::format("{}x potion of {}\n", gamer.getInventory()[a], Potion::name[a]);
 	}
 
 	std::cout << std::format("You escaped with {} gold remaining.\n\n", gamer.getWealth());
@@ -78,7 +78,8 @@ int runRoscoes() {
 		displayShop();
 
 		char input{ getTFromUser<char>("Enter the number of the potion you'd like to buy, or 'q' to quit: ") };
-		
+		if (input == 'q') quit = true;
+
 		while (!isValidInput(input) ){
 			std::cout << "That is an invalid input. Try again.\n";
 			input = getTFromUser<char>("");
@@ -89,7 +90,7 @@ int runRoscoes() {
 			printExitStats(gamer);
 		}
 		else {
-			std::cout << gamer.getWealth();
+			//std::cout << gamer.getWealth();
 			updatePlayer(gamer, input);
 		}
 	}

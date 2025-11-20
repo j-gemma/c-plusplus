@@ -57,9 +57,9 @@ Player greetAndInitPlayer();
 
 bool isValidInput(char input);
 
-int updatePlayer(Player gamer, char purchase);
+int updatePlayer(Player& gamer, char purchase);
 
-int printExitStats(Player gamer);
+int printExitStats(Player& gamer);
 
 int runRoscoes();
 
