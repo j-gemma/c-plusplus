@@ -117,6 +117,9 @@
     <ClCompile Include="roscoes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="deck52.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h">
@@ -228,6 +231,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="roscoes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deck52.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

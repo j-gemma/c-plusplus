@@ -24,3 +24,4 @@
 #include "ch17ArraysPt1.h"
 #include "perfectSquares.h"
 #include "roscoes.h"
+#include "deck52.h"

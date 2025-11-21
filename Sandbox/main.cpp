@@ -156,7 +156,9 @@ int main() {
 	case 39: {
 		runRoscoes();
 		break;
-
+	}case 40: {
+		runDeck52();
+		break;
 	}
 
 	default: {
