@@ -13,3 +13,20 @@ int runDeck52() {
 	std::cout << '\n';
 	return 0;
 }
+
+bool playBlackjack() {
+
+	bool win{ false };
+
+	Player dealer{};
+	Player p1{};
+
+	Card drawn{
+		Card::allRanks[Random::get(0, Card::max_rank - 1)],
+		Card::allSuits[Random::get(0, Card::max_suit - 1)]
+	};
+
+
+
+	return win;
+}

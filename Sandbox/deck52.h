@@ -32,8 +32,8 @@ struct Card {
 	Rank rank{};
 	Suit suit{};
 
-	static constexpr std::array allRanks{ ace, two, three, four, five, six, seven, eight, nine, ten, jack, queen, king };
-	static constexpr std::array allSuits{ club, diamond, heart, spade };
+	static constexpr std::array<Card::Rank, max_rank> allRanks{ ace, two, three, four, five, six, seven, eight, nine, ten, jack, queen, king };
+	static constexpr std::array<Card::Suit, max_suit> allSuits{ club, diamond, heart, spade };
 	
 	friend std::ostream& operator<<(std::ostream& out, const Card& card) {
 		static constexpr std::array<char, max_rank> ranks{ 'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K' };
@@ -47,6 +47,15 @@ struct Card {
 		constexpr std::array rankValues {11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10 };
 		return rankValues[rank];
 	}
+
+};
+
+struct Player {
+	int m_score{};
+
+	void setScore(int score) { m_score = score; }
+
+	int getScore() { return m_score; }
 
 };
 
