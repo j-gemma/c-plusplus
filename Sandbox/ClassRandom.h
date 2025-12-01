@@ -3,6 +3,10 @@
 #include <random>
 #include <iostream>
 
+//#include "projectHeaders.h"
+
+class Deck;
+
 class Random
 {
 private:
@@ -12,10 +16,11 @@ private:
 
 public:
 
-	static int get(int min, int max) { return std::uniform_int_distribution{ min, max }(mt); }
+	//static int get(int min, int max) { return std::uniform_int_distribution{ min, max }(mt); }
 
 	template <typename T>
 	static T get(T min, T max) { return std::uniform_int_distribution<T>{min, max}(mt); }
+
 };
 
 void runRandomClass();

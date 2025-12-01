@@ -160,6 +160,10 @@ int main() {
 		runDeck52();
 		break;
 	}
+	case 41: {
+		runDealCards();
+		break;
+	}
 
 	default: {
 		std::cout << "Default case";

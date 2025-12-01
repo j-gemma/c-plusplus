@@ -13,6 +13,7 @@
 #include "Ball.h"
 #include "FractionClass.h"
 #include "Triad.h"
+#include "deck52.h"
 #include "ClassRandom.h"
 #include "Vector3d.h"
 #include "stdVectorExample.h"
@@ -24,4 +25,3 @@
 #include "ch17ArraysPt1.h"
 #include "perfectSquares.h"
 #include "roscoes.h"
-#include "deck52.h"

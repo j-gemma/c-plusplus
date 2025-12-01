@@ -3,9 +3,7 @@
 #include <iostream>
 #include <vector>
 
-#include "ClassRandom.h"
-#include "input.h"
-
+#include "projectHeaders.h"
 
 namespace Potion {
 

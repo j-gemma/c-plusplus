@@ -14,19 +14,30 @@ int runDeck52() {
 	return 0;
 }
 
+void Deck::shuffle() {
+	std::shuffle(m_cards.begin(), m_cards.end(), Random::mt);
+	m_currIdx = 0;
+}
+
+Card Deck::dealCard() {
+	assert(m_currIdx < m_cards.size() && "Current card index greater than deck size.\n");
+	return m_cards[m_currIdx++];
+}
+
+int runDealCards()
+{
+	Deck deck{};
+	std::cout << deck.dealCard() << ' ' << deck.dealCard() << ' ' << deck.dealCard() << '\n';
+
+	deck.shuffle();
+	std::cout << deck.dealCard() << ' ' << deck.dealCard() << ' ' << deck.dealCard() << '\n';
+
+	return 0;
+}
+
 bool playBlackjack() {
 
 	bool win{ false };
-
-	Player dealer{};
-	Player p1{};
-
-	Card drawn{
-		Card::allRanks[Random::get(0, Card::max_rank - 1)],
-		Card::allSuits[Random::get(0, Card::max_suit - 1)]
-	};
-
-
 
 	return win;
 }

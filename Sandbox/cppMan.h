@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
 #include <cctype>
-#include "ClassRandom.h"
-#include "input.h"
+
+#include "projectHeaders.h"
 
 namespace WordList {
 

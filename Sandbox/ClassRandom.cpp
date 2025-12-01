@@ -1,4 +1,4 @@
-#include "ClassRandom.h"
+#include "classRandom.h"
 
 std::mt19937 Random::generate()
 {
