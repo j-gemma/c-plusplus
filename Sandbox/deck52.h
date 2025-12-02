@@ -62,7 +62,7 @@ struct Card {
 	}
 
 	int value() const {
-		constexpr std::array rankValues{ 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10 };
+		constexpr std::array rankValues{ 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 };
 		return rankValues[rank];
 	}
 
@@ -70,7 +70,7 @@ struct Card {
 
 class Deck {
 
-	size_t m_currIdx{ 0 };
+	size_t m_nextIdx{ 0 };
 	std::vector<Card> m_cards{ std::vector<Card>(52) };
 
 public:

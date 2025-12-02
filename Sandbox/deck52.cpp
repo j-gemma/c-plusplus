@@ -16,12 +16,12 @@ int runDeck52() {
 
 void Deck::shuffle() {
 	std::shuffle(m_cards.begin(), m_cards.end(), Random::getMT());
-	m_currIdx = 0;
+	m_nextIdx = 0;
 }
 
 Card Deck::dealCard() {
-	assert(m_currIdx < m_cards.size() && "Current card index greater than deck size.\n");
-	return m_cards[m_currIdx++];
+	assert(m_nextIdx != m_cards.size() && "Deck ran out of cards.\n");
+	return m_cards[m_nextIdx++];
 }
 
 int runDealCards()
@@ -48,17 +48,19 @@ bool playBlackjack() {
 	std::cout << std::format("The dealer is showing: {}\n", dealer.getScore());
 	std::cout << std::format("You have score: {}\n", player.getScore());
 
-	return (player.getScore() >= dealer.getScore());
+	return (player.m_score > dealer.m_score);
 }
 
 int runPlayBlackjack() {
-
+	int count{};
 	while (true) {
+		++count;
 		if (playBlackjack()) std::cout << "You win!\n\n";
 		else {
-			std::cout << "You lose";
-			break;
+			std::cout << "You lose\n\n";
 		}
+
+		if (count == 100) break;
 	}
 	return 0;
 }
