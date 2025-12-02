@@ -218,9 +218,6 @@
     <ClInclude Include="quiz16.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="projectHeaders.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="cppMan.h">
       <Filter>Header Files</Filter>
     </ClInclude>

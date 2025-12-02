@@ -2,18 +2,24 @@
 #include <iostream>
 #include <algorithm>
 #include <cassert>
+#include <array>
+#include <vector>
 
-#include "projectHeaders.h"
+#include "ClassRandom.h"
 
+//#include "projectHeaders.h"
 
-struct CardPlayer {
+namespace Blackjack {
+	struct Player {
 		int m_score{};
 
 		void setScore(int score) { m_score = score; }
 
 		int getScore() { return m_score; }
 
-};
+	};
+
+}
 
 struct Card {
 	enum Rank {
@@ -94,3 +100,7 @@ private:
 int runDealCards();
 
 int runDeck52();
+
+bool playBlackjack();
+
+int runPlayBlackjack();

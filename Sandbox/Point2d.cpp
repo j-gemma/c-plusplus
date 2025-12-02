@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+
 #include "input.h"
 #include "Point2d.h"
 

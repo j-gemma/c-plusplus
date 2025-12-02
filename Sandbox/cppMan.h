@@ -2,7 +2,10 @@
 #include <iostream>
 #include <cctype>
 
-#include "projectHeaders.h"
+#include "input.h"
+#include "ClassRandom.h"
+
+//#include "projectHeaders.h"
 
 namespace WordList {
 

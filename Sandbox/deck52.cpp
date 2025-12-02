@@ -15,7 +15,7 @@ int runDeck52() {
 }
 
 void Deck::shuffle() {
-	std::shuffle(m_cards.begin(), m_cards.end(), Random::mt);
+	std::shuffle(m_cards.begin(), m_cards.end(), Random::getMT());
 	m_currIdx = 0;
 }
 
@@ -37,7 +37,28 @@ int runDealCards()
 
 bool playBlackjack() {
 
-	bool win{ false };
+	Blackjack::Player dealer{};
+	Blackjack::Player player{};
 
-	return win;
+	Deck deck{};
+
+	dealer.setScore(dealer.getScore() + deck.dealCard().value());
+	player.setScore(player.getScore() + deck.dealCard().value() + deck.dealCard().value());
+
+	std::cout << std::format("The dealer is showing: {}\n", dealer.getScore());
+	std::cout << std::format("You have score: {}\n", player.getScore());
+
+	return (player.getScore() >= dealer.getScore());
+}
+
+int runPlayBlackjack() {
+
+	while (true) {
+		if (playBlackjack()) std::cout << "You win!\n\n";
+		else {
+			std::cout << "You lose";
+			break;
+		}
+	}
+	return 0;
 }

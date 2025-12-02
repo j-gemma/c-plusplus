@@ -1,4 +1,5 @@
 #include <iostream>
+
 #include "input.h"
 #include "Point3d.h"
 #include "Vector3d.h"

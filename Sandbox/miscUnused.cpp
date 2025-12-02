@@ -1,5 +1,6 @@
 #include <iostream>
 #include <bitset>
+
 #include "miscUnused.h"
 #include "input.h"
 

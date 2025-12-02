@@ -1,5 +1,30 @@
 #include <iostream>
-#include "projectHeaders.h"
+#include "input.h"
+#include "hiLo.h"
+#include "swap.h"
+#include "animalLegNums.h"
+#include "calculateAdRevenue.h"
+#include "FractionStruct.h"
+#include "Monster.h"
+#include "TriadStruct.h"
+#include "Point3d.h"
+#include "Ball.h"
+#include "Point2d.h"
+#include "FractionClass.h"
+#include "Triad.h"
+#include "ClassRandom.h"
+#include "Vector3d.h"
+#include "stdVectorExample.h"
+#include "arrayLoop.h"
+#include "rangeBased.h"
+#include "enumIndex.h"
+#include "vectorStack.h"
+#include "cppMan.h"
+#include "quiz16.h"
+#include "ch17ArraysPt1.h"
+#include "perfectSquares.h"
+#include "roscoes.h"
+#include "deck52.h"
 
 int askWhichPgm() {
 	return getTFromUser<int>("Which program?\n");
@@ -162,6 +187,10 @@ int main() {
 	}
 	case 41: {
 		runDealCards();
+		break;
+	}
+	case 42: {
+		runPlayBlackjack();
 		break;
 	}
 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+
 #include "Triad.h"
 
 void runTriad()
