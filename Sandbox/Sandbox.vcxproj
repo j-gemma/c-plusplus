@@ -166,6 +166,7 @@
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Point3d.cpp" />
     <ClCompile Include="Point2d.cpp" />
+    <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="stdVectorExample.cpp" />
     <ClCompile Include="swap.cpp" />
     <ClCompile Include="Triad.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="arithmetic.h" />
     <ClInclude Include="arrayLoop.h" />
     <ClInclude Include="Ball.h" />
+    <ClInclude Include="bubbleSort.h" />
     <ClInclude Include="calculateAdRevenue.h" />
     <ClInclude Include="ch17ArraysPt1.h" />
     <ClInclude Include="ClassRandom.h" />
