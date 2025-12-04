@@ -35,32 +35,100 @@ int runDealCards()
 	return 0;
 }
 
-bool playBlackjack() {
+int initGame(Blackjack::Player& dealer, Blackjack::Player& player, Deck& deck) {
+	
+
+	Card card1{ deck.dealCard() };
+	if (card1.value() == 11) dealer.numAces++;
+	std::cout << std::format("The dealer is showing {} ({})\n", card1, card1.value());
+	dealer.m_score = dealer.m_score + card1.value();
+
+	Card card2{ deck.dealCard() };
+	Card card3{ deck.dealCard() };
+	if (card2.value() == 11) player.numAces++;
+	if (card3.value() == 11) player.numAces++;
+	std::cout << std::format("You are showing {} {} ({})\n", card2, card3, card2.value() + card3.value());
+	player.m_score = player.m_score + card2.value() + card3.value();
+
+	return 0;
+}
+
+int dealerTurn(Blackjack::Player& dealer, Deck& deck) {
+
+	while (dealer.m_score < Settings::DEALERSTAND) {
+		Card card{ deck.dealCard() };
+		dealer.m_score += card.value();
+		if (card.value() == 11) dealer.numAces++;
+		dealer.m_score += card.value();
+		while ((dealer.m_score > Settings::BUST) && (dealer.numAces > 0)) {
+			dealer.m_score -= 10;
+			dealer.numAces--;
+		}
+
+		std::cout << std::format("The dealer flips a {}. They now have {}\n", card, dealer.m_score);
+		if (dealer.m_score > Settings::BUST) std::cout << "The dealer went bust!\n";
+	}
+
+	return 0;
+}
+
+
+int playerTurn(Blackjack::Player& player, Deck& deck) {
+	
+	while (player.m_score < Settings::BUST) {
+		char choice{ getTFromUser<char>("(h) to hit, or (s) to stand: ") };
+
+		while ((choice != 's') && (choice != 'h')) {
+			choice = getTFromUser<char>("(h) to hit, or (s) to stand: ");
+		}
+
+		if (choice == 'h') {
+			Card card{ deck.dealCard() };
+			if (card.value() == 11) player.numAces++;
+			player.m_score += card.value();
+			while ((player.m_score > Settings::BUST) && (player.numAces > 0)) {
+				player.m_score -= 10;
+				player.numAces--;
+			}
+			std::cout << std::format("You were dealt {}. You now have {}: \n", card, player.m_score);
+			if (player.m_score > Settings::BUST) std::cout << "You went bust!\n";
+		}
+
+		if (choice == 's') break;
+
+	}
+	
+	return 0;
+}
+
+Blackjack::Condition playBlackjack() {
 
 	Blackjack::Player dealer{};
 	Blackjack::Player player{};
 
 	Deck deck{};
 
-	dealer.setScore(dealer.getScore() + deck.dealCard().value());
-	player.setScore(player.getScore() + deck.dealCard().value() + deck.dealCard().value());
+	initGame(dealer, player, deck);
+	playerTurn(player, deck);
+	if(player.m_score <= Settings::BUST) dealerTurn(dealer, deck);
 
-	std::cout << std::format("The dealer is showing: {}\n", dealer.getScore());
-	std::cout << std::format("You have score: {}\n", player.getScore());
+	if (player.m_score == dealer.m_score) return Blackjack::tie;
 
-	return (player.m_score > dealer.m_score);
+	bool win{  ((player.m_score > dealer.m_score) && (player.m_score <= Settings::BUST))
+			|| ((dealer.m_score > Settings::BUST) && player.m_score <= Settings::BUST) ? true : false };
+
+	if (win) return Blackjack::win;
+	else return Blackjack::lose;
 }
 
 int runPlayBlackjack() {
-	int count{};
 	while (true) {
-		++count;
-		if (playBlackjack()) std::cout << "You win!\n\n";
-		else {
-			std::cout << "You lose\n\n";
+		Blackjack::Condition cond{ playBlackjack() };
+		if (cond == Blackjack::win) std::cout << "You win!\n\n";
+		else if (cond == Blackjack::lose) {
+			std::cout << "You lose!\n\n";
 		}
-
-		if (count == 100) break;
-	}
-	return 0;
+		else std::cout << "You tied!\n\n";
+	}return 0;
 }
+

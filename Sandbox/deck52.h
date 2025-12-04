@@ -5,21 +5,16 @@
 #include <array>
 #include <vector>
 
+#include "input.h"
 #include "ClassRandom.h"
 
-//#include "projectHeaders.h"
-
-namespace Blackjack {
-	struct Player {
-		int m_score{};
-
-		void setScore(int score) { m_score = score; }
-
-		int getScore() { return m_score; }
-
-	};
+namespace Settings {
+	const int BUST{ 21 };
+	const int DEALERSTAND{ 17 };
 
 }
+
+
 
 struct Card {
 	enum Rank {
@@ -61,12 +56,42 @@ struct Card {
 		return out;
 	}
 
+
+
 	int value() const {
 		constexpr std::array rankValues{ 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 };
 		return rankValues[rank];
 	}
 
 };
+
+namespace Blackjack {
+	struct Player {
+		int m_score{};
+		int numAces{};
+
+	};
+
+	enum Condition {
+		win, 
+		lose,
+		tie,
+		max_conditions
+	};
+
+}
+
+template <>
+struct std::formatter<Card> : std::formatter<std::string> {
+	static constexpr std::array<char, Card::max_rank> ranks{ 'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K' };
+	static constexpr std::array<char, Card::max_suit> suits{ 'C', 'H', 'D', 'S' };
+
+	auto format(const Card& c, auto& ctx) const {
+		std::string s = std::format("{}{}", ranks[c.rank], suits[c.suit]);
+		return std::formatter<std::string>::format(s, ctx);
+	}
+};
+
 
 class Deck {
 
@@ -101,6 +126,6 @@ int runDealCards();
 
 int runDeck52();
 
-bool playBlackjack();
+Blackjack::Condition playBlackjack();
 
 int runPlayBlackjack();
