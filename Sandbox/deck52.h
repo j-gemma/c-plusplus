@@ -14,8 +14,6 @@ namespace Settings {
 
 }
 
-
-
 struct Card {
 	enum Rank {
 		ace,
@@ -56,8 +54,6 @@ struct Card {
 		return out;
 	}
 
-
-
 	int value() const {
 		constexpr std::array rankValues{ 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 };
 		return rankValues[rank];
@@ -73,8 +69,8 @@ namespace Blackjack {
 	};
 
 	enum Condition {
-		win, 
-		lose,
+		playerWin, 
+		dealerWin,
 		tie,
 		max_conditions
 	};
@@ -95,12 +91,13 @@ struct std::formatter<Card> : std::formatter<std::string> {
 
 class Deck {
 
-	size_t m_nextIdx{ 0 };
+	
 	std::vector<Card> m_cards{ std::vector<Card>(52) };
+	size_t m_nextIdx{ 0 };
 
 public:
 	Deck() {
-		initCards();
+		deckOfCards();
 		shuffle();
 	}
 
@@ -109,7 +106,7 @@ public:
 	void shuffle();
 
 private:
-	void initCards() {
+	void deckOfCards() {
 		size_t index{ 0 };
 		for (size_t j{ 0 }; j < Card::max_suit; ++j) {
 			for (size_t k{ 0 }; k < Card::max_rank; ++k) {

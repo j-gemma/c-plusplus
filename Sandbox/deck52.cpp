@@ -117,18 +117,31 @@ Blackjack::Condition playBlackjack() {
 	bool win{  ((player.m_score > dealer.m_score) && (player.m_score <= Settings::BUST))
 			|| ((dealer.m_score > Settings::BUST) && player.m_score <= Settings::BUST) ? true : false };
 
-	if (win) return Blackjack::win;
-	else return Blackjack::lose;
+	if (win) return Blackjack::playerWin;
+	else return Blackjack::dealerWin;
 }
 
 int runPlayBlackjack() {
 	while (true) {
-		Blackjack::Condition cond{ playBlackjack() };
-		if (cond == Blackjack::win) std::cout << "You win!\n\n";
-		else if (cond == Blackjack::lose) {
-			std::cout << "You lose!\n\n";
+		switch (playBlackjack()) {
+			
+		case Blackjack::playerWin: {
+			std::cout << "You win!\n\n";
+			break;
 		}
-		else std::cout << "You tied!\n\n";
+		case Blackjack::dealerWin: {
+			std::cout << "You lose!\n\n";
+			break;
+		}
+		case Blackjack::tie:
+		default:
+		{
+			std::cout << "You tied!\n\n";
+			break;
+		}
+		
+		}
+		
 	}return 0;
 }
 
