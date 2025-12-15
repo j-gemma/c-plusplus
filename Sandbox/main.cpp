@@ -1,4 +1,5 @@
 #include <iostream>
+#include "bubbleSort.h"
 #include "input.h"
 #include "hiLo.h"
 #include "swap.h"
@@ -191,6 +192,10 @@ int main() {
 	}
 	case 42: {
 		runPlayBlackjack();
+		break;
+	}
+	case 43: {
+		runBubbleSort();
 		break;
 	}
 

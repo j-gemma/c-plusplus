@@ -2,4 +2,9 @@
 #include <iterator>
 #include <iostream>
 
-int bubbleSort(const int arr[]);
+int bubbleSort(int arr[], int size);
+
+void printArray(int arr[], int size);
+
+
+int runBubbleSort();
