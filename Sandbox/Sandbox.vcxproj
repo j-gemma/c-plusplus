@@ -147,6 +147,7 @@
     <ClCompile Include="countApples.cpp" />
     <ClCompile Include="cppMan.cpp" />
     <ClCompile Include="deck52.cpp" />
+    <ClCompile Include="dynamicAllocation.cpp" />
     <ClCompile Include="enumIndex.cpp" />
     <ClCompile Include="FractionClass.cpp" />
     <ClCompile Include="hiLo.cpp" />
@@ -189,6 +190,7 @@
     <ClInclude Include="countApples.h" />
     <ClInclude Include="cppMan.h" />
     <ClInclude Include="deck52.h" />
+    <ClInclude Include="dynamicAllocation.h" />
     <ClInclude Include="enumIndex.h" />
     <ClInclude Include="FractionClass.h" />
     <ClInclude Include="perfectSquares.h" />

@@ -1,4 +1,5 @@
 #include <iostream>
+#include "dynamicAllocation.h"
 #include "bubbleSort.h"
 #include "input.h"
 #include "hiLo.h"
@@ -196,6 +197,10 @@ int main() {
 	}
 	case 43: {
 		runBubbleSort();
+		break;
+	}
+	case 44: {
+		runDynamicAllocation();
 		break;
 	}
 
