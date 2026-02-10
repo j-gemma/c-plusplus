@@ -25,8 +25,6 @@ int dynAlloc() {
 
 }
 
-
-
 int runDynamicAllocation() {
 	dynAlloc();	
 	return 0;

@@ -27,6 +27,7 @@
 #include "perfectSquares.h"
 #include "roscoes.h"
 #include "deck52.h"
+#include "funcPointerCalculator.h"
 
 int askWhichPgm() {
 	return getTFromUser<int>("Which program?\n");
@@ -203,12 +204,15 @@ int main() {
 		runDynamicAllocation();
 		break;
 	}
+	case 45: {
+		runPointerCalculator();
+		break;
+	}
 
 	default: {
 		std::cout << "Default case";
 		break;
 	}
-	}
-
+  } 
 	return 0;
 }

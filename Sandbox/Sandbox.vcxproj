@@ -150,6 +150,7 @@
     <ClCompile Include="dynamicAllocation.cpp" />
     <ClCompile Include="enumIndex.cpp" />
     <ClCompile Include="FractionClass.cpp" />
+    <ClCompile Include="funcPointerCalculator.cpp" />
     <ClCompile Include="hiLo.cpp" />
     <ClCompile Include="isPrime.cpp" />
     <ClCompile Include="main.cpp" />
@@ -193,6 +194,7 @@
     <ClInclude Include="dynamicAllocation.h" />
     <ClInclude Include="enumIndex.h" />
     <ClInclude Include="FractionClass.h" />
+    <ClInclude Include="funcPointerCalculator.h" />
     <ClInclude Include="perfectSquares.h" />
     <ClInclude Include="Point2d.h" />
     <ClInclude Include="Point3d.h" />
