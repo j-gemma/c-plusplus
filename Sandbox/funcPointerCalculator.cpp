@@ -2,6 +2,7 @@
 
 
 void runPointerCalculator() {
+	while (true) {
 	UserInput ui;
 	char op{ ui.getOperator() };
 	ArithmeticFunction fcn{ getArithmeticFunction(op) };
@@ -10,6 +11,8 @@ void runPointerCalculator() {
 
 	std::cout << '\n' << x << ' ' << op << ' ' << y << " = " << fcn(x, y) << '\n';
 	//std::cout << (fcn(ui.getFirstNum(), ui.getSecondNum()));
+
+	}
 }
 
 int add(int x, int y) {

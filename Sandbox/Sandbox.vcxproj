@@ -149,6 +149,7 @@
     <ClCompile Include="deck52.cpp" />
     <ClCompile Include="dynamicAllocation.cpp" />
     <ClCompile Include="enumIndex.cpp" />
+    <ClCompile Include="recurse.cpp" />
     <ClCompile Include="FractionClass.cpp" />
     <ClCompile Include="funcPointerCalculator.cpp" />
     <ClCompile Include="hiLo.cpp" />
@@ -193,6 +194,7 @@
     <ClInclude Include="deck52.h" />
     <ClInclude Include="dynamicAllocation.h" />
     <ClInclude Include="enumIndex.h" />
+    <ClInclude Include="recurse.h" />
     <ClInclude Include="FractionClass.h" />
     <ClInclude Include="funcPointerCalculator.h" />
     <ClInclude Include="perfectSquares.h" />

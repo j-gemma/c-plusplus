@@ -28,6 +28,7 @@
 #include "roscoes.h"
 #include "deck52.h"
 #include "funcPointerCalculator.h"
+#include "recurse.h"
 
 int askWhichPgm() {
 	return getTFromUser<int>("Which program?\n");
@@ -206,6 +207,18 @@ int main() {
 	}
 	case 45: {
 		runPointerCalculator();
+		break;
+	}
+	case 46: {
+		runFactorial();
+		break;
+	}
+	case 47: {
+		runSumDigits();
+		break;
+	}
+	case 48: {
+		runIntToBinary();
 		break;
 	}
 
