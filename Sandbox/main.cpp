@@ -29,6 +29,7 @@
 #include "deck52.h"
 #include "funcPointerCalculator.h"
 #include "recurse.h"
+#include "lambda.h"
 
 int askWhichPgm() {
 	return getTFromUser<int>("Which program?\n");
@@ -219,6 +220,14 @@ int main() {
 	}
 	case 48: {
 		runIntToBinary();
+		break;
+	}
+	case 49: {
+		runFindBestStudent();
+		break;
+	}
+	case 50: {
+		runSortSeasons();
 		break;
 	}
 

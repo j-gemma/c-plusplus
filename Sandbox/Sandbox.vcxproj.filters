@@ -132,6 +132,9 @@
     <ClCompile Include="recurse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lambda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h">
@@ -255,6 +258,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="recurse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lambda.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

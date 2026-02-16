@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
+#include <algorithm>
 #include "input.h"
+
 int factorial(int i);
 
 int runFactorial();
@@ -14,3 +16,4 @@ int getInt();
 void intToBinary(unsigned int i);
 
 int runIntToBinary();
+
