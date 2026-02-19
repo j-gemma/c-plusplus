@@ -230,6 +230,10 @@ int main() {
 		runSortSeasons();
 		break;
 	}
+	case 51: {
+		runSquareGame();
+		break;
+	}
 
 	default: {
 		std::cout << "Default case";

@@ -2,6 +2,37 @@
 #include <array>
 #include <iostream>
 #include <algorithm>
+#include "input.h"
+#include "ClassRandom.h"
+
+class GameState {
+
+private:
+    const int MIN_START{ 1 };
+    const int MIN_COUNT{ 1 };
+    const int m_start{};
+    const int m_howMany{};
+    const int m_mult{};
+    std::vector<int> m_generated{};
+
+    int getStartInt(int min);
+    int getHowMany(int min);
+
+public:
+
+    GameState()
+        : m_start{ GameState::getStartInt(MIN_START) }
+        , m_howMany{ GameState::getHowMany(MIN_COUNT) }
+        , m_mult{ Random::get(2, 4) }
+    {
+        for (int i{ m_start }; i < m_start + m_howMany; ++i)
+        {
+            m_generated.push_back(i * i * m_mult);
+        }
+        std::cout << std::format("I have generated {} square numbers.\
+Do you know what each number is after multiplying it by {}?", m_howMany, m_mult);
+    }
+};
 
 struct Student {
     const std::string_view m_name{};
@@ -37,3 +68,5 @@ void runFindBestStudent();
 int sortSeasons();
 
 void runSortSeasons();
+
+void runSquareGame();

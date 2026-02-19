@@ -13,7 +13,6 @@ double getDoubleFromUser(void) {
 	ignoreLine();
 	return x;
 
-
 }
 
 double getDoubleFromUser(std::string message) {
@@ -97,6 +96,37 @@ int getIntFromUserWithBounds(std::string message, int lbound, int ubound) {
 		return x;
 	}
 
+}
+
+int getIntFromUserWithLowerBound(std::string message, int lbound) {
+	while (true) {
+		int x{};
+		std::cout << message;
+		std::cin >> x;
+
+		if (!std::cin) {
+			//Handle failure
+			message = "Whoops! Try again.";
+			std::cin.clear();
+			ignoreLine();
+			continue;
+		}
+
+		//If extraneous input, treat as failure case
+		if (hasUnextractedInput()) {
+			ignoreLine();
+			continue;
+		}
+
+		if (x < lbound) {
+			message = "Whoops! Try again.";
+			continue;
+		}
+
+		ignoreLine();
+		return x;
+
+	}
 }
 
 char getCharFromUser(std::string message) {

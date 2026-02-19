@@ -30,4 +30,14 @@ void runSortSeasons() {
 	sortSeasons();
 }
 
+int GameState::getStartInt(int min) {
+	return { getIntFromUserWithLowerBound("Start where? ", min)};
+}
 
+int GameState::getHowMany(int min) {
+	return { getIntFromUserWithLowerBound("How many?", min)};
+}
+
+void runSquareGame() {
+	GameState newState{};
+}
