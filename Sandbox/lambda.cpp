@@ -38,6 +38,33 @@ int GameState::getHowMany(int min) {
 	return { getIntFromUserWithLowerBound("How many?", min)};
 }
 
-void runSquareGame() {
+bool GameState::playGame() {
+	int guess{ getTFromUser<int>(std::format("I have generated {} square numbers.\
+        Do you know what each number is after multiplying it by {}?\n", m_howMany, m_mult)) };
+
+	auto found{ std::find(m_generated.begin(), m_generated.end(), guess)};
+
+	if(found == m_generated.end())
+	{
+		auto closest{ std::min_element(m_generated.begin(), m_generated.end(), [guess](int a, int b) {
+			return abs(a - guess) < abs(b - guess); }) };
+
+		std::cout << std::format("{} is wrong! Try {} next time", guess, *closest);
+	}
+
+	else {
+		m_generated.erase(found);
+		getTFromUser<int>(std::format("Nice! {} number(s) left.\n", m_generated.size()));
+	}
+
+	return false;
+
+}
+
+
+bool runSquareGame() {
 	GameState newState{};
+	bool win{ newState.playGame() };
+
+	return win;
 }

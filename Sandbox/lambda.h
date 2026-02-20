@@ -2,6 +2,7 @@
 #include <array>
 #include <iostream>
 #include <algorithm>
+#include <cmath>
 #include "input.h"
 #include "ClassRandom.h"
 
@@ -29,9 +30,10 @@ public:
         {
             m_generated.push_back(i * i * m_mult);
         }
-        std::cout << std::format("I have generated {} square numbers.\
-Do you know what each number is after multiplying it by {}?", m_howMany, m_mult);
+        
     }
+
+    bool playGame();
 };
 
 struct Student {
@@ -69,4 +71,4 @@ int sortSeasons();
 
 void runSortSeasons();
 
-void runSquareGame();
+bool runSquareGame();
