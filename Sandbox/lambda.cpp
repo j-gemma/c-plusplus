@@ -38,9 +38,14 @@ int GameState::getHowMany(int min) {
 	return { getIntFromUserWithLowerBound("How many?", min)};
 }
 
-bool GameState::playGame() {
-	int guess{ getTFromUser<int>(std::format("I have generated {} square numbers.\
-        Do you know what each number is after multiplying it by {}?\n", m_howMany, m_mult)) };
+void GameState::playGame() {
+	const std::string START_MESSAGE{ std::format("I have generated {} square numbers.\
+    Do you know what each number is after multiplying it by {}?\n", m_howMany, m_mult) };
+
+	static std::string message{ START_MESSAGE };
+
+	while (!m_win && !m_lose) {
+	int guess{ getTFromUser<int>(message) };
 
 	auto found{ std::find(m_generated.begin(), m_generated.end(), guess)};
 
@@ -50,21 +55,31 @@ bool GameState::playGame() {
 			return abs(a - guess) < abs(b - guess); }) };
 
 		std::cout << std::format("{} is wrong! Try {} next time", guess, *closest);
+		m_lose = true;
 	}
 
 	else {
 		m_generated.erase(found);
-		getTFromUser<int>(std::format("Nice! {} number(s) left.\n", m_generated.size()));
+		size_t currSize{ m_generated.size() };
+		switch(currSize) {
+			case 0: {
+				m_win = true;
+				std::cout << "Nice! You found all the numbers, good job!";
+				break;
+			}
+			default: {
+				message = std::format("Nice! {} number(s) left.\n", currSize);
+				break;
+			}
+		}
+		}	
 	}
-
-	return false;
-
 }
 
 
-bool runSquareGame() {
+int runSquareGame() {
 	GameState newState{};
-	bool win{ newState.playGame() };
-
-	return win;
+	newState.playGame();
+	
+	return 0;
 }

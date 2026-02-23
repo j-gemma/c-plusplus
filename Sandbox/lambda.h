@@ -14,6 +14,8 @@ private:
     const int m_start{};
     const int m_howMany{};
     const int m_mult{};
+    bool m_win{ false };
+    bool m_lose{ false };
     std::vector<int> m_generated{};
 
     int getStartInt(int min);
@@ -33,7 +35,7 @@ public:
         
     }
 
-    bool playGame();
+    void playGame();
 };
 
 struct Student {
@@ -71,4 +73,4 @@ int sortSeasons();
 
 void runSortSeasons();
 
-bool runSquareGame();
+int runSquareGame();
