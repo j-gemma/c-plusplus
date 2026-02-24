@@ -1,11 +1,11 @@
 #pragma once
 #include <iosfwd> // forward declare streams
 
-class FractionClass {
+class Fraction {
 public:
-    explicit FractionClass(int num = 0, int den = 1);
+    explicit Fraction(int num = 0, int den = 1);
 
-    FractionClass multiply(const FractionClass& f1);
+    Fraction multiply(const Fraction& f1);
     
     int getNumerator() const;
 
@@ -18,4 +18,4 @@ private:
 
 void runFractionClass();
 
-void printFraction(FractionClass f);
+void printFraction(Fraction f);
