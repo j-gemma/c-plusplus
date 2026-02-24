@@ -35,7 +35,7 @@ int GameState::getStartInt(int min) {
 }
 
 int GameState::getHowMany(int min) {
-	return { getIntFromUserWithLowerBound("How many?", min)};
+	return { getIntFromUserWithLowerBound("How many? ", min)};
 }
 
 void GameState::playGame() {
@@ -83,3 +83,18 @@ int runSquareGame() {
 	
 	return 0;
 }
+
+//function prototypes Chapter 20 Quiz q1 
+/*
+double max(double a, double b);
+
+me: void swap(int a, int b);
+
+correct: void swap(int& a, int& b);
+
+int& getLargestElement(std::array<int>, int length)
+
+correct: int& getLargestElement(int* array, int length)o
+
+TIP: use a pointer to the array type for the address of a dynamically allocated array
+*/

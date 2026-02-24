@@ -26,7 +26,7 @@ public:
     GameState()
         : m_start{ GameState::getStartInt(MIN_START) }
         , m_howMany{ GameState::getHowMany(MIN_COUNT) }
-        , m_mult{ Random::get(2, 4) }
+        , m_mult{ Random::get(2, 6) }
     {
         for (int i{ m_start }; i < m_start + m_howMany; ++i)
         {

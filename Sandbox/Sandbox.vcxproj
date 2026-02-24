@@ -141,6 +141,7 @@
     <ClCompile Include="aliasesEX.cpp" />
     <ClCompile Include="arrayLoop.cpp" />
     <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="binarySearch.cpp" />
     <ClCompile Include="calculateAdRevenue.cpp" />
     <ClCompile Include="ch17ArraysPt1.cpp" />
     <ClCompile Include="ClassRandom.cpp" />
@@ -185,6 +186,7 @@
     <ClInclude Include="arithmetic.h" />
     <ClInclude Include="arrayLoop.h" />
     <ClInclude Include="Ball.h" />
+    <ClInclude Include="binarySearch.h" />
     <ClInclude Include="bubbleSort.h" />
     <ClInclude Include="calculateAdRevenue.h" />
     <ClInclude Include="ch17ArraysPt1.h" />

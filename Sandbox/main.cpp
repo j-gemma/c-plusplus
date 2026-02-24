@@ -30,6 +30,7 @@
 #include "funcPointerCalculator.h"
 #include "recurse.h"
 #include "lambda.h"
+#include "binarySearch.h"
 
 int askWhichPgm() {
 	return getTFromUser<int>("Which program?\n");
@@ -232,6 +233,10 @@ int main() {
 	}
 	case 51: {
 		runSquareGame();
+		break;
+	}
+	case 52: {
+		runBinarySearch();
 		break;
 	}
 
