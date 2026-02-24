@@ -31,6 +31,7 @@
 #include "recurse.h"
 #include "lambda.h"
 #include "binarySearch.h"
+#include "operatorOverloads.h"
 
 int askWhichPgm() {
 	return getTFromUser<int>("Which program?\n");
@@ -237,6 +238,10 @@ int main() {
 	}
 	case 52: {
 		runBinarySearch();
+		break;
+	}
+	case 53: {
+		runOperatorOverloads();
 		break;
 	}
 

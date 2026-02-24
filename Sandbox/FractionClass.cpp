@@ -5,8 +5,12 @@
 Fraction::Fraction(int num, int den)
 	: m_numerator{ num }, m_denominator{ den }
 	{
-
+	reduce();
 	}
+
+void Fraction::print() const {
+	std::cout << m_numerator << '/' << m_denominator << '\n';
+}
 
 Fraction Fraction::multiply(const Fraction& f) {
 	return Fraction{ m_numerator * f.m_numerator, m_denominator * f.m_denominator };
@@ -36,11 +40,27 @@ void runFractionClass() {
 	Fraction f2{ getFractionFromUser() };
 
 	std::cout << "Your fractions multiplied together: "; 
-	printFraction(f1.multiply(f2));
+	f1.multiply(f2).print();
 
 	return;
 }
 
-void printFraction(Fraction f) {
-	std::cout << f.getNumerator() << '/' << f.getDenominator() << '\n';
+Fraction operator*(const Fraction& a, const Fraction& b) {
+	return Fraction(a.m_numerator * b.m_numerator, a.m_denominator * b.m_denominator);
 }
+
+void Fraction::reduce() {
+	int gcd{ std::gcd(m_numerator, m_denominator) };
+	if (gcd) {
+		m_numerator /= gcd;
+		m_denominator /= gcd;
+	}
+
+}
+
+
+//Fraction operator*(Fraction a, int b) {
+//	return Fraction(a.m_numerator * b, a.m_denominator);
+//}
+
+//Fraction operator*(int a, Fraction b) { return operator*(b, a); }

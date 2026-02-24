@@ -151,6 +151,7 @@
     <ClCompile Include="dynamicAllocation.cpp" />
     <ClCompile Include="enumIndex.cpp" />
     <ClCompile Include="lambda.cpp" />
+    <ClCompile Include="operatorOverloads.cpp" />
     <ClCompile Include="recurse.cpp" />
     <ClCompile Include="FractionClass.cpp" />
     <ClCompile Include="funcPointerCalculator.cpp" />
@@ -198,6 +199,7 @@
     <ClInclude Include="dynamicAllocation.h" />
     <ClInclude Include="enumIndex.h" />
     <ClInclude Include="lambda.h" />
+    <ClInclude Include="operatorOverloads.h" />
     <ClInclude Include="recurse.h" />
     <ClInclude Include="FractionClass.h" />
     <ClInclude Include="funcPointerCalculator.h" />
