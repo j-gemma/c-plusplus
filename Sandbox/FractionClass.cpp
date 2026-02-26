@@ -1,6 +1,4 @@
-#include <iostream>
 #include "FractionClass.h"
-#include "input.h"
 
 Fraction::Fraction(int num, int den)
 	: m_numerator{ num }, m_denominator{ den }
@@ -47,6 +45,29 @@ void runFractionClass() {
 
 Fraction operator*(const Fraction& a, const Fraction& b) {
 	return Fraction(a.m_numerator * b.m_numerator, a.m_denominator * b.m_denominator);
+}
+
+std::ostream& operator<<(std::ostream& out, const Fraction& f) {
+
+    out << f.m_numerator << '/' << f.m_denominator;
+
+    return out;
+
+}
+
+std::istream& operator>>(std::istream& in, Fraction& f) {
+    
+	int x{};
+    int y{};
+	char ignore{};
+
+    in >> x >> ignore >> y;
+    if (y == 0) in.setstate(std::ios_base::failbit);
+
+    f = in ? Fraction{ x, y } : Fraction{};
+    
+    return in;
+
 }
 
 void Fraction::reduce() {

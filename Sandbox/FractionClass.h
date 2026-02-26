@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
 #include <numeric>
-#include <iosfwd> // forward declare streams
+#include <iosfwd> // forward declare streamso
+#include "input.h"
 
 class Fraction {
 public:
@@ -15,9 +16,38 @@ public:
 
     void print() const;
 
-   void reduce();
+    void reduce();
 
     friend Fraction operator*(const Fraction& a, const Fraction& b);
+
+    friend std::ostream& operator<<(std::ostream& out, const Fraction& f);
+
+    friend std::istream& operator>>(std::istream& in, Fraction& f);
+
+    friend bool operator==(const Fraction f1, const Fraction f2){ 
+        return (f1.m_numerator == f2.m_numerator) && (f1.m_denominator == f2.m_denominator); 
+    }
+
+    friend bool operator!=(const Fraction f1, const Fraction f2) {
+        return (!operator==(f1, f2));
+    }
+
+    friend bool operator<(const Fraction f1, const Fraction f2) {
+        return (f2.m_denominator * f1.m_numerator) < (f1.m_denominator * f2.m_numerator);
+    }
+
+    friend bool operator>(const Fraction f1, const Fraction f2) {
+        return operator<(f2, f1);
+    }
+
+    friend bool operator<=(const Fraction f1, const Fraction f2) {
+        return !operator>(f1, f2);
+    }
+
+    friend bool operator>=(const Fraction f1, const Fraction f2) {
+        return !operator<(f1, f2);
+    }
+
 
    // friend Fraction operator*(const Fraction& a, int b);
 

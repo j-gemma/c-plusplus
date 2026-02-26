@@ -143,6 +143,7 @@
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="binarySearch.cpp" />
     <ClCompile Include="calculateAdRevenue.cpp" />
+    <ClCompile Include="Car.cpp" />
     <ClCompile Include="ch17ArraysPt1.cpp" />
     <ClCompile Include="ClassRandom.cpp" />
     <ClCompile Include="countApples.cpp" />
@@ -190,6 +191,7 @@
     <ClInclude Include="binarySearch.h" />
     <ClInclude Include="bubbleSort.h" />
     <ClInclude Include="calculateAdRevenue.h" />
+    <ClInclude Include="Car.h" />
     <ClInclude Include="ch17ArraysPt1.h" />
     <ClInclude Include="ClassRandom.h" />
     <ClInclude Include="constants.h" />

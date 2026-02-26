@@ -25,6 +25,8 @@ public:
 
 	bool isEqual(Point3d p) const;
 
+	Point3d operator+() const;
+
 };
 
 void runClassExample();

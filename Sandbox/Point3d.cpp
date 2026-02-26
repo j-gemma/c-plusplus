@@ -19,6 +19,10 @@ bool Point3d::isEqual(Point3d p) const {
 	return (m_x == p.m_x && m_y == p.m_y && m_z == p.m_z);
 }
 
+Point3d Point3d::operator+() const {
+	return *this;
+}
+
 void Point3d::moveByVector(const Vector3d& v) {
 	m_x += v.m_x;
 	m_y += v.m_y;
