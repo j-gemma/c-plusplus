@@ -105,6 +105,27 @@ int testGradeMap() {
 	return 0;
 }
 
+std::ostream& operator<<(std::ostream& out, const MyString& str) 
+{
+	out << str.m_str;
+
+	return out;
+}
+
+std::string_view MyString::operator()(int startIdx, int len) {
+	std::string_view look{ m_str };
+
+	return std::string_view{ m_str }.substr(static_cast<size_t>(startIdx), static_cast<size_t>(len));
+}
+
+int testMyString() {
+	
+	MyString s{ "Hello, world!" };
+	std::cout << s(7, 5) << '\n'; // start at index 7 and return 5 characters
+
+	return 0;
+}
+
 int runOperatorOverloads()
 {
     std::cout << "Question 1A: \n";
@@ -130,6 +151,10 @@ int runOperatorOverloads()
 	std::cout << "-----------------------------------------\n";
 
 	testGradeMap();
+	
+	std::cout << "-----------------------------------------\n";
+
+	testMyString();
 
 	return 0;
 }

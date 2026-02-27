@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <string>
 #include <vector>
+#include <iostream>
 
 #include "FractionClass.h"
 
@@ -15,6 +16,22 @@ class GradeMap {
 
 public:
 	char& operator[](std::string_view name);
+};
+
+class MyString {
+
+private:
+	std::string m_str{};
+
+public:
+
+	MyString(std::string s)
+		:m_str{s}
+	{ }
+
+	friend std::ostream& operator<<(std::ostream& out, const MyString& str);
+	
+	std::string_view operator()(int startIdx, int len);
 };
 
 
