@@ -126,6 +126,68 @@ int testMyString() {
 	return 0;
 }
 
+int testAverageClass() {
+	Average avg{};
+	std::cout << avg << '\n';
+
+	avg += 4;
+	std::cout << avg << '\n'; // 4 / 1 = 4
+
+	avg += 8;
+	std::cout << avg << '\n'; // (4 + 8) / 2 = 6
+
+	avg += 24;
+	std::cout << avg << '\n'; // (4 + 8 + 24) / 3 = 12
+
+	avg += -10;
+	std::cout << avg << '\n'; // (4 + 8 + 24 - 10) / 4 = 6.5
+
+	(avg += 6) += 10; // 2 calls chained together
+	std::cout << avg << '\n'; // (4 + 8 + 24 - 10 + 6 + 10) / 6 = 7
+
+	Average copy{ avg };
+	std::cout << copy << '\n';
+
+	return 0;
+}
+
+Average& Average::operator+=(std::int32_t toAdd) {
+	m_total += toAdd;
+	m_count++;
+	return *this;
+}
+
+IntArray fillArray()
+{
+	IntArray a(5);
+
+	a[0] = 5;
+	a[1] = 8;
+	a[2] = 2;
+	a[3] = 3;
+	a[4] = 6;
+
+	return a;
+}
+
+int testIntArray() {
+	IntArray a{ fillArray() };
+
+//	std::cout << a << '\n';
+
+//	auto& ref{ a }; // we're using this reference to avoid compiler self-assignment errors
+//	a = ref;
+
+//	IntArray b(1);
+//	b = a;
+
+//	a[4] = 7;
+
+//	std::cout << b << '\n';
+
+	return 0;
+}
+
 int runOperatorOverloads()
 {
     std::cout << "Question 1A: \n";
@@ -155,6 +217,14 @@ int runOperatorOverloads()
 	std::cout << "-----------------------------------------\n";
 
 	testMyString();
+
+	std::cout << "-----------------------------------------\n";
+
+	testAverageClass();
+
+	std::cout << "-----------------------------------------\n";
+
+	testIntArray();
 
 	return 0;
 }

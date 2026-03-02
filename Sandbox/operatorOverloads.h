@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <cassert>
 
 #include "FractionClass.h"
 
@@ -34,6 +35,41 @@ public:
 	std::string_view operator()(int startIdx, int len);
 };
 
+class Average {
+
+private:
+	std::int32_t m_total{};
+	int m_count{};
+
+public:
+
+	Average() {}
+
+	Average& operator+=(std::int32_t toAdd);
+	
+	friend std::ostream& operator<<(std::ostream& out, const Average avg) {
+		if (avg.m_count == 0) out << 0;
+
+		else out << static_cast<double>(avg.m_total) / avg.m_count;
+
+		return out;}
+	
+};
+
+class IntArray {
+private:
+	int* m_arr[];
+
+public:
+	IntArray(int size){
+		assert(size > 0 && "Oops! Please provide positive array size!\n");
+
+		int* m_arr{ new int[size] {} };
+	
+
+	}
+
+};
 
 void question1A();
 
