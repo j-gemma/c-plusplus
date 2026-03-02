@@ -58,18 +58,22 @@ public:
 
 class IntArray {
 private:
+	int m_length;
 	int* m_arr[];
 
 public:
-	IntArray(int size){
-		assert(size > 0 && "Oops! Please provide positive array size!\n");
+	IntArray(int len)
+		:m_length{ len }
+	{
+		assert(m_length > 0 && "Oops! Please provide positive array size!\n");
 
-		int* m_arr{ new int[size] {} };
-	
+		int* m_arr{ new int[m_length]{} }
 
 	}
 
 };
+
+int testIntArray();
 
 void question1A();
 
