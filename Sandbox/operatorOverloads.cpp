@@ -93,6 +93,8 @@ char& GradeMap::operator[](const std::string_view name) {
 	}
 }
 
+
+
 int testGradeMap() {
 	GradeMap grades{};
 
@@ -170,20 +172,46 @@ IntArray fillArray()
 	return a;
 }
 
+void IntArray::deepCopy(const IntArray& source) {
+	delete[] m_arr;
+
+	m_length = source.m_length;
+
+	if (source.m_arr) {
+		m_arr = new int[static_cast<size_t>(m_length)];
+
+		for (int i{}; i < m_length; i++) {
+			m_arr[i] = source.m_arr[i];
+
+		}
+	}
+	else m_arr = nullptr;
+}
+
+IntArray& IntArray::operator=(const IntArray& source) {
+	if (this != &source) deepCopy(source);
+	return *this;
+}
+
+//int& IntArray::operator[](const size_t index) {
+//	assert(index >= 0 && index < m_length);
+//	return m_arr[index];
+//}
+
 int testIntArray() {
 	IntArray a{ fillArray() };
 
-//	std::cout << a << '\n';
+	std::cout << a << '\n';
 
-//	auto& ref{ a }; // we're using this reference to avoid compiler self-assignment errors
-//	a = ref;
+	auto& ref{ a }; // we're using this reference to avoid compiler self-assignment errors
+	a = ref;
 
-//	IntArray b(1);
-//	b = a;
+	IntArray b(1);
+	b = a;
 
-//	a[4] = 7;
+	a[4] = 7;
 
-//	std::cout << b << '\n';
+	std::cout << b << '\n';
 
 	return 0;
 }

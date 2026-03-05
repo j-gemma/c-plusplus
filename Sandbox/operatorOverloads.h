@@ -53,23 +53,52 @@ public:
 		else out << static_cast<double>(avg.m_total) / avg.m_count;
 
 		return out;}
-	
+
+		
 };
 
 class IntArray {
 private:
-	int m_length;
-	int* m_arr[];
+	int m_length{ 0 };
+	int* m_arr{ nullptr };
 
 public:
-	IntArray(int len)
+	explicit IntArray(int len)
 		:m_length{ len }
 	{
 		assert(m_length > 0 && "Oops! Please provide positive array size!\n");
 
-		int* m_arr{ new int[m_length]{} }
+		m_arr = new int[static_cast<size_t>(m_length)] {};
 
 	}
+
+	~IntArray() {
+		delete m_arr;
+	}
+
+void deepCopy(const IntArray& source);
+
+IntArray& operator=(const IntArray& source);
+
+//int& operator[](const size_t index);
+
+int& operator[](const size_t index) {
+	assert(index < m_length);
+	return m_arr[index];
+}
+
+int& operator[](const size_t index) const {
+	assert(index < m_length);
+	return m_arr[index];
+}
+
+friend std::ostream& operator<<(std::ostream& out, const IntArray& arr) {
+	for (size_t i{}; i < arr.m_length; i++) {
+		out << arr[i] << " ";
+	}
+
+	return out;
+}
 
 };
 
