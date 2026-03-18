@@ -72,6 +72,12 @@ public:
 
 	}
 
+	IntArray(const IntArray& source)
+		: m_length{ source.m_length }
+	{
+		if (this != &source) deepCopy(source);
+	}
+
 	~IntArray() {
 		delete m_arr;
 	}
@@ -102,7 +108,42 @@ friend std::ostream& operator<<(std::ostream& out, const IntArray& arr) {
 
 };
 
+class FixedPoint2 {
+private:
+	__int16 m_base{};
+	__int8 m_decimal{};
+
+public:
+
+	FixedPoint2(__int16 whole, __int8 frac)
+	:m_base{}
+	,m_decimal{}{
+		bool negative{};
+		if (whole < 0 || frac < 0) negative = true;
+
+		m_base = static_cast<__int16>(abs(whole) + abs(frac/100));
+		m_decimal = static_cast<__int8>(abs(frac % 100));
+
+		if (negative) {
+			m_base = -m_base;
+			m_decimal = -m_decimal;
+		}
+	}
+
+	bool friend testDecimal(const FixedPoint2& fp);
+
+	operator double() const {
+		if (m_base < 0 || m_decimal < 0) return { -(abs(m_base) + (abs(m_decimal / 100.0))) };
+		else return m_base + (m_decimal / 100.0);
+	}
+
+};
+
 int testIntArray();
+
+int test1FixedPoint2();
+
+int test2FixedPoint2();
 
 void question1A();
 
