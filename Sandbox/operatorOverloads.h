@@ -52,9 +52,8 @@ public:
 
 		else out << static_cast<double>(avg.m_total) / avg.m_count;
 
-		return out;}
-
-		
+		return out;
+	}
 };
 
 class IntArray {
@@ -105,7 +104,6 @@ friend std::ostream& operator<<(std::ostream& out, const IntArray& arr) {
 
 	return out;
 }
-
 };
 
 class FixedPoint2 {
@@ -141,14 +139,12 @@ public:
 
 	friend bool testDecimal(const FixedPoint2& fp);
 
-
 	explicit operator double() const {
 		if (m_base < 0 || m_decimal < 0) return { -(abs(m_base) + (abs(m_decimal / 100.0))) };
 		else return m_base + (m_decimal / 100.0);
 	}
 
 };
-
 
 int testIntArray();
 
