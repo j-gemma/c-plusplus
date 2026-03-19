@@ -216,6 +216,12 @@ int testIntArray() {
 	return 0;
 }
 
+// This doesn't require access to the internals of the class, so it can be defined outside the class
+std::ostream& operator<<(std::ostream& out, const FixedPoint2& fp)
+{
+	out << static_cast<double>(fp);
+	return out;
+}
 
 int test1FixedPoint2() {
 	FixedPoint2 a{ 34, 56 };
@@ -279,6 +285,48 @@ int test2FixedPoint2() {
 	return 0;
 }
 
+int test3FixedPoint2() {
+
+	FixedPoint2 a{ 0.01 };
+	std::cout << a << '\n';
+
+	assert(static_cast<double>(a) == 0.01);
+
+	FixedPoint2 b{ -0.01 };
+	std::cout << b << '\n';
+
+	assert(static_cast<double>(b) == -0.01);
+
+	FixedPoint2 c{ 1.9 }; // make sure we handle single digit decimal
+	std::cout << c << '\n';
+
+	assert(static_cast<double>(c) == 1.9);
+
+	FixedPoint2 d{ 5.01 }; // stored as 5.0099999... so we'll need to round this
+	std::cout << d << '\n';
+
+	assert(static_cast<double>(d) == 5.01);
+
+	FixedPoint2 e{ -5.01 }; // stored as -5.0099999... so we'll need to round this
+	std::cout << e << '\n';
+
+	assert(static_cast<double>(e) == -5.01);
+
+	// Handle case where the argument's decimal rounds to 100 (need to increase base by 1)
+	FixedPoint2 f{ 106.9978 }; // should be stored with base 107 and decimal 0
+	std::cout << f << '\n';
+
+	assert(static_cast<double>(f) == 107.0);
+
+	// Handle case where the argument's decimal rounds to -100 (need to decrease base by 1)
+	FixedPoint2 g{ -106.9978 }; // should be stored with base -107 and decimal 0
+	std::cout << g << '\n';
+
+	assert(static_cast<double>(g) == -107.0);
+
+	return 0;
+}
+
 int runOperatorOverloads()
 {
     std::cout << "Question 1A: \n";
@@ -325,6 +373,9 @@ int runOperatorOverloads()
 
 	test2FixedPoint2();
 
+	std::cout << "-----------------------------------------\n";
+
+	test3FixedPoint2();
 
 	return 0;
 }

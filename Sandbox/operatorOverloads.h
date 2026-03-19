@@ -116,8 +116,9 @@ private:
 public:
 
 	FixedPoint2(__int16 whole, __int8 frac)
-	:m_base{}
-	,m_decimal{}{
+		:m_base{}
+		,m_decimal{}
+	{
 		bool negative{};
 		if (whole < 0 || frac < 0) negative = true;
 
@@ -130,14 +131,24 @@ public:
 		}
 	}
 
-	bool friend testDecimal(const FixedPoint2& fp);
+	FixedPoint2(double d)
+		:m_base{}
+		, m_decimal{}
+	{
+		*this = FixedPoint2(static_cast<__int16>(std::floor(d)), static_cast<__int8>(100*(d - std::floor(d))));
+		
+	}
 
-	operator double() const {
+	friend bool testDecimal(const FixedPoint2& fp);
+
+
+	explicit operator double() const {
 		if (m_base < 0 || m_decimal < 0) return { -(abs(m_base) + (abs(m_decimal / 100.0))) };
 		else return m_base + (m_decimal / 100.0);
 	}
 
 };
+
 
 int testIntArray();
 
