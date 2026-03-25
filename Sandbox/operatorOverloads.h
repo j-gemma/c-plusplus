@@ -129,13 +129,26 @@ public:
 		}
 	}
 
-	FixedPoint2(double d)
-		:m_base{}
-		, m_decimal{}
+	// We'll delegate to the prior constructor so we don't have to duplicate the negative number and overflow handling logic
+	FixedPoint2(double d) :
+		FixedPoint2(
+			static_cast<std::int16_t>(std::trunc(d)),
+			static_cast<std::int8_t>(std::round(d * 100) - std::trunc(d) * 100)
+		)
 	{
-		*this = FixedPoint2(static_cast<__int16>(std::floor(d)), static_cast<__int8>(100*(d - std::floor(d))));
-		
 	}
+
+	//FixedPoint2(double d)
+	//{
+	//	bool negative{(d < 0)};
+
+	//	double abs_d{ abs(d) };
+	//	int floor_abs_d{ static_cast<int>(floor(abs_d)) };
+	//	
+	//	negative ? *this = FixedPoint2(-static_cast<__int16>(floor_abs_d), static_cast<__int8>(-round(100 * (abs_d - floor_abs_d))))
+	//		: *this = FixedPoint2(static_cast<__int16>(std::floor(d)), static_cast<__int8>(round(100 * (abs_d) - floor_abs_d)));
+
+	//}
 
 	friend bool testDecimal(const FixedPoint2& fp);
 
@@ -143,6 +156,9 @@ public:
 		if (m_base < 0 || m_decimal < 0) return { -(abs(m_base) + (abs(m_decimal / 100.0))) };
 		else return m_base + (m_decimal / 100.0);
 	}
+	
+	friend bool operator==(FixedPoint2 fp1, FixedPoint2 fp2);
+
 
 };
 

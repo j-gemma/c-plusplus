@@ -223,6 +223,10 @@ std::ostream& operator<<(std::ostream& out, const FixedPoint2& fp)
 	return out;
 }
 
+bool operator==(FixedPoint2 fp1, FixedPoint2 fp2) {
+	return(fp1.m_base == fp2.m_base && fp1.m_decimal == fp2.m_decimal);
+}
+
 int test1FixedPoint2() {
 	FixedPoint2 a{ 34, 56 };
 	std::cout << a << '\n';
