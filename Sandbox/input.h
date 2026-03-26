@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include <optional>
+#include <limits>
 
 double getDoubleFromUser(void);
 

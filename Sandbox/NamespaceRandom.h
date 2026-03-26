@@ -11,7 +11,7 @@ namespace Random
 	// Returns a seeded Mersenne Twister
 	// Note: we'd prefer to return a std::seed_seq (to initialize a std::mt19937), but std::seed can't be copied, so it can't be returned by value.
 	// Instead, we'll create a std::mt19937, seed it, and then return the std::mt19937 (which can be copied).
-	inline std::mt19937 generate()
+	inline std::mt19937 gen()
 	{
 		std::random_device rd{};
 
@@ -25,7 +25,7 @@ namespace Random
 
 	// Here's our global std::mt19937 object.
 	// The inline keyword means we only have one global instance for our whole program.
-	inline std::mt19937 mt{ generate() }; // generates a seeded std::mt19937 and copies it into our global object
+	inline std::mt19937 mt{ gen() }; // generates a seeded std::mt19937 and copies it into our global object
 
 	// Generate a random int between [min, max] (inclusive)
 		// * also handles cases where the two arguments have different types but can be converted to int

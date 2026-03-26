@@ -127,7 +127,7 @@ namespace MonsterGenerator {
 			return "... ? em dnif ouy did woH";
 		}
 	}
-	Monster generate() {
+	Monster randMonst() {
 		return Monster{ Monster::Type(Random::get(0, Monster::Type::maxMonsterTypes - 1)), getName(Random::get(0, 5)), 
 						getRoar(Random::get(0, 5)), Random::get(0, 100) };
 	}
@@ -137,7 +137,7 @@ namespace MonsterGenerator {
 
 int runMonsterGenerator() {
 
-	Monster m{ MonsterGenerator::generate() };
+	Monster m{ MonsterGenerator::randMonst() };
 	m.print();
 
 	return 0;

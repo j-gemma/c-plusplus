@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <limits>
 #include "input.h"
 
 double getDoubleFromUser(void) {

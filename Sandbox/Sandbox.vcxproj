@@ -151,6 +151,7 @@
     <ClCompile Include="deck52.cpp" />
     <ClCompile Include="dynamicAllocation.cpp" />
     <ClCompile Include="enumIndex.cpp" />
+    <ClCompile Include="Game15Puzzle.cpp" />
     <ClCompile Include="lambda.cpp" />
     <ClCompile Include="operatorOverloads.cpp" />
     <ClCompile Include="recurse.cpp" />
@@ -200,6 +201,7 @@
     <ClInclude Include="deck52.h" />
     <ClInclude Include="dynamicAllocation.h" />
     <ClInclude Include="enumIndex.h" />
+    <ClInclude Include="Game15Puzzle.h" />
     <ClInclude Include="lambda.h" />
     <ClInclude Include="operatorOverloads.h" />
     <ClInclude Include="recurse.h" />

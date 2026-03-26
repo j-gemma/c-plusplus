@@ -1,3 +1,5 @@
+#include <format>
+
 #include "rangeBased.h"
 
 bool isNameInArray(std::vector<std::string_view>& names, std::string& key) {

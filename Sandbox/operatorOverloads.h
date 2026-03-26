@@ -4,6 +4,8 @@
 #include <vector>
 #include <iostream>
 #include <cassert>
+#include <cstdint>
+#include <cmath>
 
 #include "FractionClass.h"
 

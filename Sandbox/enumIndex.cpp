@@ -1,3 +1,4 @@
+#include <format>
 #include "enumIndex.h"
 
 int runEnumIndex() {

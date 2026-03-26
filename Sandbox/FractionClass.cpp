@@ -22,7 +22,7 @@ int Fraction::getDenominator() const {
 	return m_denominator;
 	}
 
-Fraction getFractionFromUser() {
+Fraction getUserFraction() {
 	int num = getIntFromUser("Enter a value for the numerator: ");
 
 	int temp{};
@@ -33,9 +33,9 @@ Fraction getFractionFromUser() {
 }
 
 void runFractionClass() {
-	Fraction f1{ getFractionFromUser() };
+	Fraction f1{ getUserFraction() };
 
-	Fraction f2{ getFractionFromUser() };
+	Fraction f2{ getUserFraction() };
 
 	std::cout << "Your fractions multiplied together: "; 
 	f1.multiply(f2).print();

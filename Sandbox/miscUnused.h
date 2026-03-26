@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 template<int N>
 constexpr int factorial() {

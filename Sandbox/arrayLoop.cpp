@@ -1,6 +1,4 @@
-
-//#include <format>
-
+#include <format>
 #include "arrayLoop.h"
 
 template <typename T>

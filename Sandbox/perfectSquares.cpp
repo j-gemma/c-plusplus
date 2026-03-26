@@ -1,3 +1,4 @@
+#include <format>
 #include "perfectSquares.h"
 
 static constexpr int squares[]{ 0, 1, 4, 9 };

@@ -1,3 +1,4 @@
+#include <format>
 #include "lambda.h"
 
 const auto best{
