@@ -138,6 +138,8 @@ public:
 	{
 	}
 
+	FixedPoint2 operator-() const;
+
 	//FixedPoint2(double d)
 	//{
 	//	bool negative{(d < 0)};
@@ -159,8 +161,11 @@ public:
 	
 	friend bool operator==(FixedPoint2 fp1, FixedPoint2 fp2);
 
+	friend std::istream& operator>>(std::istream& in, FixedPoint2& fp);
 
 };
+
+FixedPoint2 operator+(FixedPoint2 fp1, FixedPoint2 fp2);
 
 int testIntArray();
 

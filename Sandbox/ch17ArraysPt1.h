@@ -55,7 +55,6 @@ namespace Animal {
 
 				animal = static_cast<Animal::Type>(index);
 				return in;
-
 			}
 
 			in.setstate(std::ios_base::failbit);
