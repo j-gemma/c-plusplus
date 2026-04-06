@@ -38,9 +38,15 @@ int askWhichPgm() {
 }
 
 int main() {
-
+	
+bool loop{true};
+while(loop){
 	int whichPgm { askWhichPgm() };
 	switch (whichPgm) {
+	case -1:{
+		loop = false;
+		break;
+	}
 	case 0: {
 		runHiLo();
 		break;
@@ -245,10 +251,15 @@ int main() {
 		break;
 	}
 
-	default: {
-		std::cout << "Default case";
+	default:  
+ 	std::cout << "Default case";
 		break;
 	}
-  } 
+    }
+ 
+	
 	return 0;
 }
+
+
+
