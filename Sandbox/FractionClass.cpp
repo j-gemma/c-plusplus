@@ -1,87 +1,102 @@
 #include "FractionClass.h"
+#include <type_traits>
 
-Fraction::Fraction(int num, int den)
-	: m_numerator{ num }, m_denominator{ den }
-	{
-	reduce();
-	}
-
-void Fraction::print() const {
-	std::cout << m_numerator << '/' << m_denominator << '\n';
+Fraction::Fraction(int num, int den) : m_numerator{num}, m_denominator{den} {
+  reduce();
 }
 
-Fraction Fraction::multiply(const Fraction& f) {
-	return Fraction{ m_numerator * f.m_numerator, m_denominator * f.m_denominator };
-	}
+void Fraction::print() const {
+  std::cout << m_numerator << '/' << m_denominator << '\n';
+}
 
-int Fraction::getNumerator() const {
-	return m_numerator;
-	}
-	
-int Fraction::getDenominator() const {
-	return m_denominator;
-	}
+Fraction Fraction::multiply(const Fraction &f) {
+  return Fraction{m_numerator * f.m_numerator, m_denominator * f.m_denominator};
+}
+
+int Fraction::getNumerator() const { return m_numerator; }
+
+int Fraction::getDenominator() const { return m_denominator; }
 
 Fraction getUserFraction() {
-	int num = getIntFromUser("Enter a value for the numerator: ");
+  int num = getIntFromUser("Enter a value for the numerator: ");
 
-	int temp{};
-	while (temp == 0) temp = getIntFromUser("Enter a non-zero value for the denominator: ");
-	int den = temp;
+  int temp{};
+  while (temp == 0)
+    temp = getIntFromUser("Enter a non-zero value for the denominator: ");
+  int den = temp;
 
-	return Fraction{ num, den };
+  return Fraction{num, den};
 }
 
 void runFractionClass() {
-	Fraction f1{ getUserFraction() };
+  Fraction f1{getUserFraction()};
 
-	Fraction f2{ getUserFraction() };
+  Fraction f2{getUserFraction()};
 
-	std::cout << "Your fractions multiplied together: "; 
-	f1.multiply(f2).print();
+  std::cout << "Your fractions multiplied together: ";
+  f1.multiply(f2).print();
 
-	return;
+  return;
 }
 
-Fraction operator*(const Fraction& a, const Fraction& b) {
-	return Fraction(a.m_numerator * b.m_numerator, a.m_denominator * b.m_denominator);
+Fraction operator*(const Fraction &a, const Fraction &b) {
+  return Fraction(a.m_numerator * b.m_numerator,
+                  a.m_denominator * b.m_denominator);
 }
 
-std::ostream& operator<<(std::ostream& out, const Fraction& f) {
+std::ostream &operator<<(std::ostream &out, const Fraction &f) {
 
-    out << f.m_numerator << '/' << f.m_denominator;
+  out << f.m_numerator << '/' << f.m_denominator;
 
-    return out;
-
+  return out;
 }
 
-std::istream& operator>>(std::istream& in, Fraction& f) {
-    
-	int x{};
-    int y{};
-	char ignore{};
+// OLD
+// std::istream& operator>>(std::istream& in, Fraction& f) {
+//
+//     int x{};
+//     int y{};
+//     char ignore{};
+//
+//     in >> x >> ignore >> y;
+//     if (y == 0) in.setstate(std::ios_base::failbit);
+//     if (
+//     f = in ? Fraction{ x, y } : Fraction{};
+//
+//     return in;
+//
+// }
 
-    in >> x >> ignore >> y;
-    if (y == 0) in.setstate(std::ios_base::failbit);
+std::istream &operator>>(std::istream &in, Fraction &f) {
+  int x{};
+  int y{};
+  char slash{};
 
-    f = in ? Fraction{ x, y } : Fraction{};
-    
+  if (!(in >> x))
     return in;
+  if (!(in >> slash) || slash != '/') {
+    in.setstate(std::ios::failbit);
+    return in;
+  }
+  if (!(in >> y) || y == 0) {
+    in.setstate(std::ios::failbit);
+    return in;
+  }
 
+  f = Fraction{x, y};
+  return in;
 }
 
 void Fraction::reduce() {
-	int gcd{ std::gcd(m_numerator, m_denominator) };
-	if (gcd) {
-		m_numerator /= gcd;
-		m_denominator /= gcd;
-	}
-
+  int gcd{std::gcd(m_numerator, m_denominator)};
+  if (gcd) {
+    m_numerator /= gcd;
+    m_denominator /= gcd;
+  }
 }
 
-
-//Fraction operator*(Fraction a, int b) {
+// Fraction operator*(Fraction a, int b) {
 //	return Fraction(a.m_numerator * b, a.m_denominator);
-//}
+// }
 
-//Fraction operator*(int a, Fraction b) { return operator*(b, a); }
+// Fraction operator*(int a, Fraction b) { return operator*(b, a); }
