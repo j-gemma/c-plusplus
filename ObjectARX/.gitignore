@@ -1,0 +1,19 @@
+# Build Outputs
+x64/
+Debug/
+Release/
+*.obj
+*.pdb
+*.idb
+*.ipch
+
+# VS Metadata
+.vs/
+*.user
+*.VC.db
+*.VC.opendb
+
+# AudoCAD/ARX junk
+*.arx
+*.exp
+*.lik
