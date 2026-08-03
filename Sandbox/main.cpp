@@ -1,37 +1,6 @@
-#include "Ball.h"
-#include "ClassRandom.h"
-#include "FractionClass.h"
-#include "FractionStruct.h"
-#include "Monster.h"
-#include "Point2d.h"
-#include "Point3d.h"
-#include "Triad.h"
-#include "TriadStruct.h"
-#include "Vector3d.h"
-#include "animalLegNums.h"
-#include "arrayLoop.h"
-#include "binarySearch.h"
-#include "bubbleSort.h"
-#include "calculateAdRevenue.h"
-#include "ch17ArraysPt1.h"
-#include "cppMan.h"
-#include "deck52.h"
-#include "dynamicAllocation.h"
-#include "enumIndex.h"
-#include "funcPointerCalculator.h"
-#include "hiLo.h"
-#include "input.h"
-#include "lambda.h"
-#include "operatorOverloads.h"
-#include "perfectSquares.h"
-#include "quiz16.h"
-#include "rangeBased.h"
-#include "recurse.h"
-#include "roscoes.h"
-#include "stdVectorExample.h"
-#include "swap.h"
-#include "vectorStack.h"
-#include <iostream>
+#include "exercises/exercises.h"
+#include "games/Game15Puzzle.h"
+#include "games/games.h"
 
 int askWhichPgm() { return getTFromUser<int>("Which program?\n"); }
 
@@ -247,6 +216,10 @@ int main() {
     }
     case 53: {
       runOperatorOverloads();
+      break;
+    }
+    case 54: {
+      play15Game();
       break;
     }
 

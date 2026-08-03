@@ -1,0 +1,11 @@
+#pragma once
+#include "ClassRandom.h"
+#include "FractionClass.h"
+#include "Point2d.h"
+#include "Point3d.h"
+#include "Random.h"
+#include "Triad.h"
+#include "Vector3d.h"
+#include "constants.h"
+#include "input.h"
+#include "swap.h"
