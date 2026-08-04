@@ -1,5 +1,6 @@
 #pragma once
-
+#include "../common/common.h"
+#include <format>
 #include <iostream>
 
 class Point{
