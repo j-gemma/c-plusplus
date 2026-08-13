@@ -24,7 +24,7 @@ std::ostream& operator<<(std::ostream& out, const Board& b){
 
   for(int i = 0; i < rows; i++){
     for(int j = 0; j < cols; j++){
-      out << b.getTile(i, j);
+      out << b.m_tiles[i][j];
     }
     out << '\n';
   }
@@ -52,7 +52,7 @@ int play15Game(){
   while(i < g_consoleLines){
     std::cout << '\n';
     ++i;
-  }
+ }
 // Your code goes here
 
   Board board{};
@@ -66,7 +66,7 @@ int play15Game(){
       case 'a':
       case 's':
       case 'd':
-        std::cout << std::format("Valid command: {}\n", in);
+        std::cout << "Valid command: " << Direction(in) << '\n';
         break;
 
       case 'q':

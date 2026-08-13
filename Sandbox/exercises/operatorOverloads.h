@@ -80,7 +80,7 @@ public:
 	}
 
 	~IntArray() {
-		delete m_arr;
+		delete[] m_arr;
 	}
 
 void deepCopy(const IntArray& source);
@@ -94,7 +94,7 @@ int& operator[](const size_t index) {
 	return m_arr[index];
 }
 
-int& operator[](const size_t index) const {
+const int& operator[](const size_t index) const {
 	assert(index < m_length);
 	return m_arr[index];
 }
@@ -157,7 +157,7 @@ public:
 	friend bool testDecimal(const FixedPoint2& fp);
 
 	explicit operator double() const {
-		if (m_base < 0 || m_decimal < 0) return { -(abs(m_base) + (abs(m_decimal / 100.0))) };
+		if (m_base < 0 || m_decimal < 0) return -(abs(m_base) + (abs(m_decimal / 100.0)));
 		else return m_base + (m_decimal / 100.0);
 	}
 	
