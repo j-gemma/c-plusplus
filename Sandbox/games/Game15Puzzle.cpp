@@ -1,4 +1,5 @@
 #include "Game15Puzzle.h"
+#include <cassert>
 
 std::ostream& operator<<(std::ostream& out, const Tile& t){
   int num {t.getNum()};
@@ -32,6 +33,77 @@ std::ostream& operator<<(std::ostream& out, const Board& b){
   return out;
 }
 
+Direction randomDir(){
+    return Direction(Random::get(0, 3));
+  }
+
+Point Point::getAdjacentPoint(Direction d){
+  switch(d.getDirection()){
+    case Direction::up:     return Point{m_x,     m_y - 1};
+    case Direction::down:   return Point{m_x,     m_y + 1};
+    case Direction::left:   return Point{m_x - 1, m_y};
+    case Direction::right:  return Point{m_x + 1, m_y};
+    default:                break;
+    }
+
+    assert(0 && "Unsupported direction passed!");
+    return *this;
+}
+
+bool operator==(Point p1, Point p2){
+  return((p1.m_x == p2.m_x) && (p1.m_y == p2.m_y));
+}
+
+bool operator!=(Point p1, Point p2){
+  return !(p1==p2);
+}
+
+namespace UserInput{
+  bool isValidCommand(char c){
+    return c == 'w'
+        || c == 'a'
+        || c == 's'
+        || c == 'd'
+        || c == 'q';
+  }
+
+  Direction charToDirection(char c){
+
+    switch(c){
+      case 'w': return Direction{Direction::up};
+      case 'a': return Direction{Direction::left};
+      case 's': return Direction{Direction::down};
+      case 'd': return Direction{Direction::right};
+    }
+
+  assert(0 && "Unsupported direction was passed!");
+  return Direction{randomDir()};
+  }
+}
+
+void Board::setEmptyTile(Point p){
+  m_emptyTile = p;
+  return;
+}
+
+void Board::findAndSetEmptyTile(){
+  for(size_t i; i < m_rows; ++i){
+    for(size_t j; j < m_cols; ++j){
+      if (m_tiles[i][j].getNum() == 0) setEmptyTile(Point(j, i));
+    }
+  }
+  return;
+}
+//
+//void Board::moveTile(Direction dir){
+//  Point empty{findEmptyTile()};
+//  if (isValidMove(empty, dir)){
+//    swapTile(empty, dir);
+//    std::cout << *this;
+//  }
+//
+//}
+
 int play15Game(){
 //    Tile tile1{ 10 };
 //    Tile tile2{ 8 };
@@ -53,10 +125,24 @@ int play15Game(){
     std::cout << '\n';
     ++i;
  }
+
 // Your code goes here
+
+  std::cout << std::boolalpha;
+  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::up)    == Point{ 1, 0 }) << '\n';
+  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::down)  == Point{ 1, 2 }) << '\n';
+  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::left)  == Point{ 0, 1 }) << '\n';
+  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::right) == Point{ 2, 1 }) << '\n';
+  std::cout << (Point{ 1, 1 } != Point{ 2, 1 }) << '\n';
+  std::cout << (Point{ 1, 1 } != Point{ 1, 2 }) << '\n';
+  std::cout << !(Point{ 1, 1 } != Point{ 1, 1 }) << '\n';
 
   Board board{};
   std::cout << board;
+
+  for (int i{}; i < 4; i++){
+    std::cout << "Generating random direction... " << randomDir() << '\n';
+  }
 
   while(true){
     char in{getTFromUser<char>("")};
@@ -80,3 +166,4 @@ int play15Game(){
 
   return 0;
 }
+
