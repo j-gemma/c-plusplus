@@ -72,11 +72,11 @@ private:
 
 class Point{
 
-private:
+public:
+
   int m_x{0};
   int m_y{0};
 
-public:
   Point(int x, int y)
   :m_x(x)
   ,m_y(y)
@@ -94,8 +94,7 @@ public:
 
 class Tile{
   int m_value{};
-  Point m_location{};
-  
+
 public:
   Tile(int value)
   :m_value(value)
@@ -104,6 +103,8 @@ public:
   Tile() = default;
 
   int getNum() const { return m_value; }
+
+  void setNum(int i) { m_value = i; } 
 
   bool isEmpty() { return m_value == 0; }
 
@@ -127,13 +128,12 @@ public:
   int numCols() const { return m_cols; }
 
   Board(){
-    for(int i = 0; i < m_rows; i++){
-      for(int j = 0; j< m_cols; j++){
+    for(int i{}; i < m_rows; i++){
+      for(int j{}; j < m_cols; j++){
         m_tiles[i][j] = Tile{((m_rows*i) + (j + 1)) % (m_rows*m_cols)};
-        findAndSetEmptyTile();
       }
     }
-
+  findAndSetEmptyTile();
   }
 
   void setEmptyTile(Point p);

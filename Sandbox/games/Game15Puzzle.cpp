@@ -87,22 +87,34 @@ void Board::setEmptyTile(Point p){
 }
 
 void Board::findAndSetEmptyTile(){
-  for(size_t i; i < m_rows; ++i){
-    for(size_t j; j < m_cols; ++j){
+  for(size_t i{}; i < m_rows; ++i){
+    for(size_t j{}; j < m_cols; ++j){
+//      std::cout << "Cell value at " << i << ", " << j << " is " << m_tiles[i][j].getNum();
       if (m_tiles[i][j].getNum() == 0) setEmptyTile(Point(j, i));
     }
   }
   return;
 }
-//
-//void Board::moveTile(Direction dir){
-//  Point empty{findEmptyTile()};
-//  if (isValidMove(empty, dir)){
-//    swapTile(empty, dir);
-//    std::cout << *this;
-//  }
-//
-//}
+
+bool Board::isValidMove(Point p, Direction d){
+  Point moved{p.getAdjacentPoint(-d)};
+  if((moved.m_x >= 0) && (moved.m_x < COLS) && (moved.m_y >= 0) && (moved.m_y < ROWS)) return true;
+  else return false;
+}
+
+void Board::swapTile(Point p, Direction d){
+  Point toBeEmpty{p.getAdjacentPoint(-d)};
+  m_tiles[m_emptyTile.m_y][m_emptyTile.m_x].setNum(m_tiles[toBeEmpty.m_y][toBeEmpty.m_x].getNum());
+  m_tiles[toBeEmpty.m_y][toBeEmpty.m_x].setNum(0);
+  setEmptyTile(toBeEmpty);
+}
+
+void Board::moveTile(Direction dir){
+  Point empty{getEmptyTile()};
+  if (isValidMove(empty, dir)){
+    swapTile(empty, dir);
+     }
+}
 
 int play15Game(){
 //    Tile tile1{ 10 };
@@ -144,6 +156,9 @@ int play15Game(){
     std::cout << "Generating random direction... " << randomDir() << '\n';
   }
 
+  Point empty{board.getEmptyTile()};
+  std::cout << "Empty tile location: " << empty.m_x << ", " << empty.m_y;
+
   while(true){
     char in{getTFromUser<char>("")};
 
@@ -152,7 +167,7 @@ int play15Game(){
       case 'a':
       case 's':
       case 'd':
-        std::cout << "Valid command: " << Direction(in) << '\n';
+        std::cout << "Valid command: " << UserInput::charToDirection(in) << '\n';
         break;
 
       case 'q':
@@ -161,7 +176,8 @@ int play15Game(){
 
     }
 
-
+    board.moveTile(UserInput::charToDirection(in));
+    std::cout << board;
   }
 
   return 0;
