@@ -150,6 +150,8 @@ public:
 
   friend std::ostream& operator<<(std::ostream& out, const Board& b);
 
+  bool gameWon();
+
 };
 
 int play15Game();

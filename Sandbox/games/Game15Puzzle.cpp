@@ -116,6 +116,20 @@ void Board::moveTile(Direction dir){
      }
 }
 
+bool Board::gameWon(){
+  if((m_emptyTile.m_x == COLS - 1) && (m_emptyTile.m_y == ROWS - 1)){
+    for(int i{}; i < ROWS; ++i){
+      for(int j{}; j < COLS; ++j){
+        int expected{(m_rows*i) + (j + 1) % (m_rows*m_cols)};
+
+        if(m_tiles[j][i].getNum() != expected) return false;
+      }
+    }
+    return true;
+  }
+  else return false;
+}
+
 int play15Game(){
 //    Tile tile1{ 10 };
 //    Tile tile2{ 8 };
@@ -130,36 +144,42 @@ int play15Game(){
 //
 // Increase amount of new lines if your board isn't
 // at the very bottom of the console
-  constexpr int g_consoleLines{ 25 };
-
-  int i{0};
-  while(i < g_consoleLines){
-    std::cout << '\n';
-    ++i;
- }
-
+  constexpr int g_consoleLines{ 21 };
+  constexpr int g_randomMoves{100};
 // Your code goes here
 
-  std::cout << std::boolalpha;
-  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::up)    == Point{ 1, 0 }) << '\n';
-  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::down)  == Point{ 1, 2 }) << '\n';
-  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::left)  == Point{ 0, 1 }) << '\n';
-  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::right) == Point{ 2, 1 }) << '\n';
-  std::cout << (Point{ 1, 1 } != Point{ 2, 1 }) << '\n';
-  std::cout << (Point{ 1, 1 } != Point{ 1, 2 }) << '\n';
-  std::cout << !(Point{ 1, 1 } != Point{ 1, 1 }) << '\n';
+//  std::cout << std::boolalpha;
+//  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::up)    == Point{ 1, 0 }) << '\n';
+//  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::down)  == Point{ 1, 2 }) << '\n';
+//  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::left)  == Point{ 0, 1 }) << '\n';
+//  std::cout << (Point{ 1, 1 }.getAdjacentPoint(Direction::right) == Point{ 2, 1 }) << '\n';
+//  std::cout << (Point{ 1, 1 } != Point{ 2, 1 }) << '\n';
+//  std::cout << (Point{ 1, 1 } != Point{ 1, 2 }) << '\n';
+//  std::cout << !(Point{ 1, 1 } != Point{ 1, 1 }) << '\n';
 
   Board board{};
+
+  for(size_t i{}; i < g_randomMoves; i++){
+    board.moveTile(randomDir());
+  }
   std::cout << board;
 
-  for (int i{}; i < 4; i++){
-    std::cout << "Generating random direction... " << randomDir() << '\n';
-  }
+//  for (int i{}; i < 4; i++){
+//    std::cout << "Generating random direction... " << randomDir() << '\n';
+//  }
 
-  Point empty{board.getEmptyTile()};
-  std::cout << "Empty tile location: " << empty.m_x << ", " << empty.m_y;
+//  Point empty{board.getEmptyTile()};
+//  std::cout << "Empty tile location: " << empty.m_x << ", " << empty.m_y;
 
   while(true){
+
+    int i{0};
+    while(i < g_consoleLines){
+      std::cout << '\n';
+      ++i;
+    }
+
+
     char in{getTFromUser<char>("")};
 
     switch(in){
@@ -178,6 +198,11 @@ int play15Game(){
 
     board.moveTile(UserInput::charToDirection(in));
     std::cout << board;
+
+    if(board.gameWon()){
+      std::cout << "\n\nYou won!\n\n";
+      break;
+    }
   }
 
   return 0;
