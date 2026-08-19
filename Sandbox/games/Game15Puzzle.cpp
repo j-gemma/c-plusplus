@@ -120,9 +120,12 @@ bool Board::gameWon(){
   if((m_emptyTile.m_x == COLS - 1) && (m_emptyTile.m_y == ROWS - 1)){
     for(int i{}; i < ROWS; ++i){
       for(int j{}; j < COLS; ++j){
-        int expected{(m_rows*i) + (j + 1) % (m_rows*m_cols)};
+        int expected{((m_rows*i) + (j + 1)) % (m_rows*m_cols)};
 
-        if(m_tiles[j][i].getNum() != expected) return false;
+        if(m_tiles[i][j].getNum() != expected){
+          std::cout << "Expected: " << expected << ", Tile: " << m_tiles[i][j].getNum();
+          return false;
+        }
       }
     }
     return true;
