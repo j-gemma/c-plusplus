@@ -51,6 +51,8 @@ set(OLD_GLOB
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/bubbleSort.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/calculateAdRevenue.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/ch17ArraysPt1.cpp"
+  "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/ch22-5QuizUniquePtr.cpp"
+  "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/ch22SummaryQuiz.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/countApples.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/dynamicAllocation.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/enumIndex.cpp"
