@@ -20,6 +20,8 @@
 #include "roscoes.h"
 #include "stdVectorExample.h"
 #include "vectorStack.h"
+#include "ch23_3quiz.h"
+#include "ch23_7quiz.h"
 
 #include "..\common\common.h"
 

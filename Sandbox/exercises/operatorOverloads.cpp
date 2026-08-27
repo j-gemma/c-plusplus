@@ -169,8 +169,8 @@ Average &Average::operator+=(std::int32_t toAdd) {
   return *this;
 }
 
-IntArray fillArray() {
-  IntArray a(5);
+IntsArray fillArray() {
+  IntsArray a(5);
 
   a[0] = 5;
   a[1] = 8;
@@ -181,7 +181,7 @@ IntArray fillArray() {
   return a;
 }
 
-void IntArray::deepCopy(const IntArray &source) {
+void IntsArray::deepCopy(const IntsArray &source) {
   delete[] m_arr;
 
   m_length = source.m_length;
@@ -196,19 +196,19 @@ void IntArray::deepCopy(const IntArray &source) {
     m_arr = nullptr;
 }
 
-IntArray &IntArray::operator=(const IntArray &source) {
+IntsArray& IntsArray::operator=(const IntsArray &source) {
   if (this != &source)
     deepCopy(source);
   return *this;
 }
 
-// int& IntArray::operator[](const size_t index) {
+// int& IntsArray::operator[](const size_t index) {
 //	assert(index >= 0 && index < m_length);
 //	return m_arr[index];
 // }
 
-int testIntArray() {
-  IntArray a{fillArray()};
+int testIntsArray() {
+  IntsArray a{fillArray()};
 
   std::cout << a << '\n';
 
@@ -216,7 +216,7 @@ int testIntArray() {
       a}; // we're using this reference to avoid compiler self-assignment errors
   a = ref;
 
-  IntArray b(1);
+  IntsArray b(1);
   b = a;
 
   a[4] = 7;
@@ -447,7 +447,7 @@ int runOperatorOverloads() {
 
   std::cout << "-----------------------------------------\n";
 
-  testIntArray();
+  testIntsArray();
 
   std::cout << "-----------------------------------------\n";
 

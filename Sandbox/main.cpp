@@ -222,7 +222,14 @@ int main() {
       play15Game();
       break;
     }
-
+    case 55: {
+      ch23_3quizMain();
+      break;
+    }
+    case 56: {
+      ch23_7quizMain();
+      break;
+    }
     default:
       std::cout << "Default case";
       break;

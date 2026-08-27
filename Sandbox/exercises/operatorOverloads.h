@@ -58,13 +58,13 @@ public:
 	}
 };
 
-class IntArray {
+class IntsArray {
 private:
 	int m_length{ 0 };
 	int* m_arr{ nullptr };
 
 public:
-	explicit IntArray(int len)
+	explicit IntsArray(int len)
 		:m_length{ len }
 	{
 		assert(m_length > 0 && "Oops! Please provide positive array size!\n");
@@ -73,19 +73,19 @@ public:
 
 	}
 
-	IntArray(const IntArray& source)
+	IntsArray(const IntsArray& source)
 		: m_length{ source.m_length }
 	{
 		if (this != &source) deepCopy(source);
 	}
 
-	~IntArray() {
+	~IntsArray() {
 		delete[] m_arr;
 	}
 
-void deepCopy(const IntArray& source);
+void deepCopy(const IntsArray& source);
 
-IntArray& operator=(const IntArray& source);
+IntsArray& operator=(const IntsArray& source);
 
 //int& operator[](const size_t index);
 
@@ -99,7 +99,7 @@ const int& operator[](const size_t index) const {
 	return m_arr[index];
 }
 
-friend std::ostream& operator<<(std::ostream& out, const IntArray& arr) {
+friend std::ostream& operator<<(std::ostream& out, const IntsArray& arr) {
 	for (size_t i{}; i < arr.m_length; i++) {
 		out << arr[i] << " ";
 	}
@@ -169,7 +169,7 @@ public:
 
 FixedPoint2 operator+(FixedPoint2 fp1, FixedPoint2 fp2);
 
-int testIntArray();
+int testIntsArray();
 
 int test1FixedPoint2();
 
