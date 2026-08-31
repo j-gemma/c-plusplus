@@ -22,6 +22,7 @@
 #include "vectorStack.h"
 #include "ch23_3quiz.h"
 #include "ch23_7quiz.h"
+#include "ch24_4Inheritance.h"
 
 #include "..\common\common.h"
 

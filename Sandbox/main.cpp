@@ -230,6 +230,10 @@ int main() {
       ch23_7quizMain();
       break;
     }
+    case 57: {
+      printFruits();
+      break;
+    }
     default:
       std::cout << "Default case";
       break;

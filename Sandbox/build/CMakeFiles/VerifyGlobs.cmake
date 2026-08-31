@@ -55,6 +55,7 @@ set(OLD_GLOB
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/ch22SummaryQuiz.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/ch23_3quiz.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/ch23_7quiz.cpp"
+  "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/ch24_4Inheritance.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/countApples.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/dynamicAllocation.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/enumIndex.cpp"
