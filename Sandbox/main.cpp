@@ -232,6 +232,7 @@ int main() {
     }
     case 57: {
       printFruits();
+      printFruits2();
       break;
     }
     default:
