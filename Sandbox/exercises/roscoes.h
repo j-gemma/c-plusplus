@@ -26,7 +26,7 @@ namespace Potion {
 	static_assert(std::size(cost) == max_potions);
 }
 
-class Player {
+class RoscoesPlayer {
 	
 private:
 	const std::string m_name{};
@@ -35,7 +35,7 @@ private:
 
 public:
 
-	Player(const std::string& name)
+	RoscoesPlayer(const std::string& name)
 		: m_name{ name }
 	{
 	}
@@ -52,13 +52,13 @@ public:
 
 int displayShop();
 
-Player greetAndInitPlayer();
+RoscoesPlayer greetAndInitPlayer();
 
 bool isValidInput(char input);
 
-int updatePlayer(Player& gamer, char purchase);
+int updatePlayer(RoscoesPlayer& gamer, char purchase);
 
-int printExitStats(Player& gamer);
+int printExitStats(RoscoesPlayer& gamer);
 
 int runRoscoes();
 

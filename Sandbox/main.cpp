@@ -2,7 +2,7 @@
 #include "games/Game15Puzzle.h"
 #include "games/games.h"
 
-int askWhichPgm() { return getTFromUser<int>("Which program?\n"); }
+int askWhichPgm() { return getTFromUser<int>("\nWhich program?\n"); }
 
 int main() {
 
@@ -233,6 +233,10 @@ int main() {
     case 57: {
       printFruits();
       printFruits2();
+      break;
+    }
+    case 58: {
+      fightMonsters2();
       break;
     }
     default:

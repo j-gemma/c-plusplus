@@ -2,7 +2,7 @@
 #include <string>
 #include <string_view>
 
-class Monster {
+class OldMonster {
 
 public:
 	enum Type {
@@ -21,7 +21,7 @@ public:
 
 private:
 
-	Monster::Type m_type{};
+	OldMonster::Type m_type{};
 
 	//use std::string here so that monster is the *owner* of its name 
 // (as opposed to std::string_view) which is a viewer
@@ -33,9 +33,9 @@ private:
 
 public:
 
-	Monster() = default;
+	OldMonster() = default;
 
-	Monster(Monster::Type type, std::string name="Larry", std::string roar="meh", int hp=10)
+	OldMonster(OldMonster::Type type, std::string name="Larry", std::string roar="meh", int hp=10)
 		: m_type { type }
 		, m_name { name }
 		, m_roar { roar }
@@ -51,13 +51,13 @@ public:
 	void print() const;
 };
 
-void printMonster(const Monster& m);
+void printMonster(const OldMonster& m);
 
 void instantiateMonsters();
 
 void runInstantiateMonsters();
 
-Monster initMonster();
+OldMonster initMonster();
 
 void runInitMonster();
 

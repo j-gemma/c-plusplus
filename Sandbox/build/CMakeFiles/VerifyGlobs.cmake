@@ -102,6 +102,7 @@ set(OLD_GLOB
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/games/Game15Puzzle.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/games/cppMan.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/games/deck52.cpp"
+  "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/games/fightMonsters.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/games/games.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/games/hiLo.cpp"
   )

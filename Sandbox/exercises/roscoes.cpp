@@ -13,10 +13,10 @@ int displayShop() {
 
 }
 
-Player greetAndInitPlayer() {
+RoscoesPlayer greetAndInitPlayer() {
 	std::cout << "Welcome to Roscoes Potion Emporium!\n";
 
-	Player gamer{ getTFromUser<std::string>("What's your name?: ") };
+	RoscoesPlayer gamer{ getTFromUser<std::string>("What's your name?: ") };
 	
 	std::cout << std::format("Hello, {}! You have {} gold.\n\n", gamer.name(), gamer.getWealth() );
 
@@ -40,7 +40,7 @@ bool isValidInput(char input) {
 	return false;
 }
 
-int updatePlayer(Player& gamer, char purchase) {
+int updatePlayer(RoscoesPlayer& gamer, char purchase) {
 
 	//std::cout << std::format("Choice: {}", purchase);
 	size_t choice{ static_cast<size_t>(purchase - '0')};
@@ -59,7 +59,7 @@ int updatePlayer(Player& gamer, char purchase) {
 	return 0;
 }
 
-int printExitStats(Player& gamer) {
+int printExitStats(RoscoesPlayer& gamer) {
 	std::cout << "\nYour inventory contains: \n";
 	
 	for (auto& a : Potion::types) {
@@ -72,7 +72,7 @@ int printExitStats(Player& gamer) {
 }
 
 int runRoscoes() {
-	Player gamer{ greetAndInitPlayer() };
+	RoscoesPlayer gamer{ greetAndInitPlayer() };
 	bool quit{ false };
 
 	while (gamer.getWealth() > 0 && !quit) {

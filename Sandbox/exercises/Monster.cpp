@@ -3,9 +3,9 @@
 #include "Monster.h"
 #include "..\common\ClassRandom.h"
 
-using enum Monster::Type;
+using enum OldMonster::Type;
 
-constexpr std::string_view Monster::getTypeString() const {
+constexpr std::string_view OldMonster::getTypeString() const {
 
 	switch (this->m_type) {
 	case ogre:		return "Ogre";
@@ -24,7 +24,7 @@ constexpr std::string_view Monster::getTypeString() const {
 
 }
 
-void Monster::print() const {
+void OldMonster::print() const {
 	std::cout << m_name << " the " << getTypeString();
 
 	if (m_health <= 0)
@@ -34,14 +34,14 @@ void Monster::print() const {
 }
 
 //pass monster by ref here because copying compound types gets expensive fast
-void printMonster(const Monster& m) {
+void printMonster(const OldMonster& m) {
 	std::cout << "This " << m.getTypeString() << " is named " << m.Name() << " and has " << m.Health() << " health.\n";
 }
 
 void instantiateMonsters() {
 
-	Monster torg{ ogre, "Torg", "Beep!", 145 };
-	Monster blurp{ slime, "Blurp", "Boop!", 23};
+	OldMonster torg{ ogre, "Torg", "Beep!", 145 };
+	OldMonster blurp{ slime, "Blurp", "Boop!", 23};
 
 	printMonster(torg);
 	printMonster(blurp);
@@ -53,23 +53,23 @@ void runInstantiateMonsters() {
 }
 
 void runInitMonster() {
-Monster dude = initMonster();
+OldMonster dude = initMonster();
 	printMonster(dude);
 	return;
 }
 
-Monster initMonster(){
-	Monster man { Monster::skeleton, "Bones", "*rattle*", 4 };
+OldMonster initMonster(){
+	OldMonster man { OldMonster::skeleton, "Bones", "*rattle*", 4 };
 
 	return man;
 }
 
 int runMonsterStats()
 {
-	Monster skeleton{ Monster::skeleton, "Bones", "*rattle*", 4 };
+	OldMonster skeleton{ OldMonster::skeleton, "Bones", "*rattle*", 4 };
 	skeleton.print();
 
-	Monster vampire{ Monster::vampire, "Nibblez", "*hiss*", 0 };
+	OldMonster vampire{ OldMonster::vampire, "Nibblez", "*hiss*", 0 };
 	vampire.print();
 
 	return 0;
@@ -127,8 +127,8 @@ namespace MonsterGenerator {
 			return "... ? em dnif ouy did woH";
 		}
 	}
-	Monster randMonst() {
-		return Monster{ Monster::Type(Random::get(0, Monster::Type::maxMonsterTypes - 1)), getName(Random::get(0, 5)), 
+	OldMonster randMonst() {
+		return OldMonster{ OldMonster::Type(Random::get(0, OldMonster::Type::maxMonsterTypes - 1)), getName(Random::get(0, 5)), 
 						getRoar(Random::get(0, 5)), Random::get(0, 100) };
 	}
 
@@ -137,7 +137,7 @@ namespace MonsterGenerator {
 
 int runMonsterGenerator() {
 
-	Monster m{ MonsterGenerator::randMonst() };
+	OldMonster m{ MonsterGenerator::randMonst() };
 	m.print();
 
 	return 0;
