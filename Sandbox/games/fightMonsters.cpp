@@ -1,24 +1,113 @@
 #include "fightMonsters.h"
+#include <format>
 #include <utility>
 
-int fightMonsters()
-{
-
-  Creature o{ "orc", 'o', 4, 2, 10 };
-  o.addGold(5);
-  o.reduceHealth(1);
-  std::cout << "The " << o.getName() << " has " << o.getHealth() << " health and is carrying " << o.getGold() << " gold.\n";
-
-  return 0;
-}
-
-int fightMonsters2(){
+Player initPlayer(){
 
   std::string name {getTFromUser<std::string>("Enter your name: ") };
   Player player{name};
 
   std::cout << std::format("Welcome, {}.\n", player.getName());
   std::cout << std::format("You have {} health and are carrying {} gold.\n", player.getHealth(), player.getGold());
+
+  return player;
+}
+
+
+void attackMonster(Player& p, Monster& m){
+  if(p.isDead()) return;
+
+  int damage{p.getDamage()};
+  m.reduceHealth(damage);
+  std::cout << std::format("You hit the {} for {} damage.\n", m.getName(), damage);
+
+  if(m.isDead()){
+    p.levelUp();
+    std::cout << std::format("You are now level {}\n", p.getLevel());
+    int gold{m.getGold()};
+    p.addGold(gold);
+    std::cout << std::format("You found {} gold.\n", gold);
+  }
+}
+
+void attackPlayer(Player& p, Monster& m){
+
+  if(m.isDead()) return;
+
+  int damage{m.getDamage()};
+  p.reduceHealth(damage);
+  std::cout << std::format("The {} hit you for {} damage.\n", m.getName(), damage);
+}
+
+//void fightMonster(Player& p, Monster& m){
+//
+//  char c {getTFromUser<char>("(R)un or (F)ight:")  };
+//
+//  while(c != 'R' && c != 'F' && c != 'r' && c!= 'f'){
+//    c = getTFromUser<char>("(R)un or (F)ight:");
+//  }
+//
+//  if(c == 'r' || c == 'R'){ 
+//    if(Random::get(0, 1) == 1){
+//      std::cout << "You failed to flee.\n";
+//      attackPlayer(p, m);
+//      if(p.getHealth() > 0){ 
+//        std::cout << std::format("You have {} health.\n", p.getHealth());
+//        fightMonster(p, m);
+//      }
+//    }
+//    else std::cout << "You successfully fled.\n";
+//  }
+//  else{
+//    attackMonster(p, m);
+//    if(m.getHealth() > 0){
+//      attackPlayer(p, m);
+//      std::cout << std::format("You have {} health\n", p.getHealth());
+//      if(p.getHealth() >= 0) fightMonster(p, m);
+//    }
+//  }
+//}
+
+void fightMonster(Player& p){
+  Monster m{ Monster::getRandomMonster() };
+  std::cout << std::format("You have encountered a {} ({}).\n", m.getName(), m.getSymbol());
+
+  while(!m.isDead() && !p.isDead()){
+
+    char c {getTFromUser<char>("(R)un or (F)ight:")  };
+
+     while(c != 'R' && c != 'F' && c != 'r' && c!= 'f'){
+       c = getTFromUser<char>("(R)un or (F)ight:");
+     }
+
+    if(c == 'r' || c == 'R'){ 
+        if(Random::get(0, 1) == 1){
+          std::cout << "You failed to flee.\n";
+          attackPlayer(p, m);
+          std::cout << std::format("You have {} health.\n", p.getHealth());
+        }
+        else std::cout << "You successfully fled.\n";
+        return;
+      }
+    else{
+      attackMonster(p, m);
+      attackPlayer(p, m);
+      std::cout << std::format("You have {} health\n", p.getHealth());
+    }
+  }
+}
+
+int fightMonstersMain(){
+
+  Player player{initPlayer()};
+
+  while(!player.isDead() && !player.hasWon()){
+    fightMonster(player);
+  }
+
+  if(player.isDead()) std::cout << std::format("You died at level {} and with {} gold\nToo bad you can't take it with you!\n", player.getLevel(), player.getGold());
+
+  else std::cout << std::format("You won the game with {} gold!\n", player.getGold());
 
   return 0;
 }

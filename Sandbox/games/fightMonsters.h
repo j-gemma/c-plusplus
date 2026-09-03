@@ -2,6 +2,7 @@
 #include <string>
 #include "../common/input.h"
 #include <format>
+#include "../common/ClassRandom.h" 
 
 class Creature{
 protected:
@@ -41,7 +42,7 @@ public:
 };
 
 class Monster : public Creature{
-
+public:
   enum Type{
     dragon,
     orc,
@@ -49,10 +50,16 @@ class Monster : public Creature{
     max_types
   };
 
+private:
   static inline Creature monsterData[] {{"dragon", 'D', 20, 4, 100}, {"orc", 'o', 4, 2, 25}, {"slime", 's', 1, 1, 10} };
 
+public:
   Monster(Monster::Type type)
   :Creature{monsterData[type]}{}
+
+  static Monster getRandomMonster(){
+    return {static_cast<Monster::Type>(Random::get(0, max_types -1))};
+  }
 
 };
 
@@ -75,7 +82,14 @@ public:
 
 };
 
-int fightMonsters();
+Player initPlayer();
 
-int fightMonsters2();
+void attackMonster(Player& p, Monster& m);
 
+void attackPlayer(Player& p, Monster& m);
+
+//void fightMonster(Player& p, Monster& m);
+
+void fightMonster(Player& p);
+
+int fightMonstersMain();

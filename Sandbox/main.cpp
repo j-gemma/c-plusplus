@@ -236,7 +236,7 @@ int main() {
       break;
     }
     case 58: {
-      fightMonsters2();
+      fightMonstersMain();
       break;
     }
     default:
