@@ -13,6 +13,12 @@ Player initPlayer(){
   return player;
 }
 
+void potionChance(Player& p){
+  if(Random::get(0, 9) <= 2){
+    Potion p{Potion::getRandomPotion()};
+
+
+}
 
 void attackMonster(Player& p, Monster& m){
   if(p.isDead()) return;
@@ -27,6 +33,7 @@ void attackMonster(Player& p, Monster& m){
     int gold{m.getGold()};
     p.addGold(gold);
     std::cout << std::format("You found {} gold.\n", gold);
+    potionChance();
   }
 }
 
@@ -85,6 +92,7 @@ void fightMonster(Player& p){
           std::cout << "You failed to flee.\n";
           attackPlayer(p, m);
           std::cout << std::format("You have {} health.\n", p.getHealth());
+          continue;
         }
         else std::cout << "You successfully fled.\n";
         return;

@@ -82,6 +82,38 @@ public:
 
 };
 
+struct PotionData{
+  std::string m_type{};
+  int small{};
+  int medium{};
+  int large{};
+};
+
+class Potion : public PotionData{
+
+private:
+  enum Type{
+    health,
+    strength,
+    poison,
+    max_types
+  };
+
+public:
+ 
+  Potion(Potion::Type type)
+  :PotionData{potionData[type]}{}
+
+private:
+  static inline PotionData potionData[]{{"health", 2, 2, 5}, {"strength", 1, 1, 1}, {"poison", -1, -1, -1}};
+
+public:
+  static Potion getRandomPotion(){
+      return {static_cast<Potion::Type>(Random::get(0, Potion::max_types - 1))};
+    }
+};
+
+
 Player initPlayer();
 
 void attackMonster(Player& p, Monster& m);
@@ -91,5 +123,7 @@ void attackPlayer(Player& p, Monster& m);
 //void fightMonster(Player& p, Monster& m);
 
 void fightMonster(Player& p);
+
+void potionChance();
 
 int fightMonstersMain();
