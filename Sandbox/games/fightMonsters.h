@@ -97,9 +97,6 @@ private:
   Type m_type{};
   std::string size{};
 
-
-
-
 };
 
 Player initPlayer();

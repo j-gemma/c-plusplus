@@ -13,13 +13,6 @@ Player initPlayer(){
   return player;
 }
 
-void potionChance(Player& p){
-  if(Random::get(0, 9) <= 2){
-    Potion p{Potion::getRandomPotion()};
-
-
-}
-
 void attackMonster(Player& p, Monster& m){
   if(p.isDead()) return;
 
@@ -33,7 +26,6 @@ void attackMonster(Player& p, Monster& m){
     int gold{m.getGold()};
     p.addGold(gold);
     std::cout << std::format("You found {} gold.\n", gold);
-    potionChance();
   }
 }
 
