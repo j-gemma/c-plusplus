@@ -3,6 +3,7 @@
 #include "../common/input.h"
 #include <format>
 #include "../common/ClassRandom.h" 
+#include <cassert>
 
 class Creature{
 protected:
@@ -82,15 +83,7 @@ public:
 
 };
 
-struct PotionData{
-  std::string m_type{};
-  int small{};
-  int medium{};
-  int large{};
-};
-
-class Potion : public PotionData{
-
+class Potion{
 private:
   enum Type{
     health,
@@ -99,20 +92,15 @@ private:
     max_types
   };
 
-public:
- 
-  Potion(Potion::Type type)
-  :PotionData{potionData[type]}{}
+  static inline std::string sizes[]{"small", "medium", "large"};
 
-private:
-  static inline PotionData potionData[]{{"health", 2, 2, 5}, {"strength", 1, 1, 1}, {"poison", -1, -1, -1}};
+  Type m_type{};
+  std::string size{};
 
-public:
-  static Potion getRandomPotion(){
-      return {static_cast<Potion::Type>(Random::get(0, Potion::max_types - 1))};
-    }
+
+
+
 };
-
 
 Player initPlayer();
 
