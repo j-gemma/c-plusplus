@@ -84,6 +84,9 @@ public:
 };
 
 class Potion{
+
+//want Potion p{ Potion::getRandomPotion() };
+
 private:
   enum Type{
     health,
@@ -92,10 +95,36 @@ private:
     max_types
   };
 
-  static inline std::string sizes[]{"small", "medium", "large"};
+  enum Size{
+    small,
+    medium,
+    large,
+    max_sizes
+  };
 
-  Type m_type{};
-  std::string size{};
+  static inline std::string sizes[]{"small", "medium", "large"};
+  static inline std::string types[]{"health", "strength", "poison"};
+  static inline int effects[max_types][max_sizes]{{2, 2, 5}, {1, 1, 1}, {-1, -1, -1}};
+
+  std::string m_type{};
+  std::string m_size{};
+  int m_effect{};
+
+public:
+
+  Potion(Potion::Type type, Potion::Size size)
+  :m_type{types[type]}
+  ,m_size{sizes[size]}
+  ,m_effect{effects[type][size]}
+  {}
+
+  static Potion getRandomPotion(){
+    return {static_cast<Potion::Type>(Random::get(0, max_types -1)), static_cast<Potion::Size>(Random::get(0, max_sizes - 1))};
+  }
+
+  const std::string& getType() const {return m_type;}
+  const std::string& getSize() const {return m_size;}
+  const int getEffect() const {return m_effect;}
 
 };
 
@@ -108,7 +137,5 @@ void attackPlayer(Player& p, Monster& m);
 //void fightMonster(Player& p, Monster& m);
 
 void fightMonster(Player& p);
-
-void potionChance();
 
 int fightMonstersMain();
