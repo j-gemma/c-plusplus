@@ -5,8 +5,8 @@
 int displayShop() {
 	std::cout << "Here is our selection for today:\n";
 
-	for (auto p : Potion::types) {
-		std::cout << std::format("{}) {} costs {}\n", static_cast<int>(p), Potion::name[p], Potion::cost[p]);
+	for (auto p : RoscoePotion::types) {
+		std::cout << std::format("{}) {} costs {}\n", static_cast<int>(p), RoscoePotion::name[p], RoscoePotion::cost[p]);
 	}
 
 	return 0;
@@ -34,7 +34,7 @@ bool isValidInput(char input) {
 	// Accept digits within range
 	if (std::isdigit(input)) {
 		int value = input - '0';  // convert char digit to number 0–9
-		return value >= 0 && value < Potion::max_potions;
+		return value >= 0 && value < RoscoePotion::max_potions;
 	}
 
 	return false;
@@ -45,7 +45,7 @@ int updatePlayer(RoscoesPlayer& gamer, char purchase) {
 	//std::cout << std::format("Choice: {}", purchase);
 	size_t choice{ static_cast<size_t>(purchase - '0')};
 
-	int purchasePrice{ Potion::cost[choice] };
+	int purchasePrice{ RoscoePotion::cost[choice] };
 	//std::cout << std::format("Purchase price: {}", purchasePrice);
 
 	if (gamer.getWealth() < purchasePrice) 
@@ -53,7 +53,7 @@ int updatePlayer(RoscoesPlayer& gamer, char purchase) {
 	else {
 		gamer.addToInventory(choice);
 		gamer.setWealth(gamer.getWealth() - purchasePrice);
-		std::cout << std::format("\nYou purchased a potion of {}. You have {} gold left.\n\n", Potion::name[choice], gamer.getWealth());
+		std::cout << std::format("\nYou purchased a potion of {}. You have {} gold left.\n\n", RoscoePotion::name[choice], gamer.getWealth());
 	}
 
 	return 0;
@@ -62,8 +62,8 @@ int updatePlayer(RoscoesPlayer& gamer, char purchase) {
 int printExitStats(RoscoesPlayer& gamer) {
 	std::cout << "\nYour inventory contains: \n";
 	
-	for (auto& a : Potion::types) {
-		std::cout << std::format("{}x potion of {}\n", gamer.getInventory()[a], Potion::name[a]);
+	for (auto& a : RoscoePotion::types) {
+		std::cout << std::format("{}x potion of {}\n", gamer.getInventory()[a], RoscoePotion::name[a]);
 	}
 
 	std::cout << std::format("You escaped with {} gold remaining.\n\n", gamer.getWealth());

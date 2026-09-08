@@ -13,6 +13,35 @@ Player initPlayer(){
   return player;
 }
 
+void potionChance(Player& player){
+
+  if(Random::get(0, 9) < 3){
+    Potion potion{ Potion::getRandomPotion() };
+    char drinkPotion = getTFromUser<char>("You found a mythical potion! Do you want to drink it? [y/n]: ");
+
+    while((drinkPotion != 'y') && (drinkPotion != 'Y') && (drinkPotion != 'n') && (drinkPotion != 'N')){
+     drinkPotion = getTFromUser<char>("You found a mythical potion! Do you want to drink it? [y/n]: ");
+    }
+
+    if(drinkPotion == 'n' || drinkPotion == 'N') return;
+    else{
+      const std::string& potionType{potion.getType()};
+      std::cout << std::format("You drank a {} potion of {}\n", potion.getSize(), potionType);
+      if (potionType != "strength"){
+        player.reduceHealth(-potion.getEffect());
+        std::cout << std::format("Health changed by {}.\n", potion.getEffect(), player.getHealth());
+      }
+      else{
+        player.increaseStrength(potion.getEffect());
+        std::cout << std::format("Strength increased by {}. Your strength is {}.\n", potion.getEffect(), player.getDamage());
+      }
+
+    }
+  }
+  else return;
+
+}
+
 void attackMonster(Player& p, Monster& m){
   if(p.isDead()) return;
 
@@ -26,6 +55,7 @@ void attackMonster(Player& p, Monster& m){
     int gold{m.getGold()};
     p.addGold(gold);
     std::cout << std::format("You found {} gold.\n", gold);
+    potionChance(p);
   }
 }
 

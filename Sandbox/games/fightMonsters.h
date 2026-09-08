@@ -80,6 +80,7 @@ public:
 
   bool hasWon() const { return(m_level >= 20); }
 
+  void increaseStrength(int i){ m_damagePerAttack += i; }
 
 };
 
@@ -139,3 +140,5 @@ void attackPlayer(Player& p, Monster& m);
 void fightMonster(Player& p);
 
 int fightMonstersMain();
+
+void potionChance(Player& p);

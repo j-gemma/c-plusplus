@@ -6,7 +6,7 @@
 #include "..\common\input.h"
 #include "..\common\ClassRandom.h"
 
-namespace Potion {
+namespace RoscoePotion {
 
 	enum Type {
 		healing, 
@@ -30,7 +30,7 @@ class RoscoesPlayer {
 	
 private:
 	const std::string m_name{};
-	std::vector<int> m_inventory{std::vector<int>(Potion::max_potions)};
+	std::vector<int> m_inventory{std::vector<int>(RoscoePotion::max_potions)};
 	int m_wealth{Random::get(80, 120)};
 
 public:
