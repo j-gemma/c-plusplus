@@ -239,6 +239,10 @@ int main() {
       fightMonstersMain();
       break;
     }
+    case 59:{
+      ch25_1quizMain();
+      break;
+    }
     default:
       std::cout << "Default case";
       break;

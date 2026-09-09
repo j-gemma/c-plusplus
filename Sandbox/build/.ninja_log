@@ -36,17 +36,17 @@
 96	1896	7972115805443018	CMakeFiles/main.dir/enumIndex.cpp.obj	bb7039888baad17f
 616	2125	7972115810638598	CMakeFiles/main.dir/hiLo.cpp.obj	5421201999155b42
 81	2183	7972115805287668	CMakeFiles/main.dir/cppMan.cpp.obj	c1649e321c85a7f6
-47	1080	8099783660011517	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
+46	1050	8106704666518509	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
 87	2233	7972115805342774	CMakeFiles/main.dir/deck52.cpp.obj	c093335dd3f73012
 690	2238	7972115811377965	CMakeFiles/main.dir/perfectSquares.cpp.obj	8c5886c12783a53e
 718	2274	7972115811651415	CMakeFiles/main.dir/rangeBased.cpp.obj	8b2ea162d3637b21
 638	2428	7972115810856993	CMakeFiles/main.dir/lambda.cpp.obj	770765eceef7ffee
 740	2489	7972115811872014	CMakeFiles/main.dir/roscoes.cpp.obj	ebf7b5b2fe7a4b71
 706	2696	7972115811536163	CMakeFiles/main.dir/quiz16.cpp.obj	d8bba525f5fd9236
-1081	1398	8099783670332180	main.exe	ba1f381d8c7a67ad
-50	292	8100717256598929	build.ninja	b08d3879f71f5d93
-50	292	8100717256573850	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/cmake_install.cmake	b08d3879f71f5d93
-12	49	8100717252309428	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
+1283	1599	8106704678896779	main.exe	2f8acf784ddd630
+50	499	8106783880510589	build.ninja	b08d3879f71f5d93
+50	499	8106783880480592	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/cmake_install.cmake	b08d3879f71f5d93
+4	42	8106783877908219	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
 64	308	8074880204577776	CMakeFiles/main.dir/common/common.cpp.obj	775518f7a60c883d
 43	313	8074880204360543	CMakeFiles/main.dir/CMakeFiles/4.2.0/CompilerIdCXX/CMakeCXXCompilerId.cpp.obj	e60bec855cbfbc3a
 309	468	8074880207015565	CMakeFiles/main.dir/exercises/exercises.cpp.obj	5d257a6acb3a8076
@@ -80,11 +80,11 @@
 103	974	8074883768346146	CMakeFiles/main.dir/exercises/recurse.cpp.obj	24e908c2acb2d6df
 120	1107	8074883768519699	CMakeFiles/main.dir/exercises/stdVectorExample.cpp.obj	9281967774d15907
 48	668	8095664315147018	CMakeFiles/main.dir/exercises/operatorOverloads.cpp.obj	34f98e86622c39c0
-50	1549	8074883767804744	CMakeFiles/main.dir/exercises/Monster.cpp.obj	8848e651134f01f4
+42	890	8100730143294156	CMakeFiles/main.dir/exercises/Monster.cpp.obj	8848e651134f01f4
 160	1659	8074883768918114	CMakeFiles/main.dir/games/hiLo.cpp.obj	47f6473aebc266f6
 83	1722	8074883768139218	CMakeFiles/main.dir/exercises/perfectSquares.cpp.obj	fc6be3c6d7e8b8bc
 95	1757	8074883768270543	CMakeFiles/main.dir/exercises/rangeBased.cpp.obj	ae1179f15f1a11c
-108	2055	8074883768391263	CMakeFiles/main.dir/exercises/roscoes.cpp.obj	468feacd274eab24
+43	1263	8106061096420563	CMakeFiles/main.dir/exercises/roscoes.cpp.obj	468feacd274eab24
 68	2071	8074883767990221	CMakeFiles/main.dir/exercises/lambda.cpp.obj	26956e9eb4178940
 145	2102	8074883768762785	CMakeFiles/main.dir/games/deck52.cpp.obj	48d9bc1455b4d55d
 138	2113	8074883768702516	CMakeFiles/main.dir/games/cppMan.cpp.obj	aad134d2736752ca
@@ -92,130 +92,39 @@
 50	351	8074886436131064	CMakeFiles/main.dir/exercises/printBallHeight.cpp.obj	134e20476c55e813
 46	353	8074886436090911	CMakeFiles/main.dir/exercises/aliasesEX.cpp.obj	fbe3a7f1b3a3cdc
 43	406	8074886436070909	CMakeFiles/main.dir/exercises/FractionStruct.cpp.obj	fb6c20f943338858
-48	483	8074886436120921	CMakeFiles/main.dir/exercises/funcPointerCalculator.cpp.obj	b45cad78120c1967
+41	467	8106704666473358	CMakeFiles/main.dir/exercises/funcPointerCalculator.cpp.obj	b45cad78120c1967
 40	428	8093093207192054	CMakeFiles/main.dir/exercises/ch22-5QuizUniquePtr.cpp.obj	e0f86d0a191c6fd0
 41	524	8095485540649738	CMakeFiles/main.dir/exercises/ch22SummaryQuiz.cpp.obj	9f15a56fd1564f54
 43	493	8095664315091300	CMakeFiles/main.dir/exercises/ch23_3quiz.cpp.obj	cf08a732f42add07
 44	537	8098914287711029	CMakeFiles/main.dir/exercises/ch23_7quiz.cpp.obj	5d050cc92ac3c151
-45	390	8099783659981476	CMakeFiles/main.dir/exercises/ch24_4Inheritance.cpp.obj	33da6146ee7419f1
-50	499	8100717256598929	build.ninja	b08d3879f71f5d93
-50	499	8100717256598929	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/cmake_install.cmake	b08d3879f71f5d93
-3	38	8100717256901351	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-66	535	8100717257539225	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
 63	538	8100717257513251	CMakeFiles/main.dir/exercises/ch24_4Inheritance.cpp.obj	33da6146ee7419f1
-68	1183	8100717257559273	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-1183	1591	8100717268711705	main.exe	2f8acf784ddd630
-3	38	8100730142907772	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-47	388	8100730143349820	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-42	890	8100730143294156	CMakeFiles/main.dir/exercises/Monster.cpp.obj	8848e651134f01f4
-49	1099	8100730143364858	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-3	39	8100730829566036	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-45	1052	8100730829990596	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-43	1253	8100730829970607	CMakeFiles/main.dir/exercises/roscoes.cpp.obj	468feacd274eab24
-1254	1567	8100730842070135	main.exe	2f8acf784ddd630
-2	38	8100731217470486	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-42	378	8100731217870891	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-44	1083	8100731217895932	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-1084	1401	8100731228290147	main.exe	2f8acf784ddd630
-3	39	8100860198756333	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-46	1035	8100860199189401	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-48	1093	8100860199204470	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-43	1269	8100860199159236	CMakeFiles/main.dir/exercises/roscoes.cpp.obj	468feacd274eab24
-1270	1593	8100860211427398	main.exe	2f8acf784ddd630
-3	41	8100860297153769	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-45	992	8100860297569751	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-48	1053	8100860297605050	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-1054	1372	8100860307660359	main.exe	2f8acf784ddd630
-11	48	8101545635348752	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-77	1119	8101545636000181	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-74	1264	8101545635975087	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1265	1607	8101545647877157	main.exe	2f8acf784ddd630
-4	39	8101658987203536	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-46	1101	8101658987629621	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-43	1297	8101658987604535	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1298	1630	8101659000153294	main.exe	2f8acf784ddd630
-3	38	8101660455328343	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-42	1304	8101660455716106	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1305	1615	8101660468338504	main.exe	2f8acf784ddd630
-3	39	8101664075915429	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-45	1047	8101664076323232	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-42	1237	8101664076303243	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1237	1546	8101664088245823	main.exe	2f8acf784ddd630
-2	37	8101669626918162	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-41	1249	8101669627294982	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1250	1560	8101669639387716	main.exe	2f8acf784ddd630
-3	39	8101672579418787	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-43	1260	8101672579824955	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-2	38	8101672788573481	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-42	1274	8101672788974624	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1275	1602	8101672801298130	main.exe	2f8acf784ddd630
-2	40	8101674834354085	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-43	1232	8101674834762741	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1233	1544	8101674846661068	main.exe	2f8acf784ddd630
-5	44	8101675566767643	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-48	1322	8101675567201770	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1323	1655	8101675579940986	main.exe	2f8acf784ddd630
-3	40	8101687945385418	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-44	1261	8101687945784736	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1261	1583	8101687957963494	main.exe	2f8acf784ddd630
-3	41	8101688673148189	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-45	1218	8101688673563745	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1218	1528	8101688685299104	main.exe	2f8acf784ddd630
-3	44	8101701972809205	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-48	1279	8101701973264402	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-3	40	8101702081818784	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-44	1238	8101702082237582	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1238	1561	8101702094176430	main.exe	2f8acf784ddd630
-3	40	8101761362407501	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-44	1256	8101761362810368	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-3	39	8101761545993756	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-42	1199	8101761546386661	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-3	37	8101761753028673	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-44	1043	8101761753441314	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-3	39	8101761801405281	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-2	37	8101762219391153	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-41	1218	8101762219781381	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1218	1529	8101762231556089	main.exe	2f8acf784ddd630
-3	39	8101762691042192	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-43	1288	8101762691445612	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1289	1611	8101762703896603	main.exe	2f8acf784ddd630
-3	38	8101762829358348	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-42	1217	8101762829755870	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1218	1528	8101762841507802	main.exe	2f8acf784ddd630
-11	48	8102398398031885	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-77	1174	8102398398678737	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-73	1350	8102398398643637	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1350	1692	8102398411413978	main.exe	2f8acf784ddd630
-3	45	8102399352349487	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-51	1090	8102399352826254	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-49	1278	8102399352801159	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1278	1595	8102399365095282	main.exe	2f8acf784ddd630
-7	43	8106059105567617	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-68	624	8106059106174236	CMakeFiles/main.dir/exercises/funcPointerCalculator.cpp.obj	b45cad78120c1967
-123	1368	8106059106740234	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-3	39	8106061096018315	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-48	1078	8106061096461723	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-43	1263	8106061096420563	CMakeFiles/main.dir/exercises/roscoes.cpp.obj	468feacd274eab24
-46	1267	8106061096441685	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1267	1706	8106061108655256	main.exe	2f8acf784ddd630
-3	38	8106061526458245	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-42	1249	8106061526843938	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1249	1572	8106061538919711	main.exe	2f8acf784ddd630
-3	37	8106062694863037	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-47	1057	8106062695303934	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-44	1248	8106062695283076	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-4	43	8106062809660215	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-46	1285	8106062810079327	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1285	1599	8106062822469652	main.exe	2f8acf784ddd630
-3	38	8106064144248945	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-42	1245	8106064144636850	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1246	1569	8106064156672392	main.exe	2f8acf784ddd630
-11	53	8106702053179549	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-87	1232	8106702053938822	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
-79	1445	8106702053853661	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1446	1800	8106702067522327	main.exe	2f8acf784ddd630
-2	37	8106704666083619	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
-41	467	8106704666473358	CMakeFiles/main.dir/exercises/funcPointerCalculator.cpp.obj	b45cad78120c1967
-46	1050	8106704666518509	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
 44	1283	8106704666498427	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
-1283	1599	8106704678896779	main.exe	2f8acf784ddd630
+43	323	8106783880510589	build.ninja	b08d3879f71f5d93
+43	323	8106783880510589	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/cmake_install.cmake	b08d3879f71f5d93
+2	37	8106783880805075	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
+41	382	8106783881191977	CMakeFiles/main.dir/exercises/ch25_1quiz.cpp.obj	9582f0eedc44aa86
+46	1065	8106783881247217	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
+43	1305	8106783881222021	CMakeFiles/main.dir/games/fightMonsters.cpp.obj	20378de34c2899fd
+1305	1623	8106783893833207	main.exe	a659e953158c5f6a
+3	40	8106809208523905	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
+44	368	8106809208933502	CMakeFiles/main.dir/exercises/animalLegNums.cpp.obj	4bc2ff5439ace993
+49	414	8106809208978675	CMakeFiles/main.dir/exercises/ch25_1quiz.cpp.obj	9582f0eedc44aa86
+52	1027	8106809209003766	CMakeFiles/main.dir/exercises/enumIndex.cpp.obj	de1a97cd6833cbd9
+47	1064	8106809208958677	CMakeFiles/main.dir/exercises/ch17ArraysPt1.cpp.obj	af4abb18d8daeaf7
+54	1136	8106809209033755	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
+1136	1451	8106809219849064	main.exe	a659e953158c5f6a
+2	38	8106810343780558	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
+42	371	8106810344172750	CMakeFiles/main.dir/exercises/ch25_1quiz.cpp.obj	9582f0eedc44aa86
+45	1068	8106810344197813	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
+1068	1392	8106810354436696	main.exe	a659e953158c5f6a
+2	40	8106810769535213	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
+44	380	8106810769955531	CMakeFiles/main.dir/exercises/ch25_1quiz.cpp.obj	9582f0eedc44aa86
+47	1054	8106810769980566	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
+1054	1375	8106810780050208	main.exe	a659e953158c5f6a
+2	36	8106810862662218	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
+40	369	8106810863039181	CMakeFiles/main.dir/exercises/ch25_1quiz.cpp.obj	9582f0eedc44aa86
+370	679	8106810866343608	main.exe	a659e953158c5f6a
+2	36	8106811825644169	C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs	59a63391460c42f2
+40	365	8106811826030046	CMakeFiles/main.dir/exercises/ch25_1quiz.cpp.obj	9582f0eedc44aa86
+42	1031	8106811826050462	CMakeFiles/main.dir/main.cpp.obj	d9d0b1664e104baa
+1032	1345	8106811835939132	main.exe	a659e953158c5f6a

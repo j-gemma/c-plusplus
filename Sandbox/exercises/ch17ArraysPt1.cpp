@@ -2,7 +2,7 @@
 
 #include "ch17ArraysPt1.h"
 
-int printAnimalInfo(int matchIndex) {
+int printAnimalsInfo(int matchIndex) {
 
     if (matchIndex == -1) {
         std::cout << "That animal couldn't be found.\n";
@@ -12,9 +12,9 @@ int printAnimalInfo(int matchIndex) {
     size_t cast{ static_cast<size_t>(matchIndex) };
   
     std::cout << std::format("A {} has {} legs and says {}.\n",
-                            Animal::data[cast].name,
-                            Animal::data[cast].legs,
-                            Animal::data[cast].sound);
+                            Animals::data[cast].name,
+                            Animals::data[cast].legs,
+                            Animals::data[cast].sound);
                             
     return matchIndex;
 }
@@ -22,18 +22,18 @@ int printAnimalInfo(int matchIndex) {
 int printRestOfAnimals(int matchIndex) {
 
     std::cout << "\nHere is the info for the rest of the animals: \n";
-    for (int i{}; i < Animal::max_animals; i++) {
-        if (i != matchIndex) printAnimalInfo(i);
+    for (int i{}; i < Animals::max_animals; i++) {
+        if (i != matchIndex) printAnimalsInfo(i);
     }
 
     return 0;
 }
 
-int matchAnimal(std::string& animal) {
+int matchAnimals(std::string& animal) {
 
     
-    for (size_t i{}; i < Animal::max_animals; i++) {
-        if (animal == Animal::data[i].name)
+    for (size_t i{}; i < Animals::max_animals; i++) {
+        if (animal == Animals::data[i].name)
             return static_cast<int>(i);
     }
     return -1;
@@ -75,8 +75,8 @@ int runPrintArrayUsingPointers() {
 
 int runArrayOfAnimals() {
 
-    std::string uAnimal{ getTFromUser<std::string>("Enter an animal: ") };
-    printRestOfAnimals(printAnimalInfo(matchAnimal(uAnimal)));
+    std::string uAnimals{ getTFromUser<std::string>("Enter an animal: ") };
+    printRestOfAnimals(printAnimalsInfo(matchAnimals(uAnimals)));
   
     return 0;
 }

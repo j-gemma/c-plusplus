@@ -4,8 +4,8 @@
 #include <cassert>
 #include <iostream>
 
-namespace Animals {
-	enum Animals {
+namespace Animal {
+	enum Animal {
 		chicken,
 		dog,
 		cat,

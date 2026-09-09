@@ -3,15 +3,15 @@
 
 void runAnimalLegNums() {
 
-	using enum AnimalClass;
+	using enum AnimalClass::AnimalClass;
 
-	AnimalClass kitty{ cat };
+	AnimalClass::AnimalClass kitty{ cat };
 	printNumberOfLegs(kitty);
 	printNumberOfLegs(chicken);
 }
 
-void printNumberOfLegs(AnimalClass animal) {
-	using enum AnimalClass;
+void printNumberOfLegs(AnimalClass::AnimalClass animal) {
+	using enum AnimalClass::AnimalClass;
 
 	std::cout << "A " << getAnimalName(animal) << " has ";
 
@@ -34,8 +34,8 @@ void printNumberOfLegs(AnimalClass animal) {
 	std::cout << " legs.\n";
 }
 
-constexpr std::string_view getAnimalName(AnimalClass animal) {
-	using enum AnimalClass;
+constexpr std::string_view getAnimalName(AnimalClass::AnimalClass animal) {
+	using enum AnimalClass::AnimalClass;
 
 	switch (animal) {
 	case pig: return "pig";

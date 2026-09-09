@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 
+namespace AnimalClass{
 enum class AnimalClass {
 	pig,
 	chicken,
@@ -10,9 +11,10 @@ enum class AnimalClass {
 	duck,
 };
 
-constexpr std::string_view getAnimalName(AnimalClass animal);
+};
+constexpr std::string_view getAnimalName(AnimalClass::AnimalClass animal);
 
-void printNumberOfLegs(AnimalClass animal);
+void printNumberOfLegs(AnimalClass::AnimalClass animal);
 
 void runAnimalLegNums();
 

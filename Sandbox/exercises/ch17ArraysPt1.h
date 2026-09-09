@@ -13,7 +13,7 @@ struct Item {
 
 };
 
-namespace Animal {
+namespace Animals {
 
 	enum Type {
 		chicken,
@@ -46,15 +46,15 @@ namespace Animal {
 	static_assert(std::size(types) == max_animals);
 	static_assert(std::size(data) == max_animals);
 
-	inline std::istream& operator>>(std::istream& in, Animal::Type& animal) {
+	inline std::istream& operator>>(std::istream& in, Animals::Type& animal) {
 		std::string input{};
 		std::getline(in >> std::ws, input);
 
-		for (std::size_t index{ 0 }; index < Animal::max_animals; index++) {
+		for (std::size_t index{ 0 }; index < Animals::max_animals; index++) {
 		
-			if ( input == Animal::data[index].name) {
+			if ( input == Animals::data[index].name) {
 
-				animal = static_cast<Animal::Type>(index);
+				animal = static_cast<Animals::Type>(index);
 				return in;
 			}
 
@@ -65,11 +65,11 @@ namespace Animal {
 	}
 
 }
-int printAnimalInfo(int matchIndex);
+int printAnimalsInfo(int matchIndex);
 
 int printRestOfAnimals(int matchIndex);
 
-int matchAnimal(std::string& animal);
+int matchAnimals(std::string& animal);
 
 int printArrayBackwardsUsingPointers(const char ptr[]);
 

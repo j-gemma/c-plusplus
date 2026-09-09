@@ -3,9 +3,9 @@
 
 int runEnumIndex() {
 	
-	assert(std::size(Animals::legs) == Animals::numAnimals);
+	assert(std::size(Animal::legs) == Animal::numAnimals);
 
-	std::cout << std::format("An elephant has {} legs", Animals::legs[Animals::elephant]);
+	std::cout << std::format("An elephant has {} legs", Animal::legs[Animal::elephant]);
 
 	return 0;
 
