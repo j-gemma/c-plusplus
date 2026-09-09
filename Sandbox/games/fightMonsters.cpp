@@ -13,7 +13,15 @@ Player initPlayer(){
   return player;
 }
 
+EffectDeducer getPotionEffect(const Potion &p){
+  if(p.getType() == "strength") return &Player::increaseStrength;
+  else return &Player::increaseHealth;
+
+}
+
 void potionChance(Player& player){
+
+  if(player.getLevel() <= 20) return;
 
   if(Random::get(0, 9) < 3){
     Potion potion{ Potion::getRandomPotion() };
@@ -25,15 +33,15 @@ void potionChance(Player& player){
 
     if(drinkPotion == 'n' || drinkPotion == 'N') return;
     else{
+      EffectDeducer fcn{ getPotionEffect(potion) };
       const std::string& potionType{potion.getType()};
+      (player.*fcn)(potion.getValue());
       std::cout << std::format("You drank a {} potion of {}\n", potion.getSize(), potionType);
       if (potionType != "strength"){
-        player.reduceHealth(-potion.getEffect());
-        std::cout << std::format("Health changed by {}.\n", potion.getEffect(), player.getHealth());
+        std::cout << std::format("Health changed by {}.\n", potion.getValue(), player.getHealth());
       }
       else{
-        player.increaseStrength(potion.getEffect());
-        std::cout << std::format("Strength increased by {}. Your strength is {}.\n", potion.getEffect(), player.getDamage());
+        std::cout << std::format("Strength increased by {}. Your strength is {}.\n", potion.getValue(), player.getDamage());
       }
 
     }
@@ -141,3 +149,5 @@ int fightMonstersMain(){
 
   return 0;
 }
+
+

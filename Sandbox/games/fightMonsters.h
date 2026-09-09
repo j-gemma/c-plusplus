@@ -1,9 +1,11 @@
 #include <iostream>
 #include <string>
+#include <cassert>
+#include <functional>
+
 #include "../common/input.h"
 #include <format>
 #include "../common/ClassRandom.h" 
-#include <cassert>
 
 class Creature{
 protected:
@@ -27,6 +29,8 @@ public:
   int getGold() const { return m_goldCarried; }
 
   void reduceHealth(int i){ m_health -= i; }
+
+  void increaseHealth(int i){ m_health += i; }
 
   bool isDead() const { return (m_health <= 0); }
 
@@ -109,14 +113,14 @@ private:
 
   std::string m_type{};
   std::string m_size{};
-  int m_effect{};
+  int m_value{};
 
 public:
 
   Potion(Potion::Type type, Potion::Size size)
   :m_type{types[type]}
   ,m_size{sizes[size]}
-  ,m_effect{effects[type][size]}
+  ,m_value{effects[type][size]}
   {}
 
   static Potion getRandomPotion(){
@@ -125,7 +129,7 @@ public:
 
   const std::string& getType() const {return m_type;}
   const std::string& getSize() const {return m_size;}
-  const int getEffect() const {return m_effect;}
+  const int getValue() const {return m_value;}
 
 };
 
@@ -142,3 +146,7 @@ void fightMonster(Player& p);
 int fightMonstersMain();
 
 void potionChance(Player& p);
+
+using EffectDeducer = void (Player::*)(int);
+
+EffectDeducer getPotionEffect(const Potion& p);
