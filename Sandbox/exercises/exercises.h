@@ -24,6 +24,7 @@
 #include "ch23_7quiz.h"
 #include "ch24_4Inheritance.h"
 #include "ch25_1quiz.h"
+#include "ch25SummaryQuiz.h"
 
 #include "..\common\common.h"
 

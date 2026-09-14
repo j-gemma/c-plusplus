@@ -1,5 +1,6 @@
 #pragma once
 
+#include <format>
 #include <cmath>
 #include <iostream>
 
@@ -32,5 +33,27 @@ public:
 		return sqrt(pow((second.m_x - m_x), 2) + pow((second.m_y - m_y), 2));
 
 	}
+
+friend std::ostream& operator<<(std::ostream& out, Point2d point){
+  return out << std::format("Point({}, {})", point.m_x, point.m_y);
+}
+
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
