@@ -58,6 +58,7 @@ set(OLD_GLOB
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/ch24_4Inheritance.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/ch25SummaryQuiz.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/ch25_1quiz.cpp"
+  "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/ch26SummaryQuiz.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/countApples.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/dynamicAllocation.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/exercises/enumIndex.cpp"
@@ -107,32 +108,6 @@ set(OLD_GLOB
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/games/fightMonsters.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/games/games.cpp"
   "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/games/hiLo.cpp"
-  )
-if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
-  message("-- GLOB mismatch!")
-  set(NEW_ONLY ${NEW_GLOB})
-  set(OLD_ONLY ${OLD_GLOB})
-  list(REMOVE_ITEM NEW_ONLY ${OLD_GLOB})
-  list(REMOVE_ITEM OLD_ONLY ${NEW_GLOB})
-  if(NEW_ONLY)
-    message("The following files were added:")
-    foreach(VAR_FILE IN LISTS NEW_ONLY)
-      message("  +${VAR_FILE}")
-    endforeach()
-  endif()
-  if(OLD_ONLY)
-    message("The following files were removed:")
-    foreach(VAR_FILE IN LISTS OLD_ONLY)
-      message("  -${VAR_FILE}")
-    endforeach()
-  endif()
-  file(TOUCH_NOCREATE "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build/CMakeFiles/cmake.verify_globs")
-endif()
-
-# SRC_FILES at CMakeLists.txt:11 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/main.cpp")
-set(OLD_GLOB
-  "C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

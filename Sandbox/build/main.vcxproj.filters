@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\common\ClassRandom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\common\FractionClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\common\Point2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\common\Point3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\common\Triad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\common\Vector3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\common\common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\common\input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\common\swap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\Ball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\Car.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\FractionStruct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\Monster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\TriadStruct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\accumulate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\aliasesEX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\animalLegNums.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\arrayLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\binarySearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\bubbleSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\calculateAdRevenue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\ch17ArraysPt1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\ch22-5QuizUniquePtr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\ch22SummaryQuiz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\ch23_3quiz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\ch23_7quiz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\ch24_4Inheritance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\ch25SummaryQuiz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\ch25_1quiz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\ch26SummaryQuiz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\countApples.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\dynamicAllocation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\enumIndex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\exercises.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\funcPointerCalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\isPrime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\lambda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\miscUnused.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\operatorOverloads.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\perfectSquares.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\printBallHeight.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\quiz16.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\rangeBased.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\recurse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\roscoes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\rotateBits.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\stdVectorExample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\exercises\vectorStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\games\Game15Puzzle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\games\cppMan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\games\deck52.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\games\fightMonsters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\games\games.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\games\hiLo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{EF369920-B5BF-31D9-891C-1F39ECC552CE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

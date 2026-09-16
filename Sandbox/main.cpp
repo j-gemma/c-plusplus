@@ -247,6 +247,11 @@ int main() {
       ch25Question2b();
       ch25SummaryQuizMain();
       ch25SummaryQuizMain2();
+      break;
+    }
+    case 61:{
+      ch26SummaryQuizMain();
+      break;
     }
     default:
       std::cout << "Default case";

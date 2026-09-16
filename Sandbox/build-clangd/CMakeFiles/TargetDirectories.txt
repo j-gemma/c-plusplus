@@ -1,0 +1,6 @@
+C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build-clangd/CMakeFiles/main.dir
+C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build-clangd/CMakeFiles/edit_cache.dir
+C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build-clangd/CMakeFiles/rebuild_cache.dir
+C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build-clangd/specdiff/CMakeFiles/specdiff.dir
+C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build-clangd/specdiff/CMakeFiles/edit_cache.dir
+C:/Users/jgemma/OneDrive - Food Strategy Inc/Programming/c++/Sandbox/build-clangd/specdiff/CMakeFiles/rebuild_cache.dir

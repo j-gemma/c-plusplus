@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\jgemma\OneDrive - Food Strategy Inc\Programming\c++\Sandbox\build\CMakeFiles\b04c256eade75a80371017eb1f73a0fa\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2CF1F2AA-ABEA-32B4-9AF6-35B4929CFB2F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
