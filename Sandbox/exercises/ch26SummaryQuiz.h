@@ -37,4 +37,14 @@ public:
   const U& second() const { return m_v2; }
 };
 
+template<typename T>
+class StringValuePair : public Pair<std::string, T>
+{
+public:
+ StringValuePair<T>(const std::string_view s, const T& t)
+  :Pair<std::string, T>{static_cast<std::string>(s), t}
+  {
+  }
+};
+
 int ch26SummaryQuizMain();
